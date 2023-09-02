@@ -1,0 +1,196 @@
+[28-Jul-2023 19:10:24 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:25 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:25 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:25 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:27 UTC] PHP Warning:  require(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:10:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Collections/helpers.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php(45): {closure}('265b4faa2b3a976...', '/home/indice1/p...')
+#1 /home/indice1/public_html/indice/homologa/vendor/autoload.php(25): ComposerAutoloaderInit43441dc3ae216eb3a65d6a37bee29b6f::getLoader()
+#2 /home/indice1/public_html/indice/homologa/public/index.php(34): require('/home/indice1/p...')
+#3 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/composer/autoload_real.php on line 41
+[28-Jul-2023 19:16:30 UTC] PHP Warning:  include(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:30 UTC] PHP Warning:  include(): Failed opening '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:30 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:30 UTC] PHP Warning:  include(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:30 UTC] PHP Warning:  include(): Failed opening '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:30 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:30 UTC] PHP Warning:  include(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:30 UTC] PHP Warning:  include(): Failed opening '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:30 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:31 UTC] PHP Warning:  include(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:31 UTC] PHP Warning:  include(): Failed opening '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:31 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:31 UTC] PHP Warning:  include(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:31 UTC] PHP Warning:  include(): Failed opening '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:31 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:31 UTC] PHP Warning:  include(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:31 UTC] PHP Warning:  include(): Failed opening '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:31 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:38 UTC] PHP Warning:  include(/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php): Failed to open stream: No such file or directory in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:38 UTC] PHP Warning:  include(): Failed opening '/home/indice1/public_html/indice/homologa/vendor/composer/../laravel/framework/src/Illuminate/Contracts/Container/Container.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php on line 576
+[28-Jul-2023 19:16:38 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:50 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:50 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
+[28-Jul-2023 19:16:51 UTC] PHP Fatal error:  Uncaught Error: Interface "Illuminate\Contracts\Container\Container" not found in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php:17
+Stack trace:
+#0 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include()
+#1 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#2 /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(31): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Cont...')
+#3 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(576): include('/home/indice1/p...')
+#4 /home/indice1/public_html/indice/homologa/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}('/home/indice1/p...')
+#5 /home/indice1/public_html/indice/homologa/bootstrap/app.php(14): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Foun...')
+#6 /home/indice1/public_html/indice/homologa/public/index.php(47): require_once('/home/indice1/p...')
+#7 {main}
+  thrown in /home/indice1/public_html/indice/homologa/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 17
