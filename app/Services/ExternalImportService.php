@@ -1,6 +1,7 @@
 <?php 
 namespace App\Services;
 
+use App\Models\Congressperson;
 use App\Models\CongresspersonIndicator;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
@@ -9,7 +10,8 @@ class ExternalImportService implements ToModel, WithHeadingRow
 {
     public function model(array $row)
     {
-        $congresspersonName = $row['Deputado'];
+        dump($row);
+        $congresspersonName = $row['deputado'];
         $congressperson = Congressperson::firstOrCreate(['name' => $congresspersonName]);
 
         for ($i = 1; $i <= 16; $i++) {
