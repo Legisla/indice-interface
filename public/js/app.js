@@ -16,8 +16,9 @@ $(document).ready(function () {
 
     /*** MENU CLASS SCROLL ***/
     $(".filtro_box .box_explorador").click(function () {
-        $(".filtro_estado").toggle();
+        $(this).next(".filtro_estado").toggle();
     });
+    
 
     $(".box_filtro_busca .box_explorador").click(function () {
         $(".filtro_busca").toggle();
@@ -47,6 +48,14 @@ $(document).ready(function () {
         redirectToExplorer();
     });
 
+    $('.explorerTopState').change(function () {
+        redirectToSelectedUF();
+    });
+
+    $('.explorerTopParty').change(function () {
+        redirectToSelectedParty();
+    });
+
     $('#stateSelectorExplorerPanel').change(function () {
 
         const acronym = $(this).val();
@@ -59,6 +68,7 @@ $(document).ready(function () {
         });
 
         $('#modal_filtro_porperty').foundation('reveal', 'open');
+        $('#modal_destaque_property').foundation('reveal', 'open');
     });
 
 
@@ -151,6 +161,25 @@ function redirectToExplorer() {
         location.href = baseUrl + '/explorador/';
     }
 }
+
+function redirectToSelectedUF() {
+    const state = $('.explorerTopState').val() || null;
+
+    if (state) {
+        location.href = baseUrl + '/explorador/top-scores/' + state.toLowerCase();
+    }
+
+}
+
+function redirectToSelectedParty() {
+    const party = $('.explorerTopParty').val() || null;
+
+    if (party) {
+        location.href = baseUrl + '/explorador/top-scores/' + party.toLowerCase();
+    }
+
+}
+
 
 function redirectToFilter() {
     const stateSelect = $('.filterSelectState');

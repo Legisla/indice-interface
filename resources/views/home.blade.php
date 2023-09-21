@@ -22,6 +22,10 @@
 
         @include('layouts.explorerPanel')
 
+    <br clear="all">
+
+    @include('layouts.selectedPanel')
+
         <section id="destaque">
             <div class="central">
                 <ul>

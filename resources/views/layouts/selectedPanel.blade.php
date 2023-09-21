@@ -1,25 +1,25 @@
 @if(setting('site.showIndex'))
-<section id="explorador" class="explorador">
+<section id="selected" class="explorador">
     <div class="central">
 
-        <ul class="accordion" {{ Route::current()->getName() !=='home' ? 'data-accordion' : ''}}>
+        <ul class="accordion">
             <li class="accordion-navigation {{ Route::current()->getName() =='home' ? 'active' : ''}}">
-                <a href="{{ Route::current()->getName() !=='home' ? '#panel1a' : ''}}"
+                <a
                    class="bot_explo_interno" {{ Route::current()->getName() =='home' ? 'aria-expanded="true"' : ''}}>
                     <h2>
-                        EXPLORADOR {!! Route::current()->getName() !=='home' ? ' &bull; CLIQUE PARA UMA NOVA PESQUISA' : ''!!}
+                        DESTAQUES
                     </h2>
                 </a>
                 <div id="panel1a" class="content {{ Route::current()->getName() =='home' ? 'active' : ''}}">
-                    <div>
+                    <div class="col_3-wrapper">
                         <div class="col_3">
                             <div class="box_explorador">
                                 <img src="{{asset('img/img_ex1.png')}}" alt="">
 
-                                <h3>ESCOLHA UM ESTADO</h3>
+                                <h3>DESTAQUES POR ESTADO</h3>
 
                                 <form>
-                                    <select name="UF" class="explorerSelectState">
+                                    <select name="UF" class="explorerTopState">
                                         <option value="">SELECIONE</option>
                                         @foreach($states as $state)
                                             <option value="{{$state->acronym}}"
@@ -32,18 +32,22 @@
                             </div>
                         </div><!-- col_3 -->
 
-                        <div class="col_3 box_filtro_busca">
+                        <div class="col_3">
                             <div class="box_explorador">
                                 <img src="{{asset('img/img_ex2.png')}}" alt="">
 
-                                <h3>PESQUISE UM DEPUTADO<br>PELO NOME</h3>
+                                <h3>DESTAQUES POR PARTIDO</h3>
 
-                            </div>
-                            <div class="filtro_busca" style="display: none;">
-                                <form method="get" action="{{route('search-by-name')}}">
-                                    <input type="search" name="name">
-
-                                    <input type="submit" value="buscar">
+                            
+                            <form>
+                                    <select name="PARTIDO" class="explorerTopParty">
+                                        <option value="">SELECIONE</option>
+                                        @foreach($parties as $party)
+                                            <option value="{{$party->acronym}}" {{(!empty($selectedState) && $selectedParty === $party->acronym?'selected':'' )}}>
+                                                {{$party->name}}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </form>
                             </div>
                         </div><!-- col_3 -->
@@ -52,7 +56,7 @@
 
                             <div class="box_explorador">
                                 <img src="{{asset('img/img_ex3.png')}}" alt="" onclick="return false;">
-                                <h3>FILTRE POR EIXO<br>OU INDICADOR</h3>
+                                <h3>DESTAQUES POR EIXO
                             </div>
 
                             <div class="filtro_estado" style="display: none;">
@@ -75,20 +79,20 @@
 
                                 <br>
 
-                                <a href="#" class="botao_br" data-reveal-id="modal_filtro_porperty"> BRASIL</a>
+                                <a href="#" class="botao_br" data-reveal-id="modal_destaque_property"> BRASIL</a>
 
                             </div>
 
 
                             <!-- AQUI TA O FILTRO DA SELEÇÃO DE OPÇÕES -->
-                            <div id="modal_filtro_porperty"
+                            <div id="modal_destaque_property"
                                  class="reveal-modal xlarge"
                                  data-reveal
                                  aria-labelledby="modalTitle"
                                  aria-hidden="true"
                                  role="dialog">
 
-                                <div id="lista_filtro_criterio">
+                                <div id="lista_destaque_criterio">
                                     <div class="title_box">
                                         <h5>
                                             <strong class="stateSubstitute">BR</strong> Escolha o Eixo ou Indicador
@@ -103,17 +107,6 @@
                                                 <a class="substituteLink"
                                                    href="{{route('filtro',['br',$statLink['link']])}}">{{$statLink['name']}}</a>
                                             </h3>
-                                            <ul>
-                                                @foreach($statLink['indicators'] as $indicator)
-                                                    <li>
-                                                        <i class="fa fa-caret-right"></i>
-                                                        <a class="substituteLink"
-                                                           href="{{ route('filtro-indicador',['br',$statLink['link'],$indicator['link']])}}">{{$indicator['name']}}</a>
-                                                        <br>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-
                                         </div><!-- col_3 -->
 
                                     @endforeach
@@ -125,13 +118,6 @@
                             <!-- AQUI TA O FILTRO DA SELEÇÃO DE OPÇÕES -->
 
 
-                        </div><!-- col_3 -->
-
-                        <div class="col_3">
-                            <a class="box_explorador" href="{{route('crie-seu-indice')}}">
-                                <img src="{{asset('img/img_ex4.png')}}" alt="">
-                                <h3>CRIE SEU<br>PRÓPRIO ÍNDICE</h3>
-                            </a>
                         </div><!-- col_3 -->
 
                     </div>

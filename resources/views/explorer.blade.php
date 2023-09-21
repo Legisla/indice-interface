@@ -27,10 +27,10 @@
 
                     <div class="ranking">
                         <i class="fa fa-star font_ativo"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 20? 'font_ativo' : ''}}"></i>
+                        <!-- <i class="fa fa-star {{ ( $stars * 20 ) > 20? 'font_ativo' : ''}}"></i>
                         <i class="fa fa-star {{ ( $stars * 20 ) > 40? 'font_ativo' : ''}}"></i>
                         <i class="fa fa-star {{ ( $stars * 20 ) > 60? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 80? 'font_ativo' : ''}}"></i>
+                        <i class="fa fa-star {{ ( $stars * 20 ) > 80? 'font_ativo' : ''}}"></i> -->
                     </div>
 
                 @endif
@@ -57,7 +57,7 @@
                         @endforeach
                     </select>
 
-                    <select id="classificacao"
+                    <!-- <select id="classificacao"
                             name="classificacao"
                             class="{{!empty($filterActive)?'filterSelectRate':'explorerSelectRate'}}">
                         <option value="">{{empty($stars)?'Alterar Classificação':'Limpar Classificação'}}</option>
@@ -70,7 +70,7 @@
                         <option value="duas-estrelas" {{!empty($stars) && $stars === 2 ?'selected':''}}>2 estrelas
                         </option>
                         <option value="uma-estrela" {{!empty($stars) && $stars === 1 ?'selected':''}}>1 estrela</option>
-                    </select>
+                    </select> -->
                 </form>
 
             </div>
