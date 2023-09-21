@@ -6,6 +6,9 @@ use Illuminate\Console\Command;
 use App\Services\ExternalImportService;
 use Maatwebsite\Excel\Facades\Excel;
 
+# USAGE:
+# php artisan import:congressperson-indicators /caminho/para/o/arquivo.csv
+
 class ImportCongresspersonIndicators extends Command
 {
     /**

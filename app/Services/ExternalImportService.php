@@ -17,7 +17,7 @@ class ExternalImportService implements ToModel, WithHeadingRow
         for ($i = 1; $i <= 16; $i++) {
             $value = $row["variavel_{$i}"];
             $score = $row["variavel_{$i}_score"];
-            $stars = $row["variavel_{$i}_stars"];
+            #$stars = $row["variavel_{$i}_stars"];
 
             CongresspersonIndicator::updateOrCreate(
                 [
