@@ -181,6 +181,34 @@ class ExplorerController extends Controller
 
         return view('explorer', compact('title', 'congresspeople', 'name'));
     }
+    /**
+     * @param string|null $selectedState
+     * @return View
+     */
+    public function explorerTopNScores(?string $selectedState = null)
+    {
+        $limit = 3; // Definimos o número N como 3
+
+        // Convertendo o estado selecionado para ID, se fornecido
+        $fkStateId = null;
+        if ($selectedState !== null) {
+            $selectedState = strtoupper($selectedState);
+            $state = State::findByAcronym($selectedState);
+            if ($state) {
+                $fkStateId = $state->id;
+            }
+        }
+
+        // Buscando os top 3 congressistas por score
+        $congresspeople = Congressperson::getTopNScores($limit, $fkStateId);
+
+        $title = 'Top 3 Deputados por Score';
+        if ($fkStateId !== null) {
+            $title .= ' no estado ' . $state->name;
+        }
+
+        return view('explorer', compact('title', 'congresspeople'));
+    }
 
     /**
      * @param string      $state

@@ -247,6 +247,25 @@ class Congressperson extends BaseModel
     }
 
     /**
+     * @param int $limit
+     * @param int|null $fkStateId
+     * @return EloquentCollection|null
+     */
+    public static function getTopNScores(int $limit, ?int $fkStateId = null): ?EloquentCollection
+    {
+    $query = self::query()
+                ->orderBy('rate', 'desc')
+                ->limit($limit);
+
+    if ($fkStateId !== null) {
+        $query->where('fk_state_id', $fkStateId);
+    }
+
+    return $query->get();
+    }
+
+
+    /**
      * @param array    $indicator
      * @param int      $qtt
      * @param int|null $fkStateId

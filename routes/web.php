@@ -85,6 +85,8 @@ Route::middleware(['block.site'])->group(function () {
 
             Route::get('/nome/', [ExplorerController::class, 'explorerByName'])->name('search-by-name');
 
+            Route::get('/top-scores/{selectedState?}', [ExplorerController::class, 'explorerTopNScores'])->name('top-scores');
+
         });
 
     else:
