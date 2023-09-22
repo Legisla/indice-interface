@@ -210,6 +210,21 @@ class ExplorerController extends Controller
         return view('explorer', compact('title', 'congresspeople'));
     }
 
+
+    /**
+     * @return View
+     */
+    public function explorerParty(?string $selectedParty = null)
+    {
+        
+
+        $title = 'Deputados de ' . $selectedParty;
+
+        $congresspeople = Congressperson::getByParty($selectedParty);
+
+        return view('explorer', compact('title', 'congresspeople'));
+    }
+
     /**
      * @param string      $state
      * @param string      $axis

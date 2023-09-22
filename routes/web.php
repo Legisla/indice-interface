@@ -87,6 +87,8 @@ Route::middleware(['block.site'])->group(function () {
 
             Route::get('/top-scores/{selectedState?}', [ExplorerController::class, 'explorerTopNScores'])->name('top-scores');
 
+            Route::get('/party/{selectedParty?}', [ExplorerController::class, 'explorerParty'])->name('party');
+
         });
 
     else:

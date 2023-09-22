@@ -163,6 +163,14 @@ class Congressperson extends BaseModel
             ->get();
     }
 
+    
+    public static function getByParty(string $acronym): ?EloquentCollection
+    {
+        return self::mountExplorerQuery()
+        ->where('parties.acronym', $acronym)
+        ->get();
+    }
+
     public static function getAll(): ?EloquentCollection
     {
         return self::mountExplorerQuery()
