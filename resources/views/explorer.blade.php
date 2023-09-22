@@ -129,11 +129,13 @@
                         </p>
 
                         <div class="ranking">
+                        @if($congressperson->rate > 80)
                             <i class="fa fa-star font_ativo"></i>
-                            <i class="fa fa-star {{ $congressperson->rate > 20? 'font_ativo' : ''}}"></i>
-                            <i class="fa fa-star {{ $congressperson->rate > 40? 'font_ativo' : ''}}"></i>
-                            <i class="fa fa-star {{ $congressperson->rate > 60? 'font_ativo' : ''}}"></i>
-                            <i class="fa fa-star {{ $congressperson->rate > 80? 'font_ativo' : ''}}"></i>
+                            <i class="fa fa-star font_ativo"></i>
+                            <i class="fa fa-star font_ativo"></i>
+                            <i class="fa fa-star font_ativo"></i>
+                            <i class="fa fa-star font_ativo"></i>
+                        @endif
                         </div>
 
                     </div>
