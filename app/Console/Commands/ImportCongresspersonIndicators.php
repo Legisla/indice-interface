@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Services\ExternalImportService;
+use App\Services\ImportService;
+use App\Services\ScoreService;
 use Maatwebsite\Excel\Facades\Excel;
 
 # USAGE:
@@ -45,6 +47,13 @@ class ImportCongresspersonIndicators extends Command
         Excel::import(new ExternalImportService(), $csvFile);
         
         $this->info('Importação concluída.');
+
+        // Chama a função para calcular as médias dos estados
+        $importService = new ImportService();
+        $scoreService = new ScoreService($importService);
+        $scoreService->calculateGeneralAverages();
+
+        $this->info('Médias dos estados calculadas.');
 
         return 0;
     }

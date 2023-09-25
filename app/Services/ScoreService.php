@@ -86,7 +86,7 @@ class ScoreService
             $logData = [
                 'fk_indicator_id' => $indicatorByCongressPerson->fk_indicator_id,
                 'fk_congressperson_id' =>  $indicatorByCongressPerson->fk_congressperson_id,
-                'fk_importation_id' => $this->importService->importation->id,
+                #'fk_importation_id' => $this->importService->importation->id,
                 'number_of_classes' => $numIntervals,
                 'value_between_classes' => (float)$intervalsValue,
                 'indicator_value' => (float)$indicatorByCongressPerson->value,
@@ -107,7 +107,7 @@ class ScoreService
 
         $this->saveCsv(
             $rows,
-            'indicators/processing_score_indicators_'. $this->importService->importation->id,
+            'indicators/processing_score_indicators_',#. $this->importService->importation->id,
             true
         );
     }
