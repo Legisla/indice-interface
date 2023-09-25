@@ -152,9 +152,37 @@ class Congressperson extends BaseModel
         $this->save();
     }
 
+
+
     /**
-     * @param int $fkStateId
-     * @return EloquentCollection|null
+     * Prepares a base query for fetching congresspeople with essential details.
+     * 
+     * This method sets up a base query that selects key details about a congressperson,
+     * including their external ID, name, photo URI, state acronym, party acronym, and rate.
+     * The method also sets up the necessary joins with the `parties` and `states` tables 
+     * to fetch the party and state details respectively.
+     * 
+     * @return \Illuminate\Database\Eloquent\Builder Prepared query with essential congressperson details.
+     */
+    private static function mountExplorerQuery()
+    {
+        return self::select(
+            'congresspeople.external_id',
+            'congresspeople.name',
+            'congresspeople.uri_photo',
+            'states.acronym as  state_acronym',
+            'parties.acronym as party_acronym',
+            'rate')
+            ->join('parties', 'parties.id', '=', 'congresspeople.fk_party_id')
+            ->join('states', 'states.id', '=', 'congresspeople.fk_state_id')
+            ->orderBy('congresspeople.name', 'asc');
+    }
+
+    /**
+     * Fetch congresspeople by the provided state ID.
+     *
+     * @param int $fkStateId State ID to filter congresspeople.
+     * @return EloquentCollection|null Congresspeople for the specified state, or null if none found.
      */
     public static function getByState(int $fkStateId): ?EloquentCollection
     {
@@ -163,6 +191,11 @@ class Congressperson extends BaseModel
             ->get();
     }
 
+    public static function getAll(): ?EloquentCollection
+    {
+        return self::mountExplorerQuery()
+            ->get();
+    }
     
     public static function getByParty(string $acronym): ?EloquentCollection
     {
@@ -171,11 +204,7 @@ class Congressperson extends BaseModel
         ->get();
     }
 
-    public static function getAll(): ?EloquentCollection
-    {
-        return self::mountExplorerQuery()
-            ->get();
-    }
+    
 
     public static function getByRate(int $star): ?EloquentCollection
     {
@@ -210,21 +239,6 @@ class Congressperson extends BaseModel
             ->get();
     }
 
-
-    private static function mountExplorerQuery()
-    {
-        return self::select(
-            'congresspeople.external_id',
-            'congresspeople.name',
-            'congresspeople.uri_photo',
-            'states.acronym as  state_acronym',
-            'parties.acronym as party_acronym',
-            'rate')
-            ->join('parties', 'parties.id', '=', 'congresspeople.fk_party_id')
-            ->join('states', 'states.id', '=', 'congresspeople.fk_state_id')
-            ->orderBy('congresspeople.name', 'asc');
-    }
-
     public static function findByIndicatorScoreRange(int $indicator, int $star, int|null $fkStateId)
     {
         return self::mountExplorerQuery()
@@ -253,6 +267,17 @@ class Congressperson extends BaseModel
             })
             ->get();
     }
+
+    public static function findByAverageScoreInAxis(int $axisId, float $minAverageScore): EloquentCollection
+{
+    return self::select('congresspeople.*', DB::raw('AVG(congressperson_indicators.score) as average_score'))
+        ->join('congressperson_indicators', 'congresspeople.id', '=', 'congressperson_indicators.fk_congressperson_id')
+        ->join('indicators', 'indicators.id', '=', 'congressperson_indicators.fk_indicator_id')
+        ->where('indicators.fk_axis_id', $axisId)
+        ->groupBy('congresspeople.id')
+        ->having('average_score', '>=', $minAverageScore)
+        ->get();
+}
 
     /**
      * @param int $limit

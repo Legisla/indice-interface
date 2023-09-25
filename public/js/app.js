@@ -175,7 +175,7 @@ function redirectToSelectedParty() {
     const party = $('.explorerTopParty').val() || null;
 
     if (party) {
-        location.href = baseUrl + '/explorador/top-scores/' + party.toLowerCase();
+        location.href = baseUrl + '/explorador/party/' + party.toLowerCase();
     }
 
 }
