@@ -94,11 +94,15 @@ class Format
                 ),
                 'nationalAxis' => (float)SiteConfig::getByKey(Configs::tryFrom('nat_avg_' . $axis->id)),
                 'congresPersonAxis' => CongresspersonAxis::findByAxisIdAndCongressperson($axis->id, $congressperson->id),
-                'stateAxis' => $stateAxis[$axis->id],
                 'info' => [
                     'axisName' => $axis->name,
                     'indicators' => Indicator::findByAxesId($axis->id),
-                ]
+                ],
+                'indicatorsMean' => self::indicatorsMean(
+                    CongresspersonIndicator::findByAxisIdAndCongressperson($axis->id, $congressperson->id),
+                    $stateIndicators[$axis->id],
+                    $nationalIndicators[$axis->id]
+                    )
             ];
         });
 
@@ -121,6 +125,54 @@ class Format
         });
     }
 
+    public static function indicatorsMean(
+        array $congressPersonIndicators,
+        array $stateIndicators,
+        array $nationalIndicators
+    ): array {
+        // Cálculo para $congressPersonIndicators
+        $totalCongress = 0;
+        $countCongress = count($congressPersonIndicators);
+        $meanCongress = 0.0;
+    
+        if ($countCongress > 0) {
+            foreach ($congressPersonIndicators as $valor) {
+                $totalCongress += floatval($valor);
+            }
+            $meanCongress = round(($totalCongress / $countCongress) * 10, 1);
+        }
+    
+        // Cálculo para $stateIndicators
+        $totalState = 0;
+        $countState = count($stateIndicators);
+        $meanState = 0.0;
+    
+        if ($countState > 0) {
+            foreach ($stateIndicators as $valor) {
+                $totalState += floatval($valor);
+            }
+            $meanState = round(($totalState / $countState) * 10, 1);
+        }
+    
+        // Cálculo para $nationalIndicators
+        $totalNational = 0;
+        $countNational = count($nationalIndicators);
+        $meanNational = 0.0;
+
+        if ($countNational > 0) {
+            foreach ($nationalIndicators as $valor) {
+                $totalNational += floatval($valor);
+            }
+
+            $meanNational = round(($totalNational / $countNational)*10,1);
+        }
+        return ['deputyMean' => $meanCongress, 'stateMean' => $meanState, 'nationalMean' => $meanNational];
+    }
+    
+
+
+    
+
     public static function formatStatJson(
         array  $congressPersonIndicators,
         array  $stateIndicators,
@@ -136,9 +188,9 @@ class Format
         foreach ($congressPersonIndicators as $key => $congressPersonIndicator) {
             $arr[] = [
                 (string)$key,
-                $congressPersonIndicator,
-                $stateIndicators[$key],
-                $nationalIndicators[$key],
+                $congressPersonIndicator*10,
+                $stateIndicators[$key]*10,
+                $nationalIndicators[$key]*10,
             ];
         }
 

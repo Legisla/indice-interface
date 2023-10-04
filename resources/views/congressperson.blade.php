@@ -159,19 +159,19 @@
 
                         <ul class="box_dados_graf">
                             <li>
-                                <strong class="cor1">{{$stat['congresPersonAxis']}}</strong><br>
+                                <strong class="cor1">{{$stat['indicatorsMean']['deputyMean']}}</strong><br>
                                 {{$congressperson->congressperson_name}}
                             </li>
                             <li>
-                                <strong class="cor2">{{$stat['stateAxis']}}</strong><br>
+                                <strong class="cor2">{{$stat['indicatorsMean']['stateMean']}}</strong><br>
                                 Média {{$congressperson->state_name}}
                             </li>
                             <li>
-                                <strong class="cor3">{{$stat['nationalAxis']}}</strong><br>
+                                <strong class="cor3">{{$stat['indicatorsMean']['nationalMean']}}</strong><br>
                                 Média Brasil
                             </li>
                         </ul>
-
+                        
                         <div class="bloco_grafico" id="cntr{{$axis}}">
                             <!-- COLOCAR GRAFICO AQUI -->
                         </div>
@@ -181,9 +181,11 @@
                         @endforeach
 
                         <script>
-
+                                
+                                
                             function translateIndicators(indicators) {
                                 var translated = {!! json_encode($stat['info']['indicators']) !!};
+                                console.log(translated);
                                 for (var key in indicators) {
                                     translated[key] = indicators[key];
                                 }
