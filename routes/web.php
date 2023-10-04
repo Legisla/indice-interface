@@ -60,6 +60,15 @@ Route::middleware(['block.site'])->group(function () {
 
             });
 
+            Route::group(['prefix' => 'topn'], function () {
+
+                Route::get('/{selectedState}', [ExplorerController::class, 'explorerTopNScores'])->name('topn');
+
+                Route::get('/{selectedState}/{axis}', [ExplorerController::class, 'explorerTopNScores'])->name('topn');
+
+            });
+
+
 
             Route::get('/estado/{selectedState}', [ExplorerController::class, 'explorerByState'])->name('explorador-estado');
 
@@ -84,8 +93,6 @@ Route::middleware(['block.site'])->group(function () {
             Route::get('/uma-estrela/{state}', [ExplorerController::class, 'explorerByRateAndState'])->name('1-star-and-state');
 
             Route::get('/nome/', [ExplorerController::class, 'explorerByName'])->name('search-by-name');
-
-            Route::get('/top-scores/{selectedState?}', [ExplorerController::class, 'explorerTopNScores'])->name('top-scores');
 
             Route::get('/party/{selectedParty?}', [ExplorerController::class, 'explorerParty'])->name('party');
 
@@ -114,6 +121,13 @@ Route::middleware(['block.site'])->group(function () {
 
             });
 
+            Route::group(['prefix' => 'topn'], function () {
+
+                Route::get('/{selectedState}', [ExplorerController::class, 'explorerTopNScores'])->name('topn');
+
+                Route::get('/{selectedState}/{axis}', [ExplorerController::class, 'explorerTopNScores'])->name('topn');
+
+            });
 
             Route::get('/estado/{selectedState}', [HomeController::class, 'index'])->name('explorador-estado');
 

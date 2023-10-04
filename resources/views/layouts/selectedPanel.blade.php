@@ -62,7 +62,7 @@
                             <div class="filtro_estado" style="display: none;">
 
                                 <form>
-                                    <select name="UF" id="stateSelectorExplorerPanel">
+                                    <select name="UF" id="stateSelectorExplorerPanelSelected">
                                         <option value="">POR ESTADO</option>
 
                                         @foreach($states as $state)
@@ -105,7 +105,7 @@
 
                                             <h3>
                                                 <a class="substituteLink"
-                                                   href="{{route('filtro',['br',$statLink['link']])}}">{{$statLink['name']}}</a>
+                                                   href="{{route('topn',['br',$statLink['link']])}}">{{$statLink['name']}}</a>
                                             </h3>
                                         </div><!-- col_3 -->
 

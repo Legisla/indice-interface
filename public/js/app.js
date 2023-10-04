@@ -68,8 +68,22 @@ $(document).ready(function () {
         });
 
         $('#modal_filtro_porperty').foundation('reveal', 'open');
+    });
+
+
+    $('#stateSelectorExplorerPanelSelected').change(function () {
+        const acronym = $(this).val();
+
+        $('.stateSubstitute').html($(this).find(':selected').attr('data-name').toUpperCase());
+
+        $('.substituteLink').each(function () {
+            let href = $(this).attr('href');
+            $(this).attr('href', href.replace('/br/', '/' + acronym + '/'));
+        });
+
         $('#modal_destaque_property').foundation('reveal', 'open');
     });
+
 
 
     $('.filterSelectState').change(function () {
@@ -166,7 +180,7 @@ function redirectToSelectedUF() {
     const state = $('.explorerTopState').val() || null;
 
     if (state) {
-        location.href = baseUrl + '/explorador/top-scores/' + state.toLowerCase();
+        location.href = baseUrl + '/explorador/topn/' + state.toLowerCase();
     }
 
 }
