@@ -36,6 +36,7 @@ use DB;
  * @property string $membership_on_bodies
  * @property int    $total_votes
  * @property bool   $active
+ * @property int    $stars
  * @property Carbon $start_of_mandate
  * @property Carbon $entrance_on_party
  * @property Carbon $end_of_mandate
@@ -82,6 +83,7 @@ class Congressperson extends BaseModel
         'rate',
         'rate_non_adjusted',
         'active',
+        'stars',
     ];
 
     public function party(): BelongsTo
