@@ -11,6 +11,7 @@ use App\Models\Congressperson;
 
 # USAGE:
 # php artisan import:congressperson-indicators /caminho/para/o/arquivo.csv
+ini_set('memory_limit', '128M');
 
 class ImportCongresspersonIndicators extends Command
 {
