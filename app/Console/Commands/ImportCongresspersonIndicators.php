@@ -7,6 +7,7 @@ use App\Services\ExternalImportService;
 use App\Services\ImportService;
 use App\Services\ScoreService;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Models\Congressperson;
 
 # USAGE:
 # php artisan import:congressperson-indicators /caminho/para/o/arquivo.csv
@@ -44,6 +45,8 @@ class ImportCongresspersonIndicators extends Command
         $this->info('Iniciando importação...');
 
         // Aqui você chama o seu serviço para fazer a importação.
+        Congressperson::deactivateAll();
+
         Excel::import(new ExternalImportService(), $csvFile);
         
         $this->info('Importação concluída.');
@@ -52,6 +55,7 @@ class ImportCongresspersonIndicators extends Command
         $importService = new ImportService();
         $scoreService = new ScoreService($importService);
         $scoreService->calculateGeneralAverages();
+        $scoreService->calculateAxisScores();
 
         $this->info('Médias dos estados calculadas.');
 

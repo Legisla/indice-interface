@@ -40,7 +40,7 @@ class ScoreService
         $this->calculateCongresspeopleMainRate();
 
         $this->importService->report('calculating axis scores for each congressperson');
-        $this->calulteAxisScores();
+        $this->calculateAxisScores();
 
         $this->importService->report('calculating general averages');
         $this->calculateGeneralAverages();
@@ -191,7 +191,7 @@ class ScoreService
     }
 
 
-    private function calulteAxisScores()
+    public function calculateAxisScores()
     {
         $this->importService->iterateProgressBar(
             Congressperson::getAllCurrent(),
@@ -200,7 +200,8 @@ class ScoreService
                 Axis::all()->each(function ($axis) use ($congressperson) {
 
                     $scores = CongresspersonIndicator::findByAxisIdAndCongressperson($axis->id, $congressperson->id);
-
+                    dump($scores);
+                    
                     CongresspersonAxis::saveOrCreate(
                         $congressperson->id,
                         $axis->id,
