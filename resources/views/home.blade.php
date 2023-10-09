@@ -24,7 +24,7 @@
 
     <br clear="all">
 
-    @include('layouts.selectedPanel')
+        @include('layouts.selectedPanel')
 
         <section id="destaque">
             <div class="central">

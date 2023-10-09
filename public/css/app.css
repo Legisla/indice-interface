@@ -11759,6 +11759,10 @@ footer .box_foot .rcol .redes_foot a:hover {
     background: #fa2567;
 }
 
+.explorador.white {
+    background-color:#fff;
+    border-color: #fff !important;
+}
 /* line 599, ../scss/app.scss */
 .explorador .accordion-navigation a.bot_explo {
     padding: 0;
@@ -11787,6 +11791,11 @@ footer .box_foot .rcol .redes_foot a:hover {
     border-radius: 0 0 16px 16px;
     font-family: 'stretch_proregular';
     letter-spacing: 1px;
+}
+
+.explorador.white .accordion-navigation a.bot_explo_interno h2 {
+    background-color:#fa2567;
+    border-radius: 16px 16px 16px 16px;
 }
 
 @media only screen and (max-width: 660px) {
@@ -11848,6 +11857,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 .explorador .accordion .accordion-navigation .content.active {
     padding-top: 80px;
     transition: 0.5s ease 0s;
+    margin:0 auto;
 }
 
 /* line 665, ../scss/app.scss */
@@ -11877,6 +11887,10 @@ footer .box_foot .rcol .redes_foot a:hover {
     border: solid 4px #FFF;
     position: relative;
     box-shadow: 3px 3px 9px #404040;
+}
+
+.explorador.white .box_explorador {
+    background: #fa2567;
 }
 
 /* line 684, ../scss/app.scss */

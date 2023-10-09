@@ -1,5 +1,5 @@
 @if(setting('site.showIndex'))
-<section id="selected" class="explorador">
+<section id="selected" class="explorador white">
     <div class="central">
 
         <ul class="accordion">
@@ -7,14 +7,14 @@
                 <a
                    class="bot_explo_interno" {{ Route::current()->getName() =='home' ? 'aria-expanded="true"' : ''}}>
                     <h2>
-                        DESTAQUES
+                        CONFIRA OS DESTAQUES
                     </h2>
                 </a>
                 <div id="panel1a" class="content {{ Route::current()->getName() =='home' ? 'active' : ''}}">
                     <div class="col_3-wrapper">
                         <div class="col_3">
                             <div class="box_explorador">
-                                <img src="{{asset('img/img_ex1.png')}}" alt="">
+                                <!-- <img src="{{asset('img/img_ex1.png')}}" alt=""> -->
 
                                 <h3>DESTAQUES POR ESTADO</h3>
 
@@ -34,7 +34,7 @@
 
                         <div class="col_3">
                             <div class="box_explorador">
-                                <img src="{{asset('img/img_ex2.png')}}" alt="">
+                                <!-- <img src="{{asset('img/img_ex2.png')}}" alt=""> -->
 
                                 <h3>DESTAQUES POR PARTIDO</h3>
 
@@ -55,7 +55,7 @@
                         <div class="col_3 filtro_box">
 
                             <div class="box_explorador">
-                                <img src="{{asset('img/img_ex3.png')}}" alt="" onclick="return false;">
+                                <!-- <img src="{{asset('img/img_ex3.png')}}" alt="" onclick="return false;"> -->
                                 <h3>DESTAQUES POR EIXO
                             </div>
 

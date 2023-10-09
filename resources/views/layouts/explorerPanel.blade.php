@@ -11,7 +11,7 @@
                     </h2>
                 </a>
                 <div id="panel1a" class="content {{ Route::current()->getName() =='home' ? 'active' : ''}}">
-                    <div>
+                    <div class="col_3-wrapper">
                         <div class="col_3">
                             <div class="box_explorador">
                                 <img src="{{asset('img/img_ex1.png')}}" alt="">
