@@ -25,8 +25,7 @@
                     <br>
                     <br>
                     <p>
-                        Somos uma organização sem fins lucrativos e suprapartidária, que trabalha para profissionalizar
-                        a política. Já atuamos com mais de 300 gabinetes parlamentares espalhados pelo Brasil
+                        Somos uma organização sem fins lucrativos e suprapartidária que trabalha para aprimorar a política. Apoiamos agentes políticos a adotarem práticas efetivas e representativas, fortalecendo a democracia brasileira
                     </p>
 
                     <ul>

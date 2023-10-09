@@ -48,7 +48,8 @@
                             </div>
                         </div><!-- col_3 -->
 
-                        <div class="col_3 filtro_box">
+                        <!--FILTRE POR EIXO OU INDICADOR
+                            <div class="col_3 filtro_box">
 
                             <div class="box_explorador">
                                 <img src="{{asset('img/img_ex3.png')}}" alt="" onclick="return false;">
@@ -78,9 +79,8 @@
                                 <a href="#" class="botao_br" data-reveal-id="modal_filtro_porperty"> BRASIL</a>
 
                             </div>
+                            
 
-
-                            <!-- AQUI TA O FILTRO DA SELEÇÃO DE OPÇÕES -->
                             <div id="modal_filtro_porperty"
                                  class="reveal-modal xlarge"
                                  data-reveal
@@ -114,7 +114,7 @@
                                                 @endforeach
                                             </ul>
 
-                                        </div><!-- col_3 -->
+                                        </div>
 
                                     @endforeach
 
@@ -122,18 +122,18 @@
 
                                 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                             </div>
-                            <!-- AQUI TA O FILTRO DA SELEÇÃO DE OPÇÕES -->
+    
 
 
-                        </div><!-- col_3 -->
+                        </div>
+                        FILTRE POR EIXO OU INDICADOR -->
 
                         <div class="col_3">
                             <a class="box_explorador" href="{{route('crie-seu-indice')}}">
                                 <img src="{{asset('img/img_ex4.png')}}" alt="">
                                 <h3>CRIE SEU<br>PRÓPRIO ÍNDICE</h3>
                             </a>
-                        </div><!-- col_3 -->
-
+                        </div>
                     </div>
                 </div>
             </li>

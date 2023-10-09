@@ -35,6 +35,7 @@ use DB;
  * @property string $preferred_themes
  * @property string $membership_on_bodies
  * @property int    $total_votes
+ * @property bool   $active
  * @property Carbon $start_of_mandate
  * @property Carbon $entrance_on_party
  * @property Carbon $end_of_mandate
@@ -80,6 +81,7 @@ class Congressperson extends BaseModel
         'expenditure',
         'rate',
         'rate_non_adjusted',
+        'active',
     ];
 
     public function party(): BelongsTo
@@ -173,9 +175,10 @@ class Congressperson extends BaseModel
             'states.acronym as  state_acronym',
             'parties.acronym as party_acronym',
             'rate')
+            ->where('congresspeople.active', true)
             ->join('parties', 'parties.id', '=', 'congresspeople.fk_party_id')
-            ->join('states', 'states.id', '=', 'congresspeople.fk_state_id')
-            ->orderBy('congresspeople.name', 'asc');
+            ->join('states', 'states.id', '=', 'congresspeople.fk_state_id');
+        
     }
 
     /**
@@ -188,20 +191,28 @@ class Congressperson extends BaseModel
     {
         return self::mountExplorerQuery()
             ->where('fk_state_id', $fkStateId)
+            ->orderBy('congresspeople.name', 'asc')
             ->get();
     }
 
     public static function getAll(): ?EloquentCollection
     {
         return self::mountExplorerQuery()
+            ->orderBy('congresspeople.name', 'asc')
             ->get();
     }
     
-    public static function getByParty(string $acronym): ?EloquentCollection
+    public static function getByParty(string $acronym, ?int $limit = null): ?EloquentCollection
     {
-        return self::mountExplorerQuery()
+        $query = self::mountExplorerQuery()
         ->where('parties.acronym', $acronym)
-        ->get();
+        ->orderBy('rate', 'desc');
+        
+        if ($limit != null) {
+            $query->limit($limit);
+        }
+        
+        return $query->get();
     }
 
     
@@ -284,16 +295,26 @@ class Congressperson extends BaseModel
      * @param int|null $fkStateId
      * @return EloquentCollection|null
      */
-    public static function getTopNScores(int $limit, ?int $fkStateId = null): ?EloquentCollection
+    public static function getTopNScores(int $limit, ?int $fkStateId = null, ?int $axis = null): ?EloquentCollection
     {
-    $query = self::query()
-                ->orderBy('rate', 'desc')
+    $query = self::mountExplorerQuery()
                 ->limit($limit);
 
     if ($fkStateId !== null) {
         $query->where('fk_state_id', $fkStateId);
     }
 
+    if ($axis !== null) {
+
+    $query->addSelect('congressperson_axes.score as score')
+            ->join('congressperson_axes', 'congressperson_axes.fk_congressperson_id', '=', 'congresspeople.id')
+            ->where('congressperson_axes.fk_axis_id', $axis)
+            ->orderBy('score', 'desc');
+        }
+    else {
+        $query->orderBy('rate', 'desc');
+    }
+    
     return $query->get();
     }
 
@@ -378,6 +399,16 @@ class Congressperson extends BaseModel
     public function getPartyColleaguesExternalId(): Collection
     {
         return $this->getPartyColleagues()->pluck('external_id');
+    }
+
+    /**
+     * Set all Congresspeople to inactive.
+     *
+     * @return void
+     */
+    public static function deactivateAll(): void
+    {
+        self::query()->update(['active' => false]);
     }
 
     public static function purge(): void

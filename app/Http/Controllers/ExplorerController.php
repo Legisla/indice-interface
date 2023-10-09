@@ -185,10 +185,10 @@ class ExplorerController extends Controller
      * @param string|null $selectedState
      * @return View
      */
-    public function explorerTopNScores(?string $selectedState = null)
+    public function explorerTopNScores(?string $selectedState = null, ?string $selectedAxis = null)
     {
         $limit = 3; // Definimos o número N como 3
-
+        $axis = Format::findAttributeBySlug($selectedAxis);
         // Convertendo o estado selecionado para ID, se fornecido
         $fkStateId = null;
         if ($selectedState !== null) {
@@ -200,7 +200,8 @@ class ExplorerController extends Controller
         }
 
         // Buscando os top 3 congressistas por score
-        $congresspeople = Congressperson::getTopNScores($limit, $fkStateId);
+        $congresspeople = Congressperson::getTopNScores($limit, $fkStateId, $axis);
+        
 
         $title = 'Top 3 Deputados por Score';
         if ($fkStateId !== null) {
@@ -216,11 +217,11 @@ class ExplorerController extends Controller
      */
     public function explorerParty(?string $selectedParty = null)
     {
-        
+        $limit = 3; // Definimos o número N como 3
 
         $title = 'Deputados de ' . $selectedParty;
 
-        $congresspeople = Congressperson::getByParty($selectedParty);
+        $congresspeople = Congressperson::getByParty($selectedParty, $limit);
 
         return view('explorer', compact('title', 'congresspeople'));
     }
