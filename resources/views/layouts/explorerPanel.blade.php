@@ -36,7 +36,7 @@
                             <div class="box_explorador">
                                 <img src="{{asset('img/img_ex2.png')}}" alt="">
 
-                                <h3>PESQUISE UM DEPUTADO<br>PELO NOME</h3>
+                                <h3>PESQUISE <br>PELO NOME</h3>
 
                             </div>
                             <div class="filtro_busca" style="display: none;">

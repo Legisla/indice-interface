@@ -11891,6 +11891,8 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 .explorador.white .box_explorador {
     background: #fa2567;
+    padding: 44px 30px 30px;
+ 
 }
 
 /* line 684, ../scss/app.scss */
@@ -11998,6 +12000,10 @@ footer .box_foot .rcol .redes_foot a:hover {
     padding: 23px;
     border-radius: 15px;
     z-index: 99;
+}
+
+.explorador.white .filtro_box .filtro_estado {
+    bottom:-80px;
 }
 /* line 752, ../scss/app.scss */
 .explorador .filtro_box .filtro_estado select {
