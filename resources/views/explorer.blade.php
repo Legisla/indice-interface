@@ -129,7 +129,7 @@
                         </p>
 
                         <div class="ranking">
-                        @if($congressperson->rate > 80)
+                        @if($congressperson->stars == 5)
                             <i class="fa fa-star font_ativo"></i>
                             <i class="fa fa-star font_ativo"></i>
                             <i class="fa fa-star font_ativo"></i>

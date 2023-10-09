@@ -129,6 +129,7 @@ class Congressperson extends BaseModel
             'congresspeople.old_parties as old_parties',
             'congresspeople.observation as observation',
             'congresspeople.name as congressperson_name',
+            'congresspeople.stars as stars',
             'parties.acronym as party_acronym',
             'congresspeople.uri',
             'states.acronym as state_acronym',
@@ -174,6 +175,7 @@ class Congressperson extends BaseModel
             'congresspeople.external_id',
             'congresspeople.name',
             'congresspeople.uri_photo',
+            'congresspeople.stars',
             'states.acronym as  state_acronym',
             'parties.acronym as party_acronym',
             'rate')

@@ -46,14 +46,15 @@
                 </div>
                 <div class="box_2 col_3">
 
+                    @if ($congressperson->stars == 5)
                     <div class="ranking">
                         <i class="fa fa-star font_ativo"></i>
-                        <i class="fa fa-star {{ $congressperson->rate > 20? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ $congressperson->rate > 40? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ $congressperson->rate > 60? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ $congressperson->rate > 80? 'font_ativo' : ''}}"></i>
+                        <i class="fa fa-star font_ativo"></i>
+                        <i class="fa fa-star font_ativo"></i>
+                        <i class="fa fa-star font_ativo"></i>
+                        <i class="fa fa-star font_ativo"></i>
                     </div>
-
+                    @endif
                     <br>
 
                     <h2>{{$congressperson->congressperson_name}}</h2>

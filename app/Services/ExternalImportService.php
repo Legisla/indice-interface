@@ -13,13 +13,12 @@ class ExternalImportService implements ToModel, WithHeadingRow
         dump($row);
         $congresspersonName = $row['deputado'];
         $congressperson = Congressperson::firstOrCreate(['name' => $congresspersonName], ['external_id' => $row['external_id']]);
-        $congressperson->update(['active' => true]);
+        $congressperson->update(['active' => true, 'stars' => $row["stars"]]);
         #$congressperson->external_id = $row['external_id']; 
 
         for ($i = 1; $i <= 16; $i++) {
             $value = $row["variavel_{$i}"];
             $score = $row["variavel_{$i}_score"];
-            #$stars = $row["variavel_{$i}_stars"];
 
             CongresspersonIndicator::updateOrCreate(
                 [
