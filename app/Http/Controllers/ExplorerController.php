@@ -202,8 +202,23 @@ class ExplorerController extends Controller
         // Buscando os top 3 congressistas por score
         $congresspeople = Congressperson::getTopNScores($limit, $fkStateId, $axis);
         
-
-        $title = 'Top 3 Deputados por Score';
+        // Definindo títulos para os eixos
+        $axisTitles = [
+            1 => 'Produção Legislativa',
+            2 => 'Fiscalização',
+            3 => 'Mobilização',
+            4 => 'Alinhamento Partidário'
+        ];
+        
+        if ($axis) {
+            $axisTitle = 'no eixo ' . $axisTitles[$axis]; // Escolhe o título baseado no ID do eixo, ou 'Score' se o id não for encontrado
+        }
+        else {
+            $axisTitle = 'por Score';
+        }
+        
+        $title = 'Deputados destaques ' . $axisTitle;
+        
         if ($fkStateId !== null) {
             $title .= ' no estado ' . $state->name;
         }

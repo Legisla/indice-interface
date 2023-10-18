@@ -17,7 +17,6 @@
                                 <!-- <img src="{{asset('img/img_ex1.png')}}" alt=""> -->
 
                                 <h3>DESTAQUES POR ESTADO</h3>
-
                                 <form>
                                     <select name="UF" class="explorerTopState">
                                         <option value="">SELECIONE</option>
@@ -37,14 +36,13 @@
                                 <!-- <img src="{{asset('img/img_ex2.png')}}" alt=""> -->
 
                                 <h3>DESTAQUES POR PARTIDO</h3>
-
                             
                             <form>
                                     <select name="PARTIDO" class="explorerTopParty">
                                         <option value="">SELECIONE</option>
-                                        @foreach($parties as $party)
+                                        @foreach(App\Models\Party::getActiveParties() as $party)
                                             <option value="{{$party->acronym}}" {{(!empty($selectedState) && $selectedParty === $party->acronym?'selected':'' )}}>
-                                                {{$party->name}}
+                                                {{$party->acronym}}
                                             </option>
                                         @endforeach
                                     </select>

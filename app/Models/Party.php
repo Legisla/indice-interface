@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @property int    $id
@@ -92,5 +93,21 @@ class Party extends Model
         }
         return $list;
     }
+
+
+    public static function getActiveParties()
+    {
+        // Obter todos os partidos que têm parlamentares ativos
+        $parties = DB::table('parties')
+            ->join('congresspeople', 'congresspeople.fk_party_id', '=', 'parties.id')
+            ->where('congresspeople.active', 1)
+            ->select('parties.id', 'parties.acronym', 'parties.name', 'parties.url_logo') // ou qualquer outro campo que você precise
+            ->distinct() // Garante que cada partido seja selecionado apenas uma vez
+            ->orderBy('parties.name')
+            ->get();
+
+        return $parties;
+    }
+
 
 }

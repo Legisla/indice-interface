@@ -224,8 +224,7 @@ class Congressperson extends BaseModel
     public static function getByRate(int $star): ?EloquentCollection
     {
         return self::mountExplorerQuery()
-            ->where('rate', '>', ($star - 1) * 20)
-            ->where('rate', '<=', $star * 20)
+            ->where('stars', $star)
             ->get();
     }
 

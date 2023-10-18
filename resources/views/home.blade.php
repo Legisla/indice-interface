@@ -5,7 +5,6 @@
 @section('content')
 
     <section id="topo" class="top_home">
-
         <div class="central">
             <div class="col_5">
                 <img src="{{asset('img/imagem-top-home.png')}}" alt="imagem de topo da home">
@@ -17,7 +16,7 @@
     </section><!-- topo -->
 
     <br clear="all">
-
+    
     @if(setting('site.showIndex'))
 
         @include('layouts.explorerPanel')
