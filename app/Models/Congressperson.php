@@ -312,7 +312,8 @@ class Congressperson extends BaseModel
     $query->addSelect('congressperson_axes.score as score')
             ->join('congressperson_axes', 'congressperson_axes.fk_congressperson_id', '=', 'congresspeople.id')
             ->where('congressperson_axes.fk_axis_id', $axis)
-            ->orderBy('score', 'desc');
+            ->orderBy('score', 'desc')
+            ->orderBy('rate', 'desc');
         }
     else {
         $query->orderBy('rate', 'desc');
