@@ -28,7 +28,6 @@
                 <form method="post" id="hiddenForm">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
                     <input type="hidden" name="uf" value="{{ $stateId }}" id="hiddenInputState"/>
-                    <input type="hidden" name="stars" value="{{ $stars }}" id="hiddenInputClassification"/>
 
                     @foreach($axes as $axis)
                         <div class="col_3" style="padding: 20px 40px">
@@ -57,19 +56,8 @@
             </a>
 
             <div class="box_top_title">
-                <h3><strong>DEPUTADOS {{$stars}}</strong></h3>
+                <h3><strong>DEPUTADOS</strong></h3>
 
-                @if(!empty($stars))
-
-                    <div class="ranking">
-                        <i class="fa fa-star font_ativo"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 20? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 40? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 60? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 80? 'font_ativo' : ''}}"></i>
-                    </div>
-
-                @endif
                 <br clear="all">
                 <p>RESULTADO EM ORDEM ALFABÉTICA</p>
             </div>
@@ -86,7 +74,7 @@
                             </option>
                         @endforeach
                     </select>
-                    <select id="classificationCustomIndex" name="classificationCustomIndex">
+                    <!-- <select id="classificationCustomIndex" name="classificationCustomIndex">
                         <option value="">{{empty($stars)?'Alterar Classificação':'Limpar Classificação'}}</option>
                         <option value="5" {{!empty($stars) && $stars == 5 ?'selected':''}}>5 estrelas
                         </option>
@@ -97,7 +85,7 @@
                         <option value="2" {{!empty($stars) && $stars == 2 ?'selected':''}}>2 estrelas
                         </option>
                         <option value="1" {{!empty($stars) && $stars == 1 ?'selected':''}}>1 estrela</option>
-                    </select>
+                    </select> -->
                 </form>
 
             </div>
@@ -117,16 +105,19 @@
                         <strong>{{$congressperson->name}}</strong>
                         <p>
                             {{$congressperson->state_acronym}}<br>
-                            {{$congressperson->party_acronym}}
+                            {{$congressperson->party_acronym}}<br>
+                            [{{$congressperson->mainScore}} / {{$congressperson->stars}}]
                         </p>
 
+                        @if ($congressperson->stars == 5)
                         <div class="ranking">
                             <i class="fa fa-star font_ativo"></i>
-                            <i class="fa fa-star {{ $congressperson->mainScore * 10 > 20? 'font_ativo' : ''}}"></i>
-                            <i class="fa fa-star {{ $congressperson->mainScore * 10 > 40? 'font_ativo' : ''}}"></i>
-                            <i class="fa fa-star {{ $congressperson->mainScore * 10 > 60? 'font_ativo' : ''}}"></i>
-                            <i class="fa fa-star {{ $congressperson->mainScore * 10 > 80? 'font_ativo' : ''}}"></i>
+                            <i class="fa fa-star font_ativo"></i>
+                            <i class="fa fa-star font_ativo"></i>
+                            <i class="fa fa-star font_ativo"></i>
+                            <i class="fa fa-star font_ativo"></i>
                         </div>
+                        @endif
 
                     </div>
                     <!-- col_2 box_dep -->

@@ -347,6 +347,7 @@ class Congressperson extends BaseModel
             ->when($fkStateId, function ($query) use ($fkStateId) {
                 return $query->where('congresspeople.fk_state_id', $fkStateId);
             })
+            ->orderByDesc('mainScore')
             ->get();
     }
 

@@ -51,49 +51,74 @@ class ExplorerController extends Controller
             $stateId
         );
 
-        if ($stars = $request->get('stars')) {
-            $fixStars = true;
-        } else {
-            $stars = 5;
-            $fixStars = false;
-        }
+        // Calcular outliers e limites de intervalo
+        $scores = $congresspeopleUnfiltered->pluck('mainScore')->all();
+        sort($scores);
+        $Q1 = self::percentile($scores, 25);
+        $Q3 = self::percentile($scores, 75);
+        $IQR = $Q3 - $Q1;
+        $lower_limit = $Q1 - 1.5 * $IQR;
+        $upper_limit = $Q3 + 1.5 * $IQR;
 
-        $keepOn = true;
-        while ($keepOn) {
-            $congresspeople = $congresspeopleUnfiltered->filter(function ($congressperson) use ($stars, $fixStars) {
-                return (float)$congressperson->mainScore > ($stars - 1) * 2
-                    && (
-                        (float)$congressperson->mainScore <= $stars * 2 ||
-                        ((int)$stars === 5)
-                    );
-            });
+        $filtered_scores = array_filter($scores, function($score) use ($lower_limit, $upper_limit) {
+            return $score >= $lower_limit && $score <= $upper_limit;
+        });
 
-            if ($congresspeople->count() || $fixStars || $stars === 1) {
-                $keepOn = false;
+        $max_score = max($filtered_scores);
+        $interval = $max_score / 5;
+
+        // Nova lógica para filtrar parlamentares
+        $congresspeople = $congresspeopleUnfiltered->filter(function ($congressperson) use ($interval) {
+            $score = (float) $congressperson->mainScore;
+            $stars = 0;
+
+            if ($score <= $interval) {
+                $stars = 1;
+            } elseif ($score <= 2 * $interval) {
+                $stars = 2;
+            } elseif ($score <= 3 * $interval) {
+                $stars = 3;
+            } elseif ($score <= 4 * $interval) {
+                $stars = 4;
             } else {
-                $stars--;
+                $stars = 5;
             }
-        }
 
+            $congressperson->stars = $stars;
+            return true;
+        });
+
+        // Resto do seu código
         $axes = Axis::all()->each(function ($axis) {
             $axis->indicators = Indicator::where('fk_axis_id', $axis->id)->get();
         });
 
-        $selectedState = $stateId ? State::find($stateId)->name : null;;
+        $selectedState = $stateId ? State::find($stateId)->name : null;
 
         return view(
             'customIndexResult',
             compact(
                 'congresspeople',
-                'stars',
                 'selectedState',
                 'stateId',
                 'indicators',
                 'axes',
             )
         );
-    }
+}
 
+    // Função auxiliar para calcular percentil
+    public static function percentile($array, $percentile)
+    {
+        sort($array);
+        $index = ($percentile / 100) * count($array);
+        if (floor($index) == $index) {
+            $result = ($array[$index - 1] + $array[$index]) / 2;
+        } else {
+            $result = $array[floor($index)];
+        }
+        return $result;
+    }
     /**
      * @return View
      */

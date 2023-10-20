@@ -108,7 +108,12 @@
                                         </div><!-- col_3 -->
 
                                     @endforeach
+                                    <div>
+                                    <p>Nota: Ao aplicar o filtro por eixo, você visualiza os 3 parlamentares com as maiores pontuações considerando a média simples dos indicadores deste eixo. Esses não são, necessariamente, os parlamentares considerados 5 estrelas na pontuação geral. Para critérios de desempate nessas notas, utilizamos:</p>
+                                    <p>1) posição do/a parlamentar no eixo</p>
+                                    <p>2) posição do/a parlamentar no ranking geral</p>
 
+                                    </div>
                                 </div>
 
                                 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
