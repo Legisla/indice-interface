@@ -105,8 +105,7 @@
                         <strong>{{$congressperson->name}}</strong>
                         <p>
                             {{$congressperson->state_acronym}}<br>
-                            {{$congressperson->party_acronym}}<br>
-                            [{{$congressperson->mainScore}} / {{$congressperson->stars}}]
+                            {{$congressperson->party_acronym}}
                         </p>
 
                         @if ($congressperson->stars == 5)
