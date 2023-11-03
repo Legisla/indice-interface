@@ -56,6 +56,11 @@ $(document).ready(function () {
         redirectToSelectedParty();
     });
 
+
+    $('.explorerTopAxis').change(function () {
+        redirectToSelectedAxis();
+    });
+
     $('#stateSelectorExplorerPanel').change(function () {
 
         const acronym = $(this).val();
@@ -190,6 +195,14 @@ function redirectToSelectedParty() {
 
     if (party) {
         location.href = baseUrl + '/explorador/party/' + party.toLowerCase();
+    }
+
+}
+
+function redirectToSelectedAxis() {
+    const axis = $('.explorerTopAxis').val() || null;
+    if (axis) {
+        location.href = baseUrl + '/explorador/topn/br/' + axis.toLowerCase();
     }
 
 }

@@ -21,22 +21,14 @@
         <div class="central">
 
             <div class="box_top_title">
-                <h3><strong>DEPUTADOS</strong></h3>
-
-                @if(!empty($stars))
-
-                    <div class="ranking">
-                        <i class="fa fa-star font_ativo"></i>
-                        <!-- <i class="fa fa-star {{ ( $stars * 20 ) > 20? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 40? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 60? 'font_ativo' : ''}}"></i>
-                        <i class="fa fa-star {{ ( $stars * 20 ) > 80? 'font_ativo' : ''}}"></i> -->
-                    </div>
-
-                @endif
+                <h3><strong>{{$title}}</strong></h3>
 
                 <br clear="all">
+                @if(@isset($sort))
+                <p>RESULTADO EM ORDEM DE PONTUAÇÃO</p>
+                @else
                 <p>RESULTADO EM ORDEM ALFABÉTICA</p>
+                @endif
             </div>
 
             <div class="box_top_select">

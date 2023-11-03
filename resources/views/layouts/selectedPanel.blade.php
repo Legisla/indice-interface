@@ -50,77 +50,22 @@
                             </div>
                         </div><!-- col_3 -->
 
-                        <div class="col_3 filtro_box">
+                        <div class="col_3">
 
                             <div class="box_explorador">
                                 <!-- <img src="{{asset('img/img_ex3.png')}}" alt="" onclick="return false;"> -->
-                                <h3>DESTAQUES POR EIXO
-                            </div>
+                                <h3>DESTAQUES POR<br/>EIXO</h3>
 
-                            <div class="filtro_estado" style="display: none;">
-
-                                <form>
-                                    <select name="UF" id="stateSelectorExplorerPanelSelected">
-                                        <option value="">POR ESTADO</option>
-
-                                        @foreach($states as $state)
-                                            <option value="{{strtolower($state->acronym)}}"
-                                                    data-name="{{$state->name}}">
-                                                {{$state->name}}
-                                            </option>
-                                        @endforeach
-
-                                    </select>
-                                </form>
-
-                                <strong>OU</strong>
-
-                                <br>
-
-                                <a href="#" class="botao_br" data-reveal-id="modal_destaque_property"> BRASIL</a>
-
-                            </div>
-
-
-                            <!-- AQUI TA O FILTRO DA SELEÇÃO DE OPÇÕES -->
-                            <div id="modal_destaque_property"
-                                 class="reveal-modal xlarge"
-                                 data-reveal
-                                 aria-labelledby="modalTitle"
-                                 aria-hidden="true"
-                                 role="dialog">
-
-                                <div id="lista_destaque_criterio">
-                                    <div class="title_box">
-                                        <h5>
-                                            <strong class="stateSubstitute">BR</strong> Escolha o Eixo ou Indicador
-                                        </h5>
-                                    </div>
-
+                            <form>
+                                <select name="EIXO" class="explorerTopAxis">
+                                    <option value="">SELECIONE</option>
+                                    
                                     @foreach($statsLinks as $statLink)
-
-                                        <div class="col_3">
-
-                                            <h3>
-                                                <a class="substituteLink"
-                                                   href="{{route('topn',['br',$statLink['link']])}}">{{$statLink['name']}}</a>
-                                            </h3>
-                                        </div><!-- col_3 -->
-
+                                    <option value="{{$statLink['link']}}">{{$statLink['name']}}</option>
                                     @endforeach
-                                    <div>
-                                    <p>Nota: Ao aplicar o filtro por eixo, você visualiza os 3 parlamentares com as maiores pontuações considerando a média simples dos indicadores deste eixo. Esses não são, necessariamente, os parlamentares considerados 5 estrelas na pontuação geral. Para critérios de desempate nessas notas, utilizamos:</p>
-                                    <p>1) posição do/a parlamentar no eixo</p>
-                                    <p>2) posição do/a parlamentar no ranking geral</p>
-
-                                    </div>
-                                </div>
-
-                                <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                                </select>
+                            </form>
                             </div>
-                            <!-- AQUI TA O FILTRO DA SELEÇÃO DE OPÇÕES -->
-
-
                         </div><!-- col_3 -->
 
                     </div>

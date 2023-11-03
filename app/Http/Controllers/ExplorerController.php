@@ -156,7 +156,7 @@ class ExplorerController extends Controller
     {
         $stars = (int)Route::current()->getName();
 
-        $title = 'Deputados de ' . $stars . ' estrela' . ($stars > 1 ? 's' : '');
+        $title = 'Deputados ' . $stars . ' estrela' . ($stars > 1 ? 's' : '');
 
         $congresspeople = Congressperson::getByRate($stars);
 
@@ -248,7 +248,9 @@ class ExplorerController extends Controller
             $title .= ' no estado ' . $state->name;
         }
 
-        return view('explorer', compact('title', 'congresspeople'));
+        $sort = true;
+
+        return view('explorer', compact('title', 'congresspeople', 'sort'));
     }
 
 
