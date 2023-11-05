@@ -210,7 +210,9 @@ class Congressperson extends BaseModel
     {
         $query = self::mountExplorerQuery()
         ->where('parties.acronym', $acronym)
-        ->orderBy('rate', 'desc');
+        ->orderBy('stars', 'desc')
+        ->orderBy('rate', 'desc')
+        ->orderBy('congresspeople.id', 'asc');
         
         if ($limit != null) {
             $query->limit($limit);
@@ -317,7 +319,9 @@ class Congressperson extends BaseModel
             ->orderBy('congresspeople.id', 'asc');
         }
     else {
+        $query->orderBy('stars', 'desc');
         $query->orderBy('rate', 'desc');
+        $query->orderBy('congresspeople.id', 'asc');
     }
     
     return $query->get();

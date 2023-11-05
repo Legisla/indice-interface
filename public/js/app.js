@@ -185,7 +185,7 @@ function redirectToSelectedUF() {
     const state = $('.explorerTopState').val() || null;
 
     if (state) {
-        location.href = baseUrl + '/explorador/topn/' + state.toLowerCase();
+        location.href = baseUrl + '/explorador/topn/estado/' + state.toLowerCase();
     }
 
 }
@@ -194,7 +194,7 @@ function redirectToSelectedParty() {
     const party = $('.explorerTopParty').val() || null;
 
     if (party) {
-        location.href = baseUrl + '/explorador/party/' + party.toLowerCase();
+        location.href = baseUrl + '/explorador/topn/party/' + party.toLowerCase();
     }
 
 }
@@ -202,7 +202,7 @@ function redirectToSelectedParty() {
 function redirectToSelectedAxis() {
     const axis = $('.explorerTopAxis').val() || null;
     if (axis) {
-        location.href = baseUrl + '/explorador/topn/br/' + axis.toLowerCase();
+        location.href = baseUrl + '/explorador/topn/eixo/' + axis.toLowerCase();
     }
 
 }

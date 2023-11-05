@@ -210,22 +210,14 @@ class ExplorerController extends Controller
      * @param string|null $selectedState
      * @return View
      */
-    public function explorerTopNScores(?string $selectedState = null, ?string $selectedAxis = null)
+    public function explorerTopnAxis(?string $selectedAxis = null)
     {
         $limit = 3; // Definimos o número N como 3
         $axis = Format::findAttributeBySlug($selectedAxis);
         // Convertendo o estado selecionado para ID, se fornecido
-        $fkStateId = null;
-        if ($selectedState !== null) {
-            $selectedState = strtoupper($selectedState);
-            $state = State::findByAcronym($selectedState);
-            if ($state) {
-                $fkStateId = $state->id;
-            }
-        }
-
+        
         // Buscando os top 3 congressistas por score
-        $congresspeople = Congressperson::getTopNScores($limit, $fkStateId, $axis);
+        $congresspeople = Congressperson::getTopNScores($limit, null, $axis);
         
         // Definindo títulos para os eixos
         $axisTitles = [
@@ -244,10 +236,6 @@ class ExplorerController extends Controller
         
         $title = 'Deputados destaques ' . $axisTitle;
         
-        if ($fkStateId !== null) {
-            $title .= ' no estado ' . $state->name;
-        }
-
         $sort = true;
 
         return view('explorer', compact('title', 'congresspeople', 'sort'));
@@ -255,17 +243,48 @@ class ExplorerController extends Controller
 
 
     /**
+     * @param string|null $selectedState
      * @return View
      */
-    public function explorerParty(?string $selectedParty = null)
+    public function explorerTopnUF(?string $selectedState = null)
+    {
+        $limit = 3; // Definimos o número N como 3
+        // Convertendo o estado selecionado para ID, se fornecido
+        $fkStateId = null;
+        if ($selectedState !== null) {
+            $selectedState = strtoupper($selectedState);
+            $state = State::findByAcronym($selectedState);
+            if ($state) {
+                $fkStateId = $state->id;
+            }
+        }
+
+        // Buscando os top 3 congressistas por score
+        $congresspeople = Congressperson::getTopNScores($limit, $fkStateId, null);
+        
+        
+        
+        $title = 'Deputados destaques em ' . $state->name;
+
+        $sort = true;
+
+        return view('explorer', compact('title', 'congresspeople', 'sort'));
+    }
+
+    /**
+     * @return View
+     */
+    public function explorerTopnParty(?string $selectedParty = null)
     {
         $limit = 3; // Definimos o número N como 3
 
-        $title = 'Deputados de ' . $selectedParty;
-
         $congresspeople = Congressperson::getByParty($selectedParty, $limit);
 
-        return view('explorer', compact('title', 'congresspeople'));
+        $title = 'Deputados de ' . $congresspeople[0]['party_acronym'];
+
+        $sort = true;
+
+        return view('explorer', compact('title', 'congresspeople', 'sort'));
     }
 
     /**
