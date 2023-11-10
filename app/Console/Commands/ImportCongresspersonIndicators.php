@@ -6,8 +6,12 @@ use Illuminate\Console\Command;
 use App\Services\ExternalImportService;
 use App\Services\ImportService;
 use App\Services\ScoreService;
+use App\Services\Resources\ExpensesService;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Congressperson;
+use App\Models\Expense;
+
+
 
 # USAGE:
 # php artisan import:congressperson-indicators /caminho/para/o/arquivo.csv
@@ -59,6 +63,13 @@ class ImportCongresspersonIndicators extends Command
         $scoreService->calculateAxisScores();
 
         $this->info('Médias dos estados calculadas.');
+
+        //Coleta os gastos de gabinete
+        $expensesService = new ExpensesService($importService);
+        
+        $expensesService->process();
+
+        $this->info('Gastos de gabinete calculados.');
 
         return 0;
     }

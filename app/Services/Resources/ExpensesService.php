@@ -22,6 +22,8 @@ class ExpensesService
     {
         $this->importService->iterateProgressBar(Congressperson::getAllCurrent(),
             function ($congressperson) {
+                $this->importService->report('Processing ' . $congressperson->name);
+
                 $this->processCongressPerson($congressperson);
             });
 
@@ -38,10 +40,12 @@ class ExpensesService
     {
         if ($lastOpenMonth = Expense::getLastOpenByCongresspersonId($congressperson)) {
             $targetMonth = new Carbon($lastOpenMonth->year . '-' . $lastOpenMonth->month . '-01');
+            
+
         } else {
             $targetMonth = new Carbon(config('source.date.start'));
         }
-
+        $this->importService->report('Target month ' . $targetMonth);
         while ($targetMonth->diffInMonths(Carbon::now()->addMonth())) {
             Expense::creatOrUpdateByMonthAndCongressperson($congressperson, $targetMonth->year, $targetMonth->month,
                 (new RequesterService())->getTotalExpenditureByMonth($congressperson->external_id, $targetMonth->year, $targetMonth->month)

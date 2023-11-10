@@ -2,6 +2,9 @@
 
 return [
     'legislature_id' => 57,
+    'date' => [
+        'start' => '2023-01-01'
+    ],
 
     'indicators' => [
         'remove_outliers' => [1, 2, 3, 6, 8, 9, 13, 14, 15],
