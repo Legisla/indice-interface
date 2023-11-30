@@ -40,6 +40,12 @@
                     </li>
                 </ul>
             </div>
+            <div style="display:flex;justify-content:center; align-items: center;">
+                        <a href="https://www.legislabrasil.org/indice-legisla-acesse-o-relatorio/" target="_blank" title="">
+                            <h3 style="background-color:#fa2567; border-radius: 10px;border: solid 4px #FFF; box-shadow: 3px 3px 9px #404040; color:#fff; text-align:center; margin:2em auto; width:100%; padding:5px;">Receba o relatório exclusivo sobre seu mandato</h2>
+                        </a>
+                </ul>
+            </div>
         </section><!-- destaque -->
 
         <br clear="all">
