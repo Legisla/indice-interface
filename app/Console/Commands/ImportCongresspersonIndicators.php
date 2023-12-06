@@ -10,6 +10,8 @@ use App\Services\Resources\ExpensesService;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Congressperson;
 use App\Models\Expense;
+use App\Enums\Initiator;
+
 
 
 
@@ -24,7 +26,9 @@ class ImportCongresspersonIndicators extends Command
      *
      * @var string
      */
-    protected $signature = 'import:congressperson-indicators {csv_file}';
+    protected $signature = 'import:congressperson-indicators 
+        { --csv_file= : csv file }
+        { --initiator=  : cron or command  }';
 
     /**
      * The console command description.
@@ -40,7 +44,8 @@ class ImportCongresspersonIndicators extends Command
      */
     public function handle()
     {
-        $csvFile = $this->argument('csv_file');
+        $csvFile = $this->option('csv_file');
+        $initiator = Initiator::from($this->option('initiator'));
 
         if (!file_exists($csvFile) || !is_readable($csvFile)) {
             $this->error("O arquivo CSV não existe ou não é legível.");
@@ -58,18 +63,21 @@ class ImportCongresspersonIndicators extends Command
 
         // Chama a função para calcular as médias dos estados
         $importService = new ImportService();
+        $importService->doImportation($initiator);
         $scoreService = new ScoreService($importService);
         $scoreService->calculateGeneralAverages();
         $scoreService->calculateAxisScores();
 
         $this->info('Médias dos estados calculadas.');
 
+        //Expense::purge();
         //Coleta os gastos de gabinete
         $expensesService = new ExpensesService($importService);
         
         $expensesService->process();
 
         $this->info('Gastos de gabinete calculados.');
+        $importService->importation->finish();
 
         return 0;
     }

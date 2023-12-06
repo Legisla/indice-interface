@@ -4,6 +4,6 @@
     </a>
     <br>
     <span class="gray em-08">
-        dados atualizados em 04/10/2023
+        dados atualizados em {{getLastImportationEnd()}}
     </span>
 </div>

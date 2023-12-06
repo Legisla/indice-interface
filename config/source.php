@@ -3,7 +3,7 @@
 return [
     'legislature_id' => 57,
     'date' => [
-        'start' => '2023-01-01'
+        'start' => '2023-02-01'
     ],
 
     'indicators' => [

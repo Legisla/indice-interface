@@ -53,20 +53,18 @@ class ImportService
      * @throws GuzzleException
      * @throws Exception
      */
-    public function doImportation(Initiator $initiator, bool $cleanStart): void
+    public function doImportation(Initiator $initiator, bool $cleanStart = false): void
     {
         list($legislature_start, $legislature_end) = $this->getLegislatureDates(config('source.legislature_id'));
-
+    
         $this->importation = Importation::createOrGetLast(
             config('source.legislature_id'),
             $initiator,
             $cleanStart,
-            $this->generateStages(),
+            [], // Stages são removidos
             $legislature_start,
             $legislature_end
         );
-
-        $this->processImportation($cleanStart);
     }
 
     /**

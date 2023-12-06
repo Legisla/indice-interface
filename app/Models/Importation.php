@@ -131,7 +131,7 @@ class Importation extends Model
     {
         return self::where('status', ImportationStatus::FINISHED)
             ->where('legislature_id', config('source.legislature_id'))
-            ->orderBy('id', 'desc')
+            ->orderBy('finished_at', 'desc')
             ->first();
     }
 
