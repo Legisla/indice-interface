@@ -6,6 +6,8 @@ use GuzzleHttp\Client as HttpClient;
 use Illuminate\Support\Collection;
 use GuzzleHttp\Exception\GuzzleException;
 use Carbon\Carbon;
+use Exception;
+use Illuminate\Support\Facades\Log;
 
 
 class RequesterService
@@ -216,18 +218,36 @@ class RequesterService
      */
     private function doRequestExpensesPaginated(int $congresspersonExternalId, int $year, int $month, int $page): ?array
     {
-        return json_decode($this->httpClient->request(
-            method: 'GET',
-            uri: config('source.url.root') .
-            sprintf(
-                config('source.url.congresspeople.expenses'),
-                $congresspersonExternalId,
-                $year,
-                $month,
-                $page
-            ),
-            options: $this->acceptJsonOptions
-        )->getBody()->getContents(), true);
+        // adiciona um try e um retry para solucionar situações quando a API retorna 403 por algum motivo inexplicado.
+        try {
+            $count = 0;
+            $response = retry(5, function () use ($congresspersonExternalId, $year, $month, $page,&$count) {
+                $count++;
+
+                $guzzleResponse = $this->httpClient->request(
+                    method: 'GET',
+                    uri: config('source.url.root') .
+                    sprintf(
+                        config('source.url.congresspeople.expenses'),
+                        $congresspersonExternalId,
+                        $year,
+                        $month,
+                        $page
+                    ),
+                    options: $this->acceptJsonOptions
+                );
+
+                $guzzleResponseContent=$guzzleResponse->getBody()->getContents();
+                $responseJson = json_decode($guzzleResponseContent, true);
+                return $responseJson; 
+            }, 100); // 3 tentativas, 100 milissegundos de atraso entre elas
+        } catch (Exception $e) {
+            Log::info('Erro na requisição');
+
+            throw $e; 
+        }
+        
+        return $response;
     }
 
 
