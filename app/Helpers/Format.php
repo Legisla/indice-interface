@@ -52,15 +52,9 @@ class Format
     public static function calculateTimes(Congressperson $congressperson): array
     {
         $office_time = $party_time = 0;
-
-        if ($congressperson->start_of_mandate) {
-            if (!$congressperson->end_of_mandate) {
-                $congressperson->end_of_mandate = Carbon::now();
-            }
-
-            $office_time = $congressperson->start_of_mandate->diff($congressperson->end_of_mandate)->format('%y');
-        }
-
+        $office_time = $party_time = 0;
+        $office_time_seconds = $congressperson->time_in_office;
+        $office_time = round($office_time_seconds);
         if ($congressperson->entrance_on_party) {
             if (!$congressperson->exit_on_party) {
                 $congressperson->exit_on_party = Carbon::now();

@@ -84,6 +84,7 @@ class Congressperson extends BaseModel
         'rate_non_adjusted',
         'active',
         'stars',
+        'time_in_office'
     ];
 
     public function party(): BelongsTo
@@ -130,6 +131,7 @@ class Congressperson extends BaseModel
             'congresspeople.observation as observation',
             'congresspeople.name as congressperson_name',
             'congresspeople.stars as stars',
+            'congresspeople.time_in_office as time_in_office',
             'parties.acronym as party_acronym',
             'congresspeople.uri',
             'states.acronym as state_acronym',

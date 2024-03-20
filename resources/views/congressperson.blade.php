@@ -74,7 +74,7 @@
                     <ul>
                         <li>
                             <div class="ico_tempo">
-                                <strong>{{$officeTime}}</strong><br>Ano{{$officeTime > 1 ? 's' : ''}}
+                                <strong>{{$officeTime}}</strong><br>Dia{{$officeTime > 1 ? 's' : ''}}
                             </div>
                             <h5>Tempo de mandato</h5>
                         </li>
