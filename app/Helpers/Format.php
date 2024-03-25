@@ -54,7 +54,8 @@ class Format
         $office_time = $party_time = 0;
         $office_time = $party_time = 0;
         $office_time_seconds = $congressperson->time_in_office;
-        $office_time = round($office_time_seconds);
+        $office_time = $party_time = 0;
+        $office_time = round(($congressperson->time_in_office)/ 30.417  );
         if ($congressperson->entrance_on_party) {
             if (!$congressperson->exit_on_party) {
                 $congressperson->exit_on_party = Carbon::now();

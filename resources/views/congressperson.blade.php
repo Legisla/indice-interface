@@ -74,7 +74,7 @@
                     <ul>
                         <li>
                             <div class="ico_tempo">
-                                <strong>{{$officeTime}}</strong><br>Dia{{$officeTime > 1 ? 's' : ''}}
+                                <strong>{{$officeTime}}</strong><br>{{$officeTime > 1 ? 'Meses' : 'Mês'}}
                             </div>
                             <h5>Tempo de mandato</h5>
                         </li>
@@ -151,7 +151,7 @@
     <section id="dados_grafico">
         <div class="central">
             <h2 class="col_12">VEJA AS NOTAS</h2>
-
+            
             @foreach($statsData as $axis=>$stat)
 
                 <div class="col_3">'
