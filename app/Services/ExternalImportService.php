@@ -12,8 +12,8 @@ class ExternalImportService implements ToModel, WithHeadingRow
     {
         dump($row);
         $congresspersonName = $row['deputado'];
-        $congressperson = Congressperson::firstOrCreate(['name' => $congresspersonName], ['external_id' => $row['external_id']]);
-        $congressperson->update(['active' => true, 'stars' => $row["stars"]]);
+        $congressperson = Congressperson::firstOrCreate(['external_id' => $row['external_id']], ['external_id' => $row['external_id'], 'name' => $congresspersonName ]);
+        $congressperson->update(['active' => true, 'stars' => $row["stars"], 'time_in_office' => $row['time_in_office'] ]);
         #$congressperson->external_id = $row['external_id']; 
 
         for ($i = 1; $i <= 16; $i++) {
