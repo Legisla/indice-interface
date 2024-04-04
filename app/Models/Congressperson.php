@@ -183,7 +183,8 @@ class Congressperson extends BaseModel
             'rate')
             ->where('congresspeople.active', true)
             ->join('parties', 'parties.id', '=', 'congresspeople.fk_party_id')
-            ->join('states', 'states.id', '=', 'congresspeople.fk_state_id');
+            ->join('states', 'states.id', '=', 'congresspeople.fk_state_id')
+            ->orderBy('name', 'asc');
         
     }
 
