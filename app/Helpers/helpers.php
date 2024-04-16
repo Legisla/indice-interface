@@ -105,7 +105,28 @@ use App\Models\Importation;
 if (!function_exists('getLastImportationEnd')) {
     function getLastImportationEnd(): string
     {
+        $importation = Importation::getLastCompleted();
+        if ($importation->filename && $importation->filename != ''&& $date = getDateFromFilename($importation->filename)){
+            return $date;
+        }
         return Importation::getLastCompletedEnd() ?: '--';
+    }
+}    
+
+if (!function_exists('getDateFromFilename')) {
+    function getDateFromFilename($filename): string
+    {
+        $date ='';
+        // Usando expressão regular para extrair a data do nome do arquivo
+        if (preg_match('/\d{4}-\d{2}-\d{2}/', $filename, $matches)) {
+            $date = $matches[0]; // Captura a data no formato YYYY-MM-DD
+            $dateTime = new DateTime($date);
+            // Formatar a data para o formato desejado 'd/m/Y'
+            $formatedDate = $dateTime->format('d/m/Y');
+            return $formatedDate;
+
+        } 
+        return $date;
     }
 }
 
