@@ -53,7 +53,7 @@ class ImportService
      * @throws GuzzleException
      * @throws Exception
      */
-    public function doImportation(Initiator $initiator, bool $cleanStart = false): void
+    public function doImportation(Initiator $initiator, bool $cleanStart = false, string $filename = ''): void
     {
         list($legislature_start, $legislature_end) = $this->getLegislatureDates(config('source.legislature_id'));
     
@@ -63,7 +63,8 @@ class ImportService
             $cleanStart,
             [], // Stages são removidos
             $legislature_start,
-            $legislature_end
+            $legislature_end,
+            $filename
         );
     }
 

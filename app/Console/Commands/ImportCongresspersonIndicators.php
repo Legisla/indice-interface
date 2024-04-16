@@ -63,7 +63,8 @@ class ImportCongresspersonIndicators extends Command
 
         // Chama a função para calcular as médias dos estados
         $importService = new ImportService();
-        $importService->doImportation($initiator);
+        $filename = basename($csvFile);
+        $importService->doImportation($initiator,false,  $filename);
         $scoreService = new ScoreService($importService);
         $scoreService->calculateGeneralAverages();
         $scoreService->calculateAxisScores();

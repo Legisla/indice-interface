@@ -38,6 +38,7 @@ class Importation extends Model
         'legislature_end',
         'started_at',
         'finished_at',
+        'filename'
     ];
 
     protected $dates = [
@@ -55,7 +56,8 @@ class Importation extends Model
         bool      $cleanStart,
         array     $stages,
         Carbon    $legislature_start,
-        Carbon    $legislature_end
+        Carbon    $legislature_end,
+        string    $filename
     ): self
     {
         if ($cleanStart) {
@@ -77,6 +79,7 @@ class Importation extends Model
             'legislature_end' => $legislature_end,
             'started_at' => now(),
             'initiator' => $initiator,
+            'filename' => $filename
         ]);
     }
 
