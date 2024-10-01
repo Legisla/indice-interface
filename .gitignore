@@ -15,3 +15,4 @@ yarn-error.log
 compose/local/mariadb/data
 mariadb_data
 resultado.csv
+*.csv
