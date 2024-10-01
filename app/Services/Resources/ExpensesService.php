@@ -50,6 +50,7 @@ class ExpensesService
             Expense::creatOrUpdateByMonthAndCongressperson($congressperson, $targetMonth->year, $targetMonth->month,
                 (new RequesterService())->getTotalExpenditureByMonth($congressperson->external_id, $targetMonth->year, $targetMonth->month)
             );
+            $this->importService->report('new Target month ' . $targetMonth);
 
             $targetMonth->addMonth();
         }
