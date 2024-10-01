@@ -10531,7 +10531,7 @@ th.hide-for-touch {
 /************** ESTILOS ************/
 @font-face {
     font-family: 'stretch_proregular';
-    src: url(/fonts/stretchpro-webfont.woff2?5927eeb00d9a367cfd4deb8df71f4385) format("woff2"), url(/fonts/stretchpro-webfont.woff?28d2627402e58cf14874ed1bf205e39e) format("woff");
+    src: url("../fonts/stretchpro-webfont.woff2") format("woff2"), url("../fonts/stretchpro-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -11772,7 +11772,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 .explorador .box_explorador select {
     width: 140px;
     color: #FFFFFF;
-    background: url(/images/ico_select.png?c187ec790259957a6997c70fed523965) no-repeat right center #f0be09;
+    background: url(../img/ico_select.png) no-repeat right center #f0be09;
     margin-bottom: 0;
     border: solid 1px #f0be09;
     border-radius: 8px;
@@ -11812,7 +11812,7 @@ footer .box_foot .rcol .redes_foot a:hover {
     position: absolute;
     top: 0;
     right: 0;
-    background: url(/images/bg_search.png?f620dea494e95dc1b665982abcbace58) no-repeat center center;
+    background: url(../img/bg_search.png) no-repeat center center;
     background-size: 100%;
     width: 40px;
     height: 40px;
@@ -11847,7 +11847,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 .explorador .filtro_box .filtro_estado select {
     width: 160px;
     color: #FFFFFF;
-    background: url(/images/ico_select.png?c187ec790259957a6997c70fed523965) no-repeat right center #f0be09;
+    background: url(../img/ico_select.png) no-repeat right center #f0be09;
     margin-bottom: 0;
     border: solid 1px #f0be09;
     border-radius: 8px;
@@ -11911,7 +11911,7 @@ footer .box_foot .rcol .redes_foot a:hover {
     width: 100%;
     height: 240px;
     margin-top: 88px;
-    background: url(/images/img_banner_interno.png?2d25fc55346fff1aca810d19d37e7741) no-repeat right center #b82251;
+    background: url(../img/img_banner_interno.png) no-repeat right center #b82251;
 }
 
 /* line 805, ../scss/app.scss */
@@ -13189,7 +13189,7 @@ footer .box_foot .rcol .redes_foot a:hover {
     float: left;
     width: 160px;
     color: #FFFFFF;
-    background: url(/images/ico_select.png?c187ec790259957a6997c70fed523965) no-repeat right center #f0be09;
+    background: url(../img/ico_select.png) no-repeat right center #f0be09;
     margin: 0 8px;
     border: solid 1px #f0be09;
     border-radius: 8px;
