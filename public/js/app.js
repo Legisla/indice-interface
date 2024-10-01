@@ -13,19 +13,17 @@ $(document).foundation();
 /* Slider da página inicial */
 
 /* Máscara para telefone */
-
 $(document).ready(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-
     if (scroll >= 50) {
       $(".header").addClass("change");
     } else {
       $(".header").removeClass("change");
     }
   });
-  /*** MENU CLASS SCROLL ***/
 
+  /*** MENU CLASS SCROLL ***/
   $(".filtro_box .box_explorador").click(function () {
     $(this).next(".filtro_estado").toggle();
   });
@@ -36,8 +34,8 @@ $(document).ready(function () {
   $(".cep").mask('99999-999');
   $(".cpf").mask('999.999.999-99');
   $(".data").mask('99/99/9999');
-  /* Esconder e abrir hamburguer menu */
 
+  /* Esconder e abrir hamburguer menu */
   $(".m-menu").click(function () {
     $("#main-menu").toggle();
   });
@@ -89,22 +87,18 @@ $(document).ready(function () {
   $('.rangeCustomIndex').on("input change", function () {
     var text = 'relevante';
     var style = '50% 100%';
-
     if ($(this).val() === '0') {
       style = '0% 100%';
       text = 'não relevante (x0)';
     }
-
     if ($(this).val() === '1') {
       style = '50% 100%';
       text = ' relevante (x1)';
     }
-
     if ($(this).val() === '2') {
       style = '100% 100%';
       text = 'muito relevante (x2)';
     }
-
     $(this).css('background-size', style).siblings('.textRelevance').html(text);
     checkChecks();
   });
@@ -115,7 +109,6 @@ $(document).ready(function () {
         checked = true;
       }
     });
-
     if (!checked) {
       e.preventDefault();
     } else {
@@ -131,7 +124,6 @@ $(document).ready(function () {
     $('#hiddenForm').submit();
   });
 });
-
 function checkChecks() {
   var checked = false;
   $('.rangeCustomIndex').each(function () {
@@ -139,69 +131,54 @@ function checkChecks() {
       checked = true;
     }
   });
-
   if (checked) {
     $('.customindexsubmit').removeClass('disabled');
   } else {
     $('.customindexsubmit').addClass('disabled');
   }
 }
-
 function redirectToExplorer() {
   var state = $('.explorerSelectState').val() || null;
   var rate = $('.explorerSelectRate').val() || null;
-
   if (!state && rate) {
     location.href = baseUrl + '/explorador/' + rate;
   }
-
   if (state && rate) {
     location.href = baseUrl + '/explorador/' + rate + '/' + state.toLowerCase();
   }
-
   if (state && !rate) {
     location.href = baseUrl + '/explorador/estado/' + state.toLowerCase();
   }
-
   if (!state && !rate) {
     location.href = baseUrl + '/explorador/';
   }
 }
-
 function redirectToSelectedUF() {
   var state = $('.explorerTopState').val() || null;
-
   if (state) {
     location.href = baseUrl + '/explorador/topn/estado/' + state.toLowerCase();
   }
 }
-
 function redirectToSelectedParty() {
   var party = $('.explorerTopParty').val() || null;
-
   if (party) {
     location.href = baseUrl + '/explorador/topn/party/' + party.toLowerCase();
   }
 }
-
 function redirectToSelectedAxis() {
   var axis = $('.explorerTopAxis').val() || null;
-
   if (axis) {
     location.href = baseUrl + '/explorador/topn/eixo/' + axis.toLowerCase();
   }
 }
-
 function redirectToFilter() {
   var stateSelect = $('.filterSelectState');
   var state = stateSelect.val() || 'br';
   var rate = $('.filterSelectRate').val() || null;
   var uri = stateSelect.attr('data-params');
-
   if (rate) {
     location.href = baseUrl + '/explorador/filtro/' + state.toLowerCase() + uri + rate;
   }
-
   if (state && !rate) {
     location.href = baseUrl + '/explorador/filtro/' + state.toLowerCase() + uri;
   }
@@ -209,10 +186,10 @@ function redirectToFilter() {
 
 /***/ }),
 
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
+/***/ "./resources/css/app.scss":
+/*!********************************!*\
+  !*** ./resources/css/app.scss ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -374,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app","css/style"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/style"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/style"], () => (__webpack_require__("./resources/css/app.scss")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/style"], () => (__webpack_require__("./resources/css/style.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
