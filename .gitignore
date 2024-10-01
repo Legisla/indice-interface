@@ -16,3 +16,4 @@ compose/local/mariadb/data
 mariadb_data
 resultado.csv
 *.csv
+*.sql
