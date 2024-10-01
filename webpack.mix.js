@@ -13,9 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/css/app.scss', 'public/css')
-    .postCss('resources/css/style.css', 'public/css', [
-        require('tailwindcss'),
-        require('autoprefixer'),
-    ]).options({
+    .options({
         processCssUrls: false
     });
