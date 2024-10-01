@@ -151,6 +151,7 @@ body a {
     height: 20px;
     background: #b82251;
     cursor: ew-resize;
+    -webkit-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
     width: 16px;
     border-radius: 4px 4px 20px 20px;
@@ -307,3 +308,4 @@ footer .box_foot {
         line-height: 1.4;
     }
 }
+
