@@ -30,8 +30,8 @@
                 </ul>
 
                 <a href="{{url('')}}" title="Legisla Brasil" id="logo_top">
-                    <img src="{{asset('img/marca.png')}}" class="desk_logo" alt="Legisla Brasil">
-                    <img src="{{asset('img/marca-change.png')}}" class="mobile_logo" alt="Legisla Brasil">
+                    <img src="{{asset('img/idv-marca.png')}}" class="desk_logo" alt="Legisla Brasil">
+                    <img src="{{asset('img/idv-marca-change.png')}}" class="mobile_logo" alt="Legisla Brasil">
                 </a>
 
                 <section class="top-bar-section">

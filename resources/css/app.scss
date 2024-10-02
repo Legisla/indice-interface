@@ -10878,7 +10878,7 @@ label.error {
 @media only screen and (max-width: 1640px) {
     /* line 126, ../scss/app.scss */
     .central.nav_central {
-        max-width: 1040px;
+        max-width: 1170px;
         /* TOTAL DO ROW */
     }
 }
@@ -11038,7 +11038,7 @@ header .desk_logo, .header_interna .desk_logo {
 /* line 177, ../scss/app.scss */
 #logo_top {
     float: left;
-    padding: 40px 10px 0;
+    padding: 10px 10px 0;
     min-width: 160px;
 }
 
@@ -11076,16 +11076,22 @@ header .desk_logo, .header_interna .desk_logo {
     float: left;
     margin: 0 20px 0 9%;
     position: initial;
-    background: #f8991c;
-    border-radius: 0 0 16px 16px;
+    background: #EECFB0;
+    border-radius: 0;
 }
 
 @media only screen and (max-width: 1640px) {
     /* line 197, ../scss/app.scss */
     .top-bar-section {
+        margin: 0 20px 0 100px;
+    }
+}
+.top-bar-section{
+    @media(max-width: 1199px){
         margin: 0 20px 0 20px;
     }
 }
+
 
 /* line 208, ../scss/app.scss */
 .top-bar-section li {
@@ -11171,7 +11177,7 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 252, ../scss/app.scss */
 .top-bar ul li a {
-    color: #FFFFFF;
+    color: #474747;
     display: block;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -11197,7 +11203,7 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 270, ../scss/app.scss */
 .top-bar ul li a:hover {
-    color: #b82251 !important;
+    color: #57162F !important;
     border-bottom: 4px solid;
 }
 
@@ -11353,13 +11359,14 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 357, ../scss/app.scss */
 .redes_top {
+    display: flex;
     float: right;
     margin-top: 15px;
 }
 
 /* line 361, ../scss/app.scss */
 .redes_top a {
-    color: #FFF;
+    color: #EECFB0;
     clear: both;
     float: left;
     margin: 0 5px;
@@ -11368,7 +11375,7 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 367, ../scss/app.scss */
 .redes_top a:hover {
-    color: #f8991c;
+    color: #FFF;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -11387,10 +11394,10 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 379, ../scss/app.scss */
 .change {
-    background: #FFFFFF;
+    background: #EECFB0;
     transition: 0.5s ease 0s;
     box-shadow: 0px 0px 4px #6F6F6F;
-    border-top: solid 7px #f8991c;
+    border-top: solid 7px #57162F;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -11418,7 +11425,7 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 398, ../scss/app.scss */
 .change .top-bar-section li a {
-    color: #464646 !important;
+    color: #57162F !important;
 }
 
 /* line 402, ../scss/app.scss */
@@ -11445,7 +11452,7 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 413, ../scss/app.scss */
 .change .redes_top a {
-    color: #f8991c;
+    color: #57162F;
     clear: none;
     float: left;
     margin: 0 5px;
@@ -11454,7 +11461,7 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 419, ../scss/app.scss */
 .change .redes_top a:hover {
-    color: #b82251;
+    color: #57162F;
 }
 
 /* line 424, ../scss/app.scss */
@@ -11697,9 +11704,9 @@ footer .box_foot .rcol .redes_foot a:hover {
     float: left;
     width: 100%;
     position: relative;
-    padding-top: 230px;
-    border-top: solid 10px #f8991c;
-    background: #b82251;
+    padding-top: 130px;
+    border-top: solid 10px #EECFB0;
+    background: #57162F;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -11754,7 +11761,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 .explorador {
     float: left;
     width: 100%;
-    border-top: solid 13px #f8991c;
+    border-top: solid 13px #EA5454;
     position: relative;
     background: #fa2567;
 }
@@ -11767,7 +11774,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 .explorador .accordion-navigation a.bot_explo {
     padding: 0;
     position: absolute;
-    width: 98%;
+    width: 100% !important;
     background: none;
 }
 
@@ -11784,11 +11791,11 @@ footer .box_foot .rcol .redes_foot a:hover {
     font-weight: 700;
     color: #FFFFFF;
     text-align: center;
-    max-width: 380px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 10px 5px;
-    background: #f8991c;
-    border-radius: 0 0 16px 16px;
+    padding: 18px 0 27px;
+    background: #EA5454;
+    border-radius: 0;
     font-family: 'stretch_proregular';
     letter-spacing: 1px;
 }
@@ -11811,7 +11818,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 .explorador .accordion-navigation a.bot_explo_interno {
     padding: 0;
     position: absolute;
-    width: 98%;
+    width: 100%;
     background: none;
 }
 
@@ -11828,11 +11835,11 @@ footer .box_foot .rcol .redes_foot a:hover {
     font-weight: 700;
     color: #FFFFFF;
     text-align: center;
-    max-width: 880px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 10px 5px;
-    background: #f8991c;
-    border-radius: 0 0 16px 16px;
+    padding: 18px 0 27px;
+    background: #EA5454;
+    border-radius: 0;
     font-family: 'stretch_proregular';
     letter-spacing: 1px;
 }
@@ -11882,11 +11889,9 @@ footer .box_foot .rcol .redes_foot a:hover {
     min-height: 180px;
     padding: 64px 30px 30px;
     text-align: center;
-    background: #f8991c;
-    border-radius: 10px;
-    border: solid 4px #FFF;
+    background: #E95554;
+    border-radius: 20px;
     position: relative;
-    box-shadow: 3px 3px 9px #404040;
 }
 
 .explorador.white .box_explorador {
@@ -11904,28 +11909,23 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 686, ../scss/app.scss */
 .explorador .box_explorador img {
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
 }
 
 @media only screen and (max-width: 1640px) {
     /* line 672, ../scss/app.scss */
     .explorador .box_explorador {
-        padding: 55px 20px 16px;
-        min-height: 160px;
+        padding: 16px 20px 20px;
+        min-height: 195px;
     }
 
     /* line 691, ../scss/app.scss */
     .explorador .box_explorador h3 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     /* line 693, ../scss/app.scss */
     .explorador .box_explorador img {
-        top: -50px;
-        left: 35%;
         max-width: 96px;
     }
 }
@@ -12030,6 +12030,16 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 770, ../scss/app.scss */
 .explorador .filtro_box .filtro_estado .botao_br:hover {
     background: #fa2567;
+}
+
+#explorador{
+    .central{
+        margin:0;
+        padding: 0;
+        .accordion{
+            background: #EECFB0;
+        }
+    }
 }
 
 /* line 777, ../scss/app.scss */

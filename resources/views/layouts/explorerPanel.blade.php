@@ -14,7 +14,7 @@
                     <div class="col_3-wrapper">
                         <div class="col_3">
                             <div class="box_explorador">
-                                <img src="{{asset('img/img_ex1.png')}}" alt="">
+                                <img src="{{asset('img/idv-img_ex1.png')}}" alt="">
 
                                 <h3>ESCOLHA UM ESTADO</h3>
 
@@ -34,7 +34,7 @@
 
                         <div class="col_3 box_filtro_busca">
                             <div class="box_explorador">
-                                <img src="{{asset('img/img_ex2.png')}}" alt="">
+                                <img src="{{asset('img/idv-img_ex2.png')}}" alt="">
 
                                 <h3>PESQUISE <br>PELO NOME</h3>
 
@@ -130,7 +130,7 @@
 
                         <div class="col_3">
                             <a class="box_explorador" href="{{route('crie-seu-indice')}}">
-                                <img src="{{asset('img/img_ex4.png')}}" alt="">
+                                <img src="{{asset('img/idv-img_ex3.png')}}" alt="">
                                 <h3>CRIE SEU<br>PRÓPRIO ÍNDICE</h3>
                             </a>
                         </div>
