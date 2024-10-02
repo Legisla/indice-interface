@@ -10061,9 +10061,8 @@ label.error {
 .central {
   margin: 0 auto;
   max-width: 62.5rem;
-  width: 100%;
   position: relative;
-  max-width: 1640px;
+  max-width: 100%;
   /* TOTAL DO ROW */
   padding: 0 20px;
   /* Desconto das laterais */
@@ -10734,19 +10733,22 @@ footer {
   float: left;
   width: 100%;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+0,ffffff+100 */
-  background: #f2f2f2;
+  background: #57162F;
   /* Old browsers */
+  background: #57162F;
   /* FF3.6-15 */
+  background: #57162F;
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #f2f2f2 0%, #ffffff 100%);
+  background: #57162F;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2f2f2", endColorstr="#ffffff", GradientType=0);
   /* IE6-9 */
 }
 
 /* line 481, ../scss/app.scss */
 footer .central {
-  max-width: 1360px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* line 484, ../scss/app.scss */
@@ -10766,8 +10768,9 @@ footer .logo_foot img {
 footer .box_foot {
   float: left;
   width: 100%;
-  padding: 40px 0 30px;
-  border-bottom: 1px solid #D1D1D1;
+  padding: 20px 0 10px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 15px;
 }
 
 /* line 497, ../scss/app.scss */
@@ -10776,11 +10779,11 @@ footer .box_foot .lcol {
   padding-right: 0.9375rem;
   width: 33.33333%;
   float: left;
+  display: flex;
+  align-items: center;
 }
-
-/* line 499, ../scss/app.scss */
-footer .box_foot .lcol img {
-  margin-bottom: 20px;
+footer .box_foot .lcol a {
+  color: #fff;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -10795,6 +10798,26 @@ footer .box_foot .ccol {
   padding-right: 0.9375rem;
   width: 50%;
   float: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .box_foot .ccol a {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-bottom .footer-bottom-links a {
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 20px;
 }
 
 /* line 508, ../scss/app.scss */
@@ -10804,7 +10827,7 @@ footer .box_foot .ccol h3 {
 
 /* line 509, ../scss/app.scss */
 footer .box_foot .ccol p {
-  color: #464646;
+  color: #FFF;
   font-size: 14px;
   line-height: 20px;
 }
@@ -10813,6 +10836,11 @@ footer .box_foot .ccol p {
 footer .box_foot .ccol ul li {
   float: left;
   margin-bottom: 10px;
+}
+
+footer .box_foot .ccol ul {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* line 514, ../scss/app.scss */
@@ -10945,8 +10973,8 @@ footer .box_foot .rcol .redes_foot a:hover {
 }
 
 .explorador.white {
-  background-color: #fff;
-  border-color: #fff !important;
+  background-color: #025151;
+  border-color: #025151 !important;
 }
 
 /* line 599, ../scss/app.scss */
@@ -10979,7 +11007,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 }
 
 .explorador.white .accordion-navigation a.bot_explo_interno h2 {
-  background-color: #fa2567;
+  background-color: transparent;
   border-radius: 16px 16px 16px 16px;
 }
 
@@ -11018,6 +11046,13 @@ footer .box_foot .rcol .redes_foot a:hover {
   border-radius: 0;
   font-family: "stretch_proregular";
   letter-spacing: 1px;
+}
+
+.explorador .accordion-navigation a {
+  text-align: center;
+}
+.explorador .accordion-navigation a p {
+  color: #fff;
 }
 
 @media only screen and (max-width: 660px) {
@@ -11068,11 +11103,6 @@ footer .box_foot .rcol .redes_foot a:hover {
   position: relative;
 }
 
-.explorador.white .box_explorador {
-  background: #fa2567;
-  padding: 44px 30px 30px;
-}
-
 /* line 684, ../scss/app.scss */
 .explorador .box_explorador h3 {
   color: #FFFFFF;
@@ -11104,9 +11134,23 @@ footer .box_foot .rcol .redes_foot a:hover {
 .explorador .box_explorador select {
   width: 140px;
   color: #FFFFFF;
-  background: url(../img/ico_select.png) no-repeat right center #f0be09;
+  background: url(../img/idv-ico_select.png) no-repeat right center #B82251;
   margin-bottom: 0;
-  border: solid 1px #f0be09;
+  border: solid 1px #B82251;
+  border-radius: 8px;
+}
+
+.explorador.white .box_explorador {
+  background: #4EBAAF;
+  padding: 44px 30px 30px;
+}
+
+.explorador.white .box_explorador select {
+  width: 140px;
+  color: #FFFFFF;
+  background: url(../img/idv-ico_select2.png) no-repeat right center #025151;
+  margin-bottom: 0;
+  border: solid 1px #025151;
   border-radius: 8px;
 }
 
@@ -11215,7 +11259,8 @@ footer .box_foot .rcol .redes_foot a:hover {
 #destaque {
   float: left;
   width: 100%;
-  padding: 80px 0;
+  padding: 0 15px 100px;
+  background-color: #025151;
 }
 
 /* line 781, ../scss/app.scss */
@@ -11227,8 +11272,18 @@ footer .box_foot .rcol .redes_foot a:hover {
 #destaque ul li {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 50%;
-  float: left;
+  width: 100%;
+  text-align: center;
+}
+#destaque ul li a {
+  border: 1px solid #4EBAAF;
+  height: 58px;
+  padding: 19px 59.784px 19px 56px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #4EBAAF;
+  font-size: 24px;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -12853,15 +12908,14 @@ footer .box_foot .rcol {
 
 footer .box_foot {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-gap: 20px;
+  grid-template-columns: 0.9fr 2.1fr;
 }
 
 .redes_foot {
   font-size: 30px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 140px;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
   justify-items: center;
 }
 

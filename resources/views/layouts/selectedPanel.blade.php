@@ -9,7 +9,9 @@
                     <h2>
                         CONFIRA OS DESTAQUES
                     </h2>
+                    <p>Saiba quem são os 3 melhores deputados de cada partido/estado/eixo</p>
                 </a>
+                
                 <div id="panel1a" class="content {{ Route::current()->getName() =='home' ? 'active' : ''}}">
                     <div class="col_3-wrapper">
                         <div class="col_3">

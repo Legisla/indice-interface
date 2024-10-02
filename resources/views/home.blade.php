@@ -30,22 +30,23 @@
                 <ul>
                     <li>
                         <a href="{{route('5-star')}}" title="">
-                            <img src="{{asset('img/img_dest1.jpg')}}" alt="">
+                            <!-- <img src="{{asset('img/img_dest1.jpg')}}" alt=""> -->
+                            Veja todos os Deputados 5 estrelas do Brasil
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="{{route('metodologia')}}" title="">
                             <img src="{{asset('img/img_dest2.jpg')}}" alt="">
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
-            <div style="display:flex;justify-content:center; align-items: center;">
+            <!-- <div style="display:flex;justify-content:center; align-items: center;">
                         <a href="https://legislabrasil.org/500-dias-legisla-brasil-2/" target="_blank" title="">
                             <h3 style="background-color:#fa2567; border-radius: 10px;border: solid 4px #FFF; box-shadow: 3px 3px 9px #404040; color:#fff; text-align:center; margin:2em auto; width:100%; padding:5px;">Confira o relatório sobre os 500 dias de mandato</h2>
                         </a>
                 </ul>
-            </div>
+            </div> -->
         </section><!-- destaque -->
 
         <br clear="all">
