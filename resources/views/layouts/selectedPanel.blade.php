@@ -21,7 +21,7 @@
                                 <h3>DESTAQUES POR ESTADO</h3>
                                 <form>
                                     <select name="UF" class="explorerTopState">
-                                        <option value="">SELECIONE</option>
+                                        <option value="">Selecione</option>
                                         @foreach($states as $state)
                                             <option value="{{$state->acronym}}"
                                                 {{(!empty($selectedState) && $selectedState === $state->acronym?'selected':'' )}}>
@@ -41,7 +41,7 @@
                             
                             <form>
                                     <select name="PARTIDO" class="explorerTopParty">
-                                        <option value="">SELECIONE</option>
+                                        <option value="">Selecione</option>
                                         @foreach(App\Models\Party::getActiveParties() as $party)
                                             <option value="{{$party->acronym}}" {{(!empty($selectedState) && $selectedParty === $party->acronym?'selected':'' )}}>
                                                 {{$party->acronym}}
@@ -60,7 +60,7 @@
 
                             <form>
                                 <select name="EIXO" class="explorerTopAxis">
-                                    <option value="">SELECIONE</option>
+                                    <option value="">Selecione</option>
                                     
                                     @foreach($statsLinks as $statLink)
                                     <option value="{{$statLink['link']}}">{{$statLink['name']}}</option>

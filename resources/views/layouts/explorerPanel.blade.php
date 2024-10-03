@@ -28,7 +28,7 @@
 
                                 <form>
                                     <select name="UF" class="explorerSelectState">
-                                        <option value="">SELECIONE</option>
+                                        <option value="">Selecione</option>
                                         @foreach($states as $state)
                                             <option value="{{$state->acronym}}"
                                                 {{(!empty($selectedState) && $selectedState === $state->acronym?'selected':'' )}}>
@@ -144,6 +144,7 @@
                         </div>
                     </div>
                 </div>
+                <img class="curva-home" src="{{asset('img/idv-curva-home2.png')}}" alt="Curva">
             </li>
         </ul>
 
