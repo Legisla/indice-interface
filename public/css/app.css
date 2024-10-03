@@ -9921,49 +9921,56 @@ body {
 
 /* line 59, ../scss/app.scss */
 body h1 {
-  font-size: 40px;
-  font-family: "Montserrat", sans-serif;
-  color: #FFFFFF;
-  font-weight: 700;
-  line-height: 56px;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  color: #fff;
+  letter-spacing: -1.92px;
 }
 
 /* line 60, ../scss/app.scss */
 body h2 {
-  font-size: 36px;
-  font-family: "Montserrat", sans-serif;
-  line-height: 46px;
+  font-family: "Commissioner", sans-serif;
   font-weight: 600;
+  font-size: 48px;
+  color: #fff;
+  letter-spacing: -0.96px;
 }
 
 /* line 61, ../scss/app.scss */
 body h3 {
-  font-size: 28px;
+  font-family: "Commissioner", sans-serif;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  color: #fff;
+  letter-spacing: -0.96px;
+}
+@media (max-width: 500px) {
+  body h3 {
+    font-size: 24px;
+  }
 }
 
 /* line 62, ../scss/app.scss */
 body h4 {
+  font-family: "Commissioner", sans-serif;
+  font-weight: 600;
   font-size: 20px;
+  color: #fff;
 }
 
 /* line 63, ../scss/app.scss */
 body h5 {
+  font-family: "Commissioner", sans-serif;
+  font-weight: 600;
   font-size: 17px;
+  color: #fff;
 }
 
-@media only screen and (max-width: 56.25em) {
-  /* line 66, ../scss/app.scss */
-  body h1 {
-    font-size: 30px;
-    line-height: 38px;
-  }
-}
 @media screen and (max-width: 500px) {
   /* line 69, ../scss/app.scss */
   body h1 {
-    font-size: 35px;
+    font-size: 45px;
   }
 }
 /* line 72, ../scss/app.scss */
@@ -9996,6 +10003,8 @@ body p {
   line-height: 25px;
   font-size: 16px;
   margin-bottom: 10px;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
 }
 
 /* line 88, ../scss/app.scss */
@@ -10007,7 +10016,7 @@ body p span {
 body a {
   transition: 0.5s ease 0s;
   color: #000;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Commissioner", sans-serif !important;
 }
 
 /* line 90, ../scss/app.scss */
@@ -10064,7 +10073,6 @@ label.error {
   position: relative;
   max-width: 100%;
   /* TOTAL DO ROW */
-  padding: 0 20px;
   /* Desconto das laterais */
 }
 
@@ -10274,7 +10282,7 @@ header .desk_logo, .header_interna .desk_logo {
   }
   /* line 193, ../scss/app.scss */
   #logo_top img {
-    max-width: 130px !important;
+    max-width: 100px !important;
     margin: 5px 0 0;
   }
 }
@@ -10920,24 +10928,70 @@ footer .box_foot .rcol .redes_foot a:hover {
   border-top: solid 10px #EECFB0;
   background: #57162F;
 }
+@media (max-width: 782px) {
+  #topo {
+    padding-bottom: 30px;
+  }
+}
+#topo .central {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+@media (max-width: 992px) {
+  #topo .central {
+    flex-direction: column;
+  }
+}
+@media (max-width: 782px) {
+  #topo .central {
+    padding-top: 30px;
+  }
+}
+#topo .central .col_5 {
+  padding-right: 0;
+  width: 33%;
+}
+@media (max-width: 992px) {
+  #topo .central .col_5 {
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 992px) {
+  #topo .central .col_5 img {
+    width: 70%;
+  }
+}
+#topo .central .col_7 {
+  padding-left: 20px;
+  width: 67%;
+}
+@media (max-width: 992px) {
+  #topo .central .col_7 {
+    width: 100%;
+  }
+}
+#topo .central .col_7 p {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.72px;
+  margin-top: 15px;
+}
+@media (max-width: 782px) {
+  #topo .central .col_7 p {
+    font-size: 16px;
+  }
+}
 
 @media only screen and (max-width: 56.25em) {
   /* line 569, ../scss/app.scss */
   #topo {
     padding-top: 80px;
-  }
-  /* line 579, ../scss/app.scss */
-  #topo .col_5, #topo .col_7 {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 100%;
-    float: left;
-  }
-  /* line 582, ../scss/app.scss */
-  #topo .col_5 img, #topo .col_7 img {
-    max-width: 170px;
-    margin: 0 auto;
-    display: table;
   }
 }
 /* line 586, ../scss/app.scss */
@@ -10988,7 +11042,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 @media only screen and (max-width: 660px) {
   /* line 599, ../scss/app.scss */
   .explorador .accordion-navigation a.bot_explo {
-    width: 89%;
+    width: 100%;
   }
 }
 /* line 609, ../scss/app.scss */
@@ -11025,34 +11079,36 @@ footer .box_foot .rcol .redes_foot a:hover {
   position: absolute;
   width: 100%;
   background: none;
+  text-align: center;
+  background: #EA5454 !important;
+}
+.explorador .accordion-navigation a.bot_explo_interno p {
+  color: #fff;
 }
 
 @media only screen and (max-width: 660px) {
   /* line 631, ../scss/app.scss */
   .explorador .accordion-navigation a.bot_explo_interno {
-    width: 89%;
+    width: 100%;
   }
 }
 /* line 641, ../scss/app.scss */
 .explorador .accordion-navigation a.bot_explo_interno h2 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 400;
+  color: #EECFB0;
   text-align: center;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 18px 0 27px;
-  background: #EA5454;
+  max-width: 320px;
+  width: 100%;
+  margin: 10px auto 25px;
+  padding: 10px 27px;
   border-radius: 0;
-  font-family: "stretch_proregular";
-  letter-spacing: 1px;
-}
-
-.explorador .accordion-navigation a {
-  text-align: center;
-}
-.explorador .accordion-navigation a p {
-  color: #fff;
+  font-family: "Commissioner", sans-serif;
+  letter-spacing: 0.72px;
+  border: 1px solid #EECFB0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 660px) {
@@ -11145,13 +11201,36 @@ footer .box_foot .rcol .redes_foot a:hover {
   padding: 44px 30px 30px;
 }
 
+.explorador.white .accordion-navigation a.bot_explo_interno {
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  background: none;
+  text-align: center;
+  background: #025151 !important;
+}
+.explorador.white .accordion-navigation a.bot_explo_interno p {
+  color: #fff;
+}
+
+.explorador.white .accordion-navigation a.bot_explo_interno h2 {
+  font-size: 48px;
+  font-weight: 800 !important;
+  color: #FFF;
+  text-align: center;
+  max-width: 100% !important;
+  font-family: "Commissioner", sans-serif;
+  letter-spacing: -1.44px !important;
+  border: none !important;
+  display: block !important;
+  margin-bottom: 0 !important;
+}
+
 .explorador.white .box_explorador select {
   width: 140px;
   color: #FFFFFF;
   background: url(../img/idv-ico_select2.png) no-repeat right center #025151;
   margin-bottom: 0;
-  border: solid 1px #025151;
-  border-radius: 8px;
 }
 
 /* line 708, ../scss/app.scss */
