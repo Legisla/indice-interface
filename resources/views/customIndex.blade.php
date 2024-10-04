@@ -6,7 +6,7 @@
 
     <section id="topo_interna">
 
-        <div class="central">
+        <div class="central-topo">
             <h1>
                 Crie seu índice
             </h1>

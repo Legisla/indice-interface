@@ -4,9 +4,9 @@
 
 @section('content')
 
-    <section id="topo_interna">
+    <section id="topo_interna"> 
 
-        <div class="central">
+        <div class="central-topo">
             <h1>
                 Deputad{{$congressperson->sex === 'F' ? 'a' : 'o'}} {{$congressperson->congressperson_name}}
             </h1>

@@ -5,7 +5,7 @@
 @section('content')
     <section id="topo_interna">
 
-        <div class="central">
+        <div class="central-topo">
             <h1 class="{{!empty($filterActive)?'title-filter-page':''}}">
                 {!!$title!!}
             </h1>

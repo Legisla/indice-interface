@@ -10298,7 +10298,7 @@ header .desk_logo, .header_interna .desk_logo {
 @media only screen and (max-width: 1640px) {
   /* line 197, ../scss/app.scss */
   .top-bar-section {
-    margin: 0 20px 0 100px;
+    margin: 0 20px 0 120px;
   }
 }
 @media (max-width: 1199px) {
@@ -10533,7 +10533,7 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 338, ../scss/app.scss */
 .top-bar.expanded .toggle-topbar a span::after {
-  box-shadow: 0 0 0 1px #b82251, 0 7px 0 1px #b82251, 0 14px 0 1px #b82251;
+  box-shadow: 0 0 0 1px #57162F, 0 7px 0 1px #57162F, 0 14px 0 1px #57162F;
 }
 
 /* line 341, ../scss/app.scss */
@@ -10666,16 +10666,16 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 424, ../scss/app.scss */
 .header_interna {
-  background: #FFFFFF;
+  background: #EECFB0;
   transition: 0.5s ease 0s;
   box-shadow: 0px 0px 4px #6F6F6F;
-  border-top: solid 7px #f8991c;
+  border-top: solid 7px #57162F;
 }
 
 @media only screen and (max-width: 56.25em) {
   /* line 424, ../scss/app.scss */
   .header_interna {
-    border-top: solid 3px #f8991c;
+    border-top: solid 3px #57162F;
   }
 }
 /* line 434, ../scss/app.scss */
@@ -10691,12 +10691,12 @@ header .desk_logo, .header_interna .desk_logo {
 /* line 439, ../scss/app.scss */
 .header_interna .top-bar-section {
   background: none;
-  margin-top: 10px;
+  margin-top: 19px;
 }
 
 /* line 443, ../scss/app.scss */
 .header_interna .top-bar-section li a {
-  color: #464646 !important;
+  color: #57162F !important;
 }
 
 /* line 447, ../scss/app.scss */
@@ -10718,12 +10718,12 @@ header .desk_logo, .header_interna .desk_logo {
 /* line 454, ../scss/app.scss */
 .header_interna .redes_top {
   float: right;
-  margin-top: 15px;
+  margin-top: 27px;
 }
 
 /* line 458, ../scss/app.scss */
 .header_interna .redes_top a {
-  color: #f8991c;
+  color: #57162F;
   clear: none;
   float: left;
   margin: 0 5px;
@@ -10732,7 +10732,7 @@ header .desk_logo, .header_interna .desk_logo {
 
 /* line 464, ../scss/app.scss */
 .header_interna .redes_top a:hover {
-  color: #b82251;
+  color: #57162F;
 }
 
 /****************** FOOTER *******************/
@@ -11048,25 +11048,29 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 .curva-home {
   width: 100%;
-  margin-top: -160px;
+  margin-top: -73px;
 }
 @media (max-width: 1240px) {
   .curva-home {
     margin-top: -100px;
   }
 }
-@media (max-width: 930px) {
+@media (max-width: 900px) {
   .curva-home {
-    margin-top: 0px;
+    margin-top: -170px;
+  }
+}
+@media (max-width: 500px) {
+  .curva-home {
+    margin-top: -110px;
   }
 }
 
 .explorador {
   float: left;
   width: 100%;
-  border-top: solid 13px #EA5454;
   position: relative;
-  background: #fa2567;
+  border-top: 13px solid #EA5454;
 }
 
 .explorador.white {
@@ -11176,6 +11180,18 @@ footer .box_foot .rcol .redes_foot a:hover {
   padding-top: 80px;
   transition: 0.5s ease 0s;
   margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .explorador .accordion .accordion-navigation {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .explorador.white .accordion .accordion-navigation {
+    padding-bottom: 10px;
+  }
 }
 
 .explorador.white .accordion .accordion-navigation .content.active {
@@ -11458,18 +11474,24 @@ footer .box_foot .rcol .redes_foot a:hover {
 }
 /* line 798, ../scss/app.scss */
 #topo_interna {
-  float: left;
   width: 100%;
-  height: 240px;
+  height: 205px;
   margin-top: 88px;
-  background: url(../img/img_banner_interno.png) no-repeat right center #b82251;
+  background: url(../img/imagem-top-interna.png) no-repeat right center #57162F;
+  width: 100%;
+  padding-bottom: 50px;
 }
-
-/* line 805, ../scss/app.scss */
-#topo_interna h1 {
+#topo_interna .central-topo {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#topo_interna .central-topo h1 {
   max-width: 50%;
   color: #FFFFFF;
   padding: 80px 0px;
+  font-size: 48px;
+  text-transform: uppercase;
 }
 
 /* line 807, ../scss/app.scss */
@@ -11509,35 +11531,60 @@ footer .box_foot .rcol .redes_foot a:hover {
     text-shadow: 1px 1px 2px #000000;
   }
 }
-/* line 835, ../scss/app.scss */
 #topo_interna_institucional {
   float: left;
   width: 100%;
   height: 240px;
   margin-top: 88px;
-  text-align: center;
-  background: #f0be09;
+  text-align: left;
+  background: #57162F;
 }
-
-/* line 843, ../scss/app.scss */
-#topo_interna_institucional h1 {
+@media (max-width: 782px) {
+  #topo_interna_institucional {
+    height: auto;
+    margin-top: 72px;
+    padding-top: 50px;
+  }
+}
+#topo_interna_institucional .central-topo {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 782px) {
+  #topo_interna_institucional .central-topo {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#topo_interna_institucional .central-topo::before, #topo_interna_institucional .central-topo::after {
+  display: none;
+}
+#topo_interna_institucional .central-topo h1 {
   color: #FFFFFF;
   padding: 80px 0px;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+@media (max-width: 782px) {
+  #topo_interna_institucional .central-topo h1 {
+    order: 2;
+    font-size: 32px;
+    padding: 32px 0px;
+  }
+}
+@media (max-width: 782px) {
+  #topo_interna_institucional .central-topo img {
+    order: 1;
+    width: 280px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-@media only screen and (max-width: 56.25em) {
-  /* line 835, ../scss/app.scss */
-  #topo_interna_institucional {
-    margin-top: 70px;
-    height: 180px;
-  }
-  /* line 849, ../scss/app.scss */
-  #topo_interna_institucional h1 {
-    padding: 70px 0px;
-    text-shadow: 0px 0px 7px #000;
-    max-width: 100%;
-  }
-}
 /****************** MODAL *******************/
 /* line 856, ../scss/app.scss */
 .reveal-modal-bg {
@@ -11587,6 +11634,22 @@ footer .box_foot .rcol .redes_foot a:hover {
   width: 100%;
   padding: 100px 0;
   color: #000000;
+  background: #EECFB0;
+}
+#sobre .container-fluid {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1199px) {
+  #sobre .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+#sobre .container-fluid p span {
+  font-family: "Commissioner", sans-serif !important;
+  font-size: 16px !important;
 }
 
 /* line 888, ../scss/app.scss */
@@ -11638,6 +11701,26 @@ footer .box_foot .rcol .redes_foot a:hover {
   width: 100%;
   padding: 100px 0;
   color: #000000;
+  float: left;
+  width: 100%;
+  padding: 100px 0;
+  color: #000000;
+  background: #EECFB0;
+}
+#contato .central {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1199px) {
+  #contato .central {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+#contato .central p span {
+  font-family: "Commissioner", sans-serif !important;
+  font-size: 16px !important;
 }
 
 /* line 908, ../scss/app.scss */
@@ -11647,7 +11730,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 911, ../scss/app.scss */
 #contato .redes_contato a {
-  color: #f0be09;
+  color: #EA5454;
   float: left;
   margin: 0 5px;
   font-size: 28px;
@@ -11660,7 +11743,16 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 921, ../scss/app.scss */
 #contato form label {
+  color: #57162F;
+  font-family: "Commissioner", sans-serif;
+  font-size: 14px;
   font-weight: 600;
+}
+
+#contato form svg {
+  position: relative;
+  top: -40px;
+  left: 165px;
 }
 
 /* line 922, ../scss/app.scss */
@@ -11678,20 +11770,25 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 932, ../scss/app.scss */
 #contato form input[type=submit] {
-  float: left;
-  font-size: 18px;
-  padding: 10px 18px;
-  border-radius: 6px;
-  border: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #FFF;
-  background: #f0be09;
+  display: flex;
+  width: 220px;
+  padding: 12px 48.784px 15px 0px;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 26px;
+  border: 1px solid #E95554;
+  background: #EECFB0;
+  color: #EA5454;
+  text-align: center;
+  font-family: "Commissioner", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1.68px;
 }
 
 /* line 942, ../scss/app.scss */
 #contato form input[type=submit]:hover {
-  background: #b82251;
+  background: transparent;
 }
 
 @media only screen and (max-width: 1014px) {
@@ -11719,6 +11816,17 @@ footer .box_foot .rcol .redes_foot a:hover {
   width: 100%;
   padding: 70px 0 20px;
   color: #000000;
+}
+#dados .central {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 782px) {
+  #dados .central {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* line 964, ../scss/app.scss */
@@ -12090,6 +12198,11 @@ footer .box_foot .rcol .redes_foot a:hover {
   }
 }
 /* line 1201, ../scss/app.scss */
+#dados_grafico,
+#dados {
+  background-color: #EECFB0;
+}
+
 #dados_grafico h2 {
   color: #810f36;
   font-weight: 700;
@@ -12246,6 +12359,8 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 1324, ../scss/app.scss */
 #dados .box_top_title h3 {
   float: left;
+  color: #57162F;
+  margin-top: 25px;
 }
 
 /* line 1325, ../scss/app.scss */

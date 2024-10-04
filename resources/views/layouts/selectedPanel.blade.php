@@ -3,6 +3,7 @@
     <div class="central">
 
         <ul class="accordion">
+            <img class="curva-home" src="{{asset('img/idv-curva-home4.png')}}" alt="Curva">
             <li class="accordion-navigation {{ Route::current()->getName() =='home' ? 'active' : ''}}">
                 <a
                    class="bot_explo_interno" {{ Route::current()->getName() =='home' ? 'aria-expanded="true"' : ''}}>
