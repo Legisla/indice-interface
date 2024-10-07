@@ -13,7 +13,10 @@
         </div>
     </section><!-- topo -->
 
-    <br clear="all">
+    <!-- <br clear="all"> -->
+
+    @include('layouts.explorerPanel')
+
 
     <section id="dados" class="box_indice">
         <div class="central">
@@ -77,12 +80,12 @@
 
                         @endforeach
                     </div>
-                    <br clear="all">
+                    <!-- <br clear="all"> -->
 
                     <div class="center_box">
 
                         <select id="UF" name="uf" class="height42px">
-                            <option value="">BRASIL</option>
+                            <option value="">Brasil</option>
                             @foreach($states as $state)
                                 <option value="{{$state->id}}">
                                     {{$state->name}}
@@ -94,7 +97,7 @@
                         <input type="submit"
                                class="customindexsubmit disabled"
                                name="Gerar Resultado"
-                               value="GERAR RESULTADO"
+                               value="Gerar Resultado"
                                id="customIndexSubmit">
                     </div>
                 </form>
@@ -102,5 +105,5 @@
 
         </div>
     </section><!-- dados -->
-    <br clear="all">
+    <!-- <br clear="all"> -->
 @endsection

@@ -11,11 +11,11 @@
             </h1>
         </div>
     </section><!-- topo -->
-    <br clear="all">
+    <!-- <br clear="all"> -->
 
     @include('layouts.explorerPanel')
 
-    <br clear="all">
+    <!-- <br clear="all"> -->
 
     <section id="dados">
         <div class="central">
@@ -63,11 +63,13 @@
             </div>
 
             <div class="box_top_select">
-
                 <form>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                    <path d="M12 0.360107H0L6 7.36011L12 0.360107Z" fill="white"/>
+                </svg>
                     <select id="stateCustomIndex" name="uf">
-                        <option value="">ESCOLHA</option>
-                        <option value="">BRASIL</option>
+                        <option value="">Selecione</option>
+                        <option value="">Brasil</option>
                         @foreach($states as $state)
                             <option value="{{$state->id}}" {{$state->id == $stateId ? 'selected':''}}>
                                 {{$state->name}}

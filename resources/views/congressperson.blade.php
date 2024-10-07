@@ -13,11 +13,11 @@
         </div>
     </section><!-- topo -->
 
-    <br>
+    <!-- <br> -->
 
     @include('layouts.explorerPanel')
 
-    <br>
+    <!-- <br> -->
 
     <section id="dados">
         <div class="central">
@@ -55,7 +55,7 @@
                         <i class="fa fa-star font_ativo"></i>
                     </div>
                     @endif
-                    <br>
+                    <!-- <br> -->
 
                     <h2>{{$congressperson->congressperson_name}}</h2>
 

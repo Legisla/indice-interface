@@ -10,7 +10,6 @@
             <h1>
                 Contato
             </h1>
-            <img class="img-interna" src="{{asset('img/imagem-top-interna.png')}}" alt="Curva">
         </div>
     </section><!-- topo -->
 

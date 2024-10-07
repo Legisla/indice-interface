@@ -9,14 +9,13 @@
             <h1>
                 {{$page->title}}
             </h1>
-            <img class="img-interna" src="{{asset('img/imagem-top-interna.png')}}" alt="Curva">
         </div>
     </section><!-- topo -->
-    <br clear="all">
+    <!-- <br clear="all"> -->
 
     @include('layouts.explorerPanel')
 
-    <br clear="all">
+    <!-- <br clear="all"> -->
 
     <section id="sobre">
         <div class="central">

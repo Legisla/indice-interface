@@ -10087,13 +10087,6 @@ label.error {
   clear: both;
 }
 
-@media only screen and (max-width: 1640px) {
-  /* line 115, ../scss/app.scss */
-  .central {
-    max-width: 1440px;
-    /* TOTAL DO ROW */
-  }
-}
 /* line 126, ../scss/app.scss */
 .central.nav_central {
   max-width: 1270px;
@@ -10946,6 +10939,10 @@ footer .box_foot .rcol .redes_foot a:hover {
     text-align: center;
   }
 }
+#main {
+  background: #EECFB0;
+}
+
 /****************** HOME *******************/
 /* line 569, ../scss/app.scss */
 #topo {
@@ -11048,21 +11045,16 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 .curva-home {
   width: 100%;
-  margin-top: -73px;
+  margin-top: -43px;
 }
-@media (max-width: 1240px) {
-  .curva-home {
-    margin-top: -100px;
-  }
-}
-@media (max-width: 900px) {
-  .curva-home {
-    margin-top: -170px;
-  }
-}
-@media (max-width: 500px) {
+@media (max-width: 930px) {
   .curva-home {
     margin-top: -110px;
+  }
+}
+@media (max-width: 560px) {
+  .curva-home {
+    margin-top: -117px;
   }
 }
 
@@ -11475,11 +11467,20 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 798, ../scss/app.scss */
 #topo_interna {
   width: 100%;
-  height: 205px;
+  height: 270px;
   margin-top: 88px;
   background: url(../img/imagem-top-interna.png) no-repeat right center #57162F;
   width: 100%;
   padding-bottom: 50px;
+}
+@media (max-width: 900px) {
+  #topo_interna {
+    height: auto;
+    background: url(../img/imagem-top-interna.png) no-repeat right bottom #57162F;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 #topo_interna .central-topo {
   max-width: 1170px;
@@ -11492,6 +11493,15 @@ footer .box_foot .rcol .redes_foot a:hover {
   padding: 80px 0px;
   font-size: 48px;
   text-transform: uppercase;
+  margin-bottom: 0 !important;
+}
+@media (max-width: 900px) {
+  #topo_interna .central-topo h1 {
+    max-width: 100%;
+    height: auto;
+    background: url(../img/imagem-top-interna.png) no-repeat right bottom #57162F;
+    padding: 100px 20px;
+  }
 }
 
 /* line 807, ../scss/app.scss */
@@ -11512,10 +11522,6 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 @media only screen and (max-width: 56.25em) {
   /* line 798, ../scss/app.scss */
-  #topo_interna {
-    margin-top: 70px;
-    height: 180px;
-  }
   /* line 821, ../scss/app.scss */
   #topo_interna h1 {
     padding: 50px 0px;
@@ -11538,12 +11544,12 @@ footer .box_foot .rcol .redes_foot a:hover {
   margin-top: 88px;
   text-align: left;
   background: #57162F;
+  background: url(../img/imagem-top-interna.png) no-repeat right center #57162F;
 }
 @media (max-width: 782px) {
   #topo_interna_institucional {
     height: auto;
     margin-top: 72px;
-    padding-top: 50px;
   }
 }
 #topo_interna_institucional .central-topo {
@@ -11565,23 +11571,19 @@ footer .box_foot .rcol .redes_foot a:hover {
 #topo_interna_institucional .central-topo h1 {
   color: #FFFFFF;
   padding: 80px 0px;
-  font-size: 48px;
+  font-size: 48px !important;
   text-transform: uppercase;
+}
+@media (max-width: 900px) {
+  #topo_interna_institucional .central-topo h1 {
+    text-shadow: 0px 0px 7px #000 !important;
+    padding: 32px 0px;
+  }
 }
 @media (max-width: 782px) {
   #topo_interna_institucional .central-topo h1 {
     order: 2;
     font-size: 32px;
-    padding: 32px 0px;
-  }
-}
-@media (max-width: 782px) {
-  #topo_interna_institucional .central-topo img {
-    order: 1;
-    width: 280px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -11632,7 +11634,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 #sobre {
   float: left;
   width: 100%;
-  padding: 100px 0;
+  padding: 130px 0;
   color: #000000;
   background: #EECFB0;
 }
@@ -11699,11 +11701,10 @@ footer .box_foot .rcol .redes_foot a:hover {
 #contato {
   float: left;
   width: 100%;
-  padding: 100px 0;
+  padding: 130px 0;
   color: #000000;
   float: left;
   width: 100%;
-  padding: 100px 0;
   color: #000000;
   background: #EECFB0;
 }
@@ -11814,13 +11815,14 @@ footer .box_foot .rcol .redes_foot a:hover {
 #dados {
   float: left;
   width: 100%;
-  padding: 70px 0 20px;
+  padding: 70px 0 0;
   color: #000000;
 }
 #dados .central {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 32px;
 }
 @media (max-width: 782px) {
   #dados .central {
@@ -11841,29 +11843,32 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 972, ../scss/app.scss */
 #dados .link_spec {
   float: right;
-  color: #FFFFFF;
+  color: #EECFB0;
   font-weight: 600;
-  padding: 2px 10px 2px 16px;
+  padding: 14px 32px;
   border-radius: 7px;
-  background: #f8991c;
+  background: #EA5454;
   position: relative;
+  border-radius: 0;
+  font-family: "Commissioner", sans-serif;
+  margin-top: 40px;
 }
 
 /* line 980, ../scss/app.scss */
 #dados .link_spec i {
   position: absolute;
-  top: 5px;
+  top: 8px;
   left: -10px;
-  font-size: 13px;
+  font-size: 20px;
   text-align: center;
-  padding: 4px 7px;
+  padding: 5px 10px;
   border-radius: 100%;
-  background: #f0be09;
+  background: #B96BEC;
 }
 
 /* line 991, ../scss/app.scss */
 #dados .link_spec:hover {
-  background: #fa2567;
+  background: #57162F;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -11935,6 +11940,22 @@ footer .box_foot .rcol .redes_foot a:hover {
   line-height: 16px;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+#dados .central .col_12 h2 {
+  color: #57162F;
+  font-family: "Commissioner", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 46px;
+}
+#dados .central .col_12 h3 {
+  color: #57162F;
+  text-align: center;
+  font-family: "Commissioner", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 39.2px;
 }
 
 /* line 1040, ../scss/app.scss */
@@ -12127,7 +12148,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 1151, ../scss/app.scss */
 #dados .button_info .box_3 strong {
-  color: #fa2567;
+  color: #EA5454;
   font-size: 35px;
   clear: both;
   display: block;
@@ -12203,10 +12224,16 @@ footer .box_foot .rcol .redes_foot a:hover {
   background-color: #EECFB0;
 }
 
+#dados_grafico .central {
+  max-width: 1170px !important;
+  margin: 32px auto 0 !important;
+}
+
 #dados_grafico h2 {
-  color: #810f36;
+  color: #57162F;
   font-weight: 700;
   margin-bottom: 20px;
+  font-size: 32px;
 }
 
 /* line 1203, ../scss/app.scss */
@@ -12222,6 +12249,9 @@ footer .box_foot .rcol .redes_foot a:hover {
 #dados_grafico .box_grafico h4 {
   text-transform: uppercase;
   text-align: center;
+  color: #000 !important;
+  font-size: 16px !important;
+  font-weight: 400;
 }
 
 /* line 1212, ../scss/app.scss */
@@ -12356,6 +12386,23 @@ footer .box_foot .rcol .redes_foot a:hover {
   float: left;
 }
 
+#dados .central {
+  max-width: 1170px !important;
+  margin: 32px auto 0 !important;
+}
+#dados .central .text-right {
+  margin-top: 32px;
+}
+#dados .central .text-right span {
+  top: 15px;
+  position: relative;
+  color: #57162F;
+  text-align: right;
+  font-family: "Commissioner", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
 /* line 1324, ../scss/app.scss */
 #dados .box_top_title h3 {
   float: left;
@@ -12372,23 +12419,44 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 1328, ../scss/app.scss */
 #dados .box_top_select {
   float: right;
+  margin: 32px 0 16px;
+}
+#dados .box_top_select a {
+  font-size: 14px;
+}
+#dados .box_top_select span {
+  top: 15px;
+  position: relative;
+  color: #57162F;
+  text-align: right;
+  font-family: "Commissioner", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 /* line 1331, ../scss/app.scss */
 #dados .box_top_select form {
   float: right;
-  margin: 0 17px 0 0;
+  margin: 22px -19px 0 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+#dados .box_top_select form svg {
+  position: relative;
+  right: 32px;
 }
 
 /* line 1335, ../scss/app.scss */
 #dados .box_top_select form select {
   float: right;
-  border-radius: 6px;
+  border-radius: 0;
   margin: 0 8px;
   width: auto;
-  padding: 0 20px 0 10px;
+  padding: 0 20px;
   font-size: 14px;
-  height: 32px;
+  background: #025151;
+  color: #fff;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -12472,12 +12540,12 @@ footer .box_foot .rcol .redes_foot a:hover {
   float: left;
   width: 100%;
   padding: 25px 30px;
-  background: #b82251;
+  background: #4EBAAF;
 }
 
 /* line 1400, ../scss/app.scss */
 #dados #lista_criterio .title_box h5 {
-  color: #FFFFFF;
+  color: #025151;
   margin: 0;
   font-size: 19px;
   font-weight: 400;
@@ -12515,7 +12583,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 1420, ../scss/app.scss */
 #dados #lista_criterio .col_3 h3 {
   margin-top: 10px;
-  color: #b82251;
+  color: #025151;
   font-size: 20px;
   font-weight: 700;
   padding-left: 10px;
@@ -12530,13 +12598,13 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 1433, ../scss/app.scss */
 #dados #lista_criterio .col_3 ul li i {
-  color: #f8991c;
+  color: #025151;
   font-size: 20px;
 }
 
 /* line 1434, ../scss/app.scss */
 #dados #lista_criterio .col_3 ul li strong {
-  color: #b82251;
+  color: #025151;
   padding-left: 10px;
 }
 
@@ -12555,7 +12623,7 @@ footer .box_foot .rcol .redes_foot a:hover {
   float: left;
   width: 100%;
   padding: 25px 30px;
-  background: #b82251;
+  background: #4EBAAF;
 }
 
 /* line 1456, ../scss/app.scss */
@@ -12701,15 +12769,15 @@ footer .box_foot .rcol .redes_foot a:hover {
   width: 100%;
   min-height: 104px;
   padding: 25px 30px 15px;
-  background: #b82251;
+  background: #4EBAAF;
   margin-bottom: 25px;
 }
 
 /* line 1548, ../scss/app.scss */
 .box_indice .listas_indice .col_3 .bloco_indice .title_box h5 {
-  color: #FFFFFF !important;
+  color: #025151 !important;
   margin: 0 !important;
-  font-size: 29px;
+  font-size: 20px;
   font-weight: 700 !important;
   text-align: center;
   line-height: 32px !important;
@@ -12798,26 +12866,27 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 1606, ../scss/app.scss */
 .box_indice select {
   float: left;
-  width: 160px;
+  width: 180px;
   color: #FFFFFF;
-  background: url(../img/ico_select.png) no-repeat right center #f0be09;
+  background: url(../img/idv-ico_select2.png) no-repeat right center #025151;
   margin: 0 8px;
-  border: solid 1px #f0be09;
-  border-radius: 8px;
+  border: solid 1px #025151;
+  border-radius: 0;
+  text-transform: none;
 }
 
 /* line 1615, ../scss/app.scss */
 .box_indice input[type=submit] {
   float: left;
-  font-size: 18px;
-  padding: 10px 18px;
-  border-radius: 6px;
+  font-size: 14px;
+  padding: 12px 30px;
+  border-radius: 0;
   margin: 0 8px;
   border: none;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 600;
-  color: #FFF;
-  background: #f0be09;
+  color: #EECFB0;
+  background: #EA5454;
 }
 
 /* line 1626, ../scss/app.scss */
@@ -13158,8 +13227,8 @@ body a {
 
 .customindexsubmit.disabled {
   cursor: default;
-  background: #bebebe !important;
-  color: #FFF !important;
+  background: #EA5454 !important;
+  color: #EECFB0 !important;
 }
 
 .box_indice .listas_indice {
@@ -13231,7 +13300,7 @@ footer .box_foot {
     grid-template-columns: repeat(4, 1fr);
   }
   .cntr_4_2_1 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 767px) {

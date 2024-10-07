@@ -15,13 +15,13 @@
         </div>
     </section><!-- topo -->
 
-    <br clear="all">
+    <!-- <br clear="all"> -->
     
     @if(setting('site.showIndex'))
 
         @include('layouts.explorerPanel')
 
-    <br clear="all">
+    <!-- <br clear="all"> -->
 
         @include('layouts.selectedPanel')
 
@@ -52,7 +52,7 @@
             </div> -->
         </section><!-- destaque -->
 
-        <br clear="all">
+        <!-- <br clear="all"> -->
 
     @else
         <section id="explorador">
