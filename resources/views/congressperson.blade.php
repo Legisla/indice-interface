@@ -154,7 +154,7 @@
             
             @foreach($statsData as $axis=>$stat)
 
-                <div class="col_3">'
+                <div class="col_3">
                     <div class="box_grafico">
                         <h4>{{$stat['info']['axisName']}}</h4>
 
@@ -198,7 +198,7 @@
                                 useDirtyRect: false
                             }).setOption({
                                     grid: {left: '5%', right: '7%', top: 20, bottom: 25},
-                                    color: ['#810f36', '#b82251', '#fa2567'],
+                                    color: ['#57162F', '#BD464A', '#EA5454'],
                                     tooltip: {trigger: 'axis'},
                                     dataset: {
                                         source: [

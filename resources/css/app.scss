@@ -10879,23 +10879,15 @@ label.error {
 
 /* line 126, ../scss/app.scss */
 .central.nav_central {
-    max-width: 1270px;
+    max-width: 1170px;
+    @media(max-width: 900px){
+        padding-top: 9px;
+        margin-bottom: -7px;
+    }
+   
 }
 
-@media only screen and (max-width: 1640px) {
-    /* line 126, ../scss/app.scss */
-    .central.nav_central {
-        max-width: 1170px;
-        /* TOTAL DO ROW */
-    }
-}
 
-@media only screen and (max-width: 56.25em) {
-    /* line 126, ../scss/app.scss */
-    .central.nav_central {
-        padding: 0;
-    }
-}
 
 /* line 138, ../scss/app.scss */
 *::-moz-placeholder {
@@ -11006,6 +10998,9 @@ header, .header_interna {
     width: 100%;
     padding: 5px 0;
     z-index: 999;
+    @media(max-width: 900px){
+        padding-bottom: 22px;
+    }
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -11090,7 +11085,7 @@ header .desk_logo, .header_interna .desk_logo {
 @media only screen and (max-width: 1640px) {
     /* line 197, ../scss/app.scss */
     .top-bar-section {
-        margin: 0 20px 0 120px;
+        margin: 0 20px 0 140px;
     }
 }
 .top-bar-section{
@@ -11314,7 +11309,7 @@ header .desk_logo, .header_interna .desk_logo {
 /* line 329, ../scss/app.scss */
 .menu_fechar a {
     font-size: 20px !important;
-    color: #FFFFFF !important;
+    color: #57162F !important;
 }
 
 /* line 331, ../scss/app.scss */
@@ -11325,9 +11320,9 @@ header .desk_logo, .header_interna .desk_logo {
 /* line 334, ../scss/app.scss */
 .top-bar.expanded .menu_fechar {
     display: block !important;
-    position: absolute;
-    left: 230px;
-    top: 10px;
+    position: absolute; 
+    left: 287px;
+    top: 48px;
 }
 
 /* line 337, ../scss/app.scss */
@@ -11361,7 +11356,10 @@ header .desk_logo, .header_interna .desk_logo {
 .top-bar.expanded .top-bar-section a {
     color: #57162F !important;
     padding: 7px 40px !important;
-    text-align: center !important;
+    @media(max-width: 900px){
+        padding: 7px 40px 7px 32px !important;
+    }
+    
 }
 
 /* line 357, ../scss/app.scss */
@@ -11842,7 +11840,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 .explorador .accordion .accordion-navigation .content {
     background: none;
     padding: 0;
-    width: 90%;
+    width: 100%;
     justify-content: center;
 }
 
@@ -12078,7 +12076,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 .explorador.white .box_explorador {
     background: #4EBAAF;
-    padding: 44px 43px 30px;
+    padding: 44px 60px 30px;
     
 }
 
@@ -12279,7 +12277,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 798, ../scss/app.scss */
 #topo_interna {
     width: 100%;
-    height: 270px;
+    height: 220px;
     margin-top: 88px;
     background: url(../img/imagem-top-interna.png) no-repeat right center #57162F;
     width: 100%;
@@ -12298,7 +12296,7 @@ footer .box_foot .rcol .redes_foot a:hover {
         h1 {
             max-width: 50%;
             color: #FFFFFF;
-            padding: 80px 0px;
+            padding: 50px 0px;
             font-size: 48px;
             text-transform: uppercase;
             margin-bottom: 0 !important;
@@ -12306,7 +12304,7 @@ footer .box_foot .rcol .redes_foot a:hover {
                 max-width: 100%;    
                 height: auto;
                 background: url(../img/imagem-top-interna.png) no-repeat right bottom #57162F;
-                padding: 100px 20px;
+                padding: 100px 20px 40px;
             }
         }
     }
@@ -12633,15 +12631,17 @@ footer .box_foot .rcol .redes_foot a:hover {
     width: 100%;
     padding: 70px 0 0;
     color: #000000;
+    @media(max-width: 900px){
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0;    
+    }
+    
     .central{
         max-width: 1170px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 32px;
-        @media(max-width: 782px){
-            padding-left: 20px;
-            padding-right: 20px;
-        }
     }
 }
 
@@ -12665,7 +12665,16 @@ footer .box_foot .rcol .redes_foot a:hover {
     position: relative;
     border-radius: 0;
     font-family: 'Commissioner', sans-serif;
-    margin-top: 40px;
+    margin-top: 55px;
+    margin-left: 32px;
+    @media(max-width: 583px){
+        float: left;
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+
+
+    }
 }
 
 /* line 980, ../scss/app.scss */
@@ -12680,28 +12689,32 @@ footer .box_foot .rcol .redes_foot a:hover {
     background: #B96BEC;
 }
 
+#dados{
+    .central{
+
+    }
+}
+
 /* line 991, ../scss/app.scss */
 #dados .link_spec:hover {
     background: #57162F;
-}
-
-@media only screen and (max-width: 56.25em) {
-    /* line 972, ../scss/app.scss */
-    #dados .link_spec {
-        margin-bottom: 20px;
-    }
 }
 
 /* line 998, ../scss/app.scss */
 #dados .top_info {
     float: left;
     width: 100%;
-    padding: 20px 0;
+    padding: 0 0 40px;
+    margin-top: -50px;
+    @media(max-width: 782px){
+        margin-top: 32px;
+        padding: 0 0 0;
+    }
 }
 
 /* line 1004, ../scss/app.scss */
 #dados .top_info .box_1 img {
-    float: right;
+    float: left;
     border-radius: 100%;
     max-width: 300px;
     width: 100%;
@@ -12715,9 +12728,15 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 1014, ../scss/app.scss */
 #dados .top_info .box_2 h2 {
-    font-size: 33px;
-    line-height: 33px;
-    font-weight: 700;
+    color: #57162F;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#dados .top_info .box_2 h4 {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 /* line 1018, ../scss/app.scss */
@@ -12730,6 +12749,11 @@ footer .box_foot .rcol .redes_foot a:hover {
     float: left;
     width: 100%;
     margin-bottom: 40px;
+    @media(max-width: 782px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* line 1024, ../scss/app.scss */
@@ -12750,11 +12774,17 @@ footer .box_foot .rcol .redes_foot a:hover {
     text-align: center;
     padding: 14px;
     border-radius: 100%;
-    color: #5e0928;
-    background: #fa2567;
+    color: #57162F;
+    background: #EA5454;
     line-height: 16px;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+#dados .top_info .box_3 ul li h5 {
+    color: #57162F;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 #dados{
@@ -12789,6 +12819,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 #dados .top_info .box_3 .box_partido {
     float: left;
     width: 100%;
+    font-family: "Commissioner", sans-serif;
 }
 
 /* line 1047, ../scss/app.scss */
@@ -12934,6 +12965,21 @@ footer .box_foot .rcol .redes_foot a:hover {
     }
 }
 
+#dados{
+    .central{
+        .top_info{
+            .box_2{
+                .ranking{
+                    display: flex;
+                    @media(max-width: 782px){
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* line 1116, ../scss/app.scss */
 #dados .button_info {
     float: left;
@@ -13070,7 +13116,11 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 1201, ../scss/app.scss */
 #dados_grafico,
 #dados{
-    background-color: #EECFB0   ;
+    background-color: #EECFB0;
+}
+
+#dados_grafico{
+    padding-bottom: 40px;
 }
 
 #dados_grafico .central {
@@ -13090,7 +13140,7 @@ footer .box_foot .rcol .redes_foot a:hover {
     float: left;
     width: 100%;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 0;
     background: #e4e4e4;
 }
 
@@ -13127,17 +13177,17 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 1226, ../scss/app.scss */
 #dados_grafico .box_grafico .box_dados_graf li .cor1 {
-    background: #810f36;
+    background: #57162F;
 }
 
 /* line 1227, ../scss/app.scss */
 #dados_grafico .box_grafico .box_dados_graf li .cor2 {
-    background: #b82251;
+    background: #BD464A;
 }
 
 /* line 1228, ../scss/app.scss */
 #dados_grafico .box_grafico .box_dados_graf li .cor3 {
-    background: #fa2567;
+    background: #EA5454;
 }
 
 /* line 1230, ../scss/app.scss */
@@ -13145,7 +13195,7 @@ footer .box_foot .rcol .redes_foot a:hover {
     float: left;
     width: 76px;
     height: 73px;
-    margin: 0 10px 5px;
+    margin: 0 10px 5px 3px;
     text-align: center;
     padding: 15px 9px;
     border-radius: 100%;
@@ -13153,6 +13203,10 @@ footer .box_foot .rcol .redes_foot a:hover {
     line-height: 41px;
     font-size: 35px;
     text-transform: uppercase;
+}
+
+#dados_grafico .box_grafico .box_dados_graf li {
+    color: #57162F;
 }
 
 /* line 1246, ../scss/app.scss */
@@ -13169,8 +13223,10 @@ footer .box_foot .rcol .redes_foot a:hover {
     float: left;
     width: 100%;
     margin-bottom: 8px;
+    color: #57162F;
     font-size: 12px;
-    line-height: 14px;
+    font-weight: 400;
+    line-height: 19px; /* 158.333% */
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -13241,14 +13297,23 @@ footer .box_foot .rcol .redes_foot a:hover {
 /* line 1321, ../scss/app.scss */
 #dados .box_top_title {
     float: left;
+    @media(max-width: 583px){
+        margin-bottom: -40px;
+    }
 }
 
 #dados{
     .central{
         max-width: 1170px !important;
-        margin: 32px auto 0 !important;
+        margin: 81px auto 0 !important;
         .text-right{
             margin-top: 32px;
+            @media(max-width: 782px){
+                margin: 0 auto 0 !important;    
+            }
+            @media(max-width: 583px){
+                margin: 37px auto 0 !important;    
+            }
             span{
                 top: 15px;
                 position: relative;
@@ -13280,6 +13345,9 @@ footer .box_foot .rcol .redes_foot a:hover {
 #dados .box_top_select {
     float: right;
     margin: 32px 0 16px;
+    @media(max-width: 583px){
+        float: left;
+    }
     a{
         font-size: 14px;
     }
@@ -13313,10 +13381,19 @@ footer .box_foot .rcol .redes_foot a:hover {
     border-radius: 0;
     margin: 0 8px;
     width: auto;
-    padding: 0 20px;
+    padding: 17px 32px;
     font-size: 14px;
     background: #025151;
     color: #fff;
+    height: auto;
+    @media(max-width: 583px){
+        margin: 0 0;
+
+    }
+}
+
+#dados .box_top_select .text-right .link_spec{
+    
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -13393,9 +13470,15 @@ footer .box_foot .rcol .redes_foot a:hover {
     float: left;
     width: 100%;
     background: #e4e4e4;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     margin: 10px 0 40px;
+    @media(max-width: 900px){
+        margin: 35px 0 40px;
+    }
+    @media(max-width: 900px){
+        margin: 35px 0 0;
+    }
 }
 
 /* line 1394, ../scss/app.scss */
@@ -13478,7 +13561,7 @@ footer .box_foot .rcol .redes_foot a:hover {
     float: left;
     width: 100%;
     background: #e4e4e4;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     margin: 10px 0 40px;
 }
@@ -14072,7 +14155,7 @@ body a {
     height: 10px;
     background: rgb(255, 255, 255);
     border-radius: 0;
-    background-image: linear-gradient(#b7b7b7, #b7b7b7);
+    background-image: linear-gradient(#b7b7b7, #b7b7b7);    
     background-size: 50% 100%;
     background-repeat: no-repeat;
 }
@@ -14080,11 +14163,12 @@ body a {
 .rangeCustomIndex::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 20px;
-    background: #b82251;
+    background: #fff;
     cursor: ew-resize;
     transition: background .3s ease-in-out;
-    width: 16px;
-    border-radius: 4px 4px 20px 20px;
+    width: 20px;
+    border-radius: 50px;
+    border: 1px solid #999;
 }
 
 .rangeCustomIndex::-webkit-slider-runnable-track {
