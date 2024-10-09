@@ -4,6 +4,7 @@
     <div class="central">
 
         <div class="box_foot">
+            <div class="footer-content">
             <div class="lcol">
                 <div class="redes_foot">
                     <a href="{!! setting('social.facebook') !!}" title="" target="_blank">
@@ -48,13 +49,15 @@
                 </section>
 
             </div> -->
-        </div>
-        <div class="footer-bottom">
+            </div>
+            <div class="footer-bottom">
             <div class="footer-bottom-links">
                 <a href="/politica-de-privacidade" title="Politica de Pricavidade">Política de Privacidade</a>
                 <a href="/termos-de-uso" title="Termos de uso">Termos-de-uso</a>
             </div>
         </div>
+        </div>
+        
 
     </div>
 

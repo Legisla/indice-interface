@@ -11584,10 +11584,6 @@ footer .logo_foot img {
 footer .box_foot {
     float: left;
     width: 100%;
-    padding: 20px 0 10px;
-    border-bottom: 1px solid #d9d9d9;
-    margin-bottom: 15px;
-
 }
 
 /* line 497, ../scss/app.scss */
@@ -11636,6 +11632,8 @@ footer .box_foot .ccol {
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
+    border-top: 1px solid #d9d9d9;
+    padding-top: 10px;
     .footer-bottom-links{
         a{
             color:#fff;
@@ -11661,6 +11659,7 @@ footer .box_foot .ccol p {
     color: #FFF;
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 15px;
     @media(max-width: 767px) {
         padding: 0 25px;
         margin-bottom: 20px;
@@ -13332,7 +13331,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 #dados{
     .central{
         max-width: 1170px !important;
-        margin: 81px auto 0 !important;
+        margin: 40px auto 0 !important;
         .text-right{
             margin-top: 32px;
             @media(max-width: 782px){
@@ -14234,8 +14233,18 @@ footer .box_foot .rcol {
 }
 
 footer .box_foot {
-    display: grid;
-    grid-template-columns: .9fr 2.1fr;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .footer-content{
+        display: grid;
+        grid-template-columns: .4fr 1fr;
+        padding-bottom: 12px;
+        @media(max-width: 900px){
+            display: block;
+            text-align: center;
+        }
+    }
 }
 
 .redes_foot {
