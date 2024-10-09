@@ -27,6 +27,10 @@ Route::get('/metodologia', [HomeController::class, 'institutional'])->name('meto
 
 Route::get('/quem-somos', [HomeController::class, 'institutional'])->name('quem-somos');
 
+Route::get('/politica-de-privacidade', [HomeController::class, 'institutional'])->name('politica-de-privacidade');
+
+Route::get('/termos-de-uso', [HomeController::class, 'institutional'])->name('termos-de-uso');
+
 Route::group(['prefix' => 'contatos'], function () {
 
     Route::get('/', [HomeController::class, 'contacts'])->name('contatos');

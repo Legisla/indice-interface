@@ -15,8 +15,10 @@
 
     <!-- <br> -->
 
-    @include('layouts.explorerPanel')
+    <section id="explorador-pages">
 
+    @include('layouts.explorerPanel')
+    </section>
     <!-- <br> -->
 
     <section id="dados">

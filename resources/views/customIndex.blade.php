@@ -15,7 +15,10 @@
 
     <!-- <br clear="all"> -->
 
-    @include('layouts.explorerPanel')
+    <section id="explorador-pages">
+
+        @include('layouts.explorerPanel')
+    </section>
 
 
     <section id="dados" class="box_indice">

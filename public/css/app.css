@@ -11271,7 +11271,7 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 .explorador.white .box_explorador {
   background: #4EBAAF;
-  padding: 44px 60px 30px;
+  padding: 44px 63px 30px;
 }
 
 .explorador.white .accordion-navigation a.bot_explo_interno {
@@ -11405,6 +11405,14 @@ footer .box_foot .rcol .redes_foot a:hover {
 }
 #explorador .central .accordion {
   background: #EECFB0;
+}
+
+#explorador-home .accordion .accordion-navigation.active .content.active .col_3-wrapper {
+  margin-bottom: 0 !important;
+}
+
+#explorador-pages .accordion .accordion-navigation.active .content.active .col_3-wrapper {
+  margin-bottom: -130px;
 }
 
 /* line 777, ../scss/app.scss */
@@ -11636,9 +11644,14 @@ footer .box_foot .rcol .redes_foot a:hover {
 #sobre {
   float: left;
   width: 100%;
-  padding: 130px 0;
+  padding: 130px 0 60px;
   color: #000000;
   background: #EECFB0;
+}
+@media (max-width: 900px) {
+  #sobre {
+    padding: 65px 0;
+  }
 }
 #sobre .container-fluid {
   max-width: 1170px;

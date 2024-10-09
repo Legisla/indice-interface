@@ -19,7 +19,10 @@
     
     @if(setting('site.showIndex'))
 
-        @include('layouts.explorerPanel')
+    <section id="explorador-home">
+
+    @include('layouts.explorerPanel')
+    </section>
 
     <!-- <br clear="all"> -->
 

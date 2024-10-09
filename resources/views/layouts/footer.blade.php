@@ -51,8 +51,8 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom-links">
-                <a href="#" title="Politica de Pricavidade">Política de Privacidade</a>
-                <a href="#" title="Termos de uso">Termos-de-uso</a>
+                <a href="/politica-de-privacidade" title="Politica de Pricavidade">Política de Privacidade</a>
+                <a href="/termos-de-uso" title="Termos de uso">Termos-de-uso</a>
             </div>
         </div>
 
