@@ -6141,9 +6141,9 @@ ul.pagination li {
   .reveal-modal {
     left: 0;
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 1220px;
     right: 0;
-    width: 80%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 56.3125em) {
@@ -7763,7 +7763,7 @@ meta.foundation-mq-topbar {
   /* line 540, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section ul {
     display: inline;
-    height: auto !important;
+    height: 54px !important;
     width: auto;
   }
   /* line 545, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -11616,15 +11616,21 @@ footer .box_foot .rcol .redes_foot a:hover {
 
 /* line 857, ../scss/app.scss */
 #myModal {
-  background: none;
-  color: #FFFFFF;
+  background: #EECFB0;
+  color: 0;
   box-shadow: none;
   border: none;
+  border-top: 13px solid #025151;
 }
 
 /* line 863, ../scss/app.scss */
 #myModal h2 {
   font-size: 30px;
+}
+
+#myModal p {
+  font-size: 22px;
+  line-height: 32px;
 }
 
 /* line 864, ../scss/app.scss */
@@ -11643,10 +11649,10 @@ footer .box_foot .rcol .redes_foot a:hover {
 }
 /* line 871, ../scss/app.scss */
 .reveal-modal .close-reveal-modal {
-  top: -40px;
-  right: 0;
-  color: #FFFFFF;
-  font-size: 80px;
+  top: 3px;
+  right: 11px;
+  color: #57162F;
+  font-size: 40px;
   font-weight: normal;
 }
 
