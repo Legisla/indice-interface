@@ -11253,7 +11253,7 @@ header .desk_logo, .header_interna .desk_logo {
 
     /* line 302, ../scss/app.scss */
     .top-bar .top-bar-section ul li a:hover {
-        background: #fa2567 !important;
+        background: #EECFB0 !important;
     }
 
     /* line 304, ../scss/app.scss */
@@ -11589,13 +11589,14 @@ footer .box_foot {
 /* line 497, ../scss/app.scss */
 footer .box_foot .lcol {
     padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-right: 0.9375rem;   
     width: 33.33333%;
     float: left;
     display: flex;
     align-items: center;
-    @media(max-width: 767px){
+    @media(max-width: 900px){
         gap: 25px;
+        flex-direction: column-reverse;
     }
 
     a{
@@ -11607,7 +11608,8 @@ footer .box_foot .lcol {
 @media only screen and (max-width: 56.25em) {
     /* line 502, ../scss/app.scss */
     footer .box_foot .lcol img {
-        max-width: 190px;
+        margin-top: 32px;
+        max-width: 230px;
     }
 }
 
@@ -11635,14 +11637,20 @@ footer .box_foot .ccol {
     border-top: 1px solid #d9d9d9;
     padding-top: 10px;
     .footer-bottom-links{
+        @media(max-width: 767px) {
+            display: flex;
+            justify-content: space-between;
+            gap: 32px;
+        }
         a{
-            color:#fff;
+            color: #d9d9d9;
             text-transform: uppercase;
             margin-right: 16px;
             font-size: 13px;
             font-weight: 600;
             @media(max-width: 767px) {
                 font-size: 12px;
+                margin-right: 0;
             }
         }
     }
@@ -11686,6 +11694,7 @@ footer .box_foot .ccol ul li a {
     font-weight: 600;
     padding: 5px 15px 5px 0;
     text-transform: uppercase;
+    color: #d9d9d9;
     @media(max-width: 767px) {
         padding: 5px 15px 5px 15px;
 
@@ -14253,6 +14262,11 @@ footer .box_foot {
     flex-direction: column;    
     width: 50px;
     justify-items: center;
+    @media(max-width: 900px){
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
 }
 
 @media only screen and (min-width: 56.3125em) {
@@ -14321,8 +14335,7 @@ footer .box_foot {
     }
 
     .redes_foot {
-        padding-top: 20px;
-        width: 20%;
+        width: 100%;
     }
 }
 

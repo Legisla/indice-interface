@@ -1,6 +1,5 @@
 <footer>
 
-
     <div class="central">
 
         <div class="box_foot">
@@ -51,17 +50,14 @@
             </div> -->
             </div>
             <div class="footer-bottom">
-            <div class="footer-bottom-links">
-                <a href="/politica-de-privacidade" title="Politica de Pricavidade">Política de Privacidade</a>
-                <a href="/termos-de-uso" title="Termos de uso">Termos-de-uso</a>
+                <div class="footer-bottom-links">
+                    <a href="{{ route('politica-de-privacidade') }}" title="Política de privacidade">Política de privacidade</a>
+                    <a href="{{ route('termos-de-uso') }}" title="Termos de uso">Termos de uso</a>
+                </div>
             </div>
         </div>
-        </div>
-        
-
+    
     </div>
-
-
 
 </footer>
 
