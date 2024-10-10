@@ -12240,6 +12240,9 @@ footer .box_foot .rcol .redes_foot a:hover {
             .content.active{
                 .col_3-wrapper{
                     margin-bottom: -130px;
+                    @media(max-width: 900px){
+                        margin-bottom: -90px;
+                    }
                 }
             }
         }
@@ -12500,6 +12503,16 @@ footer .box_foot .rcol .redes_foot a:hover {
             }
            
         }
+        ul{
+            li{
+                font-family: "Commissioner", sans-serif;
+                color: #530f24;
+            }
+        }
+        hr{
+            border: solid #444746;
+            border-width: 1px;
+        }
     }
 }
 
@@ -12593,12 +12606,35 @@ footer .box_foot .rcol .redes_foot a:hover {
     color: #b82251;
 }
 
+#contato .terms-checkbox{
+    @media(max-width: 922px){
+        display: flex;
+        input[type=checkbox]{
+            margin-top: 4px;
+        }
+
+    }      
+}
+
 /* line 921, ../scss/app.scss */
 #contato form label {
     color: #57162F;
     font-family: 'Commissioner', sans-serif;
     font-size: 14px;
     font-weight: 600;
+   
+    .checkbox-tetx{
+        font-weight: 400;
+        color: #000;
+        
+    }
+    a{
+        margin-left: 3px;
+        &:hover{
+            color: #000 !important;
+        }
+       
+    }
 }
 
 #contato form {
@@ -12638,6 +12674,9 @@ footer .box_foot .rcol .redes_foot a:hover {
     font-size: 24px;
     font-weight: 400;
     letter-spacing: 1.68px;
+    @media(max-width: 520px){
+        margin-top: 16px;
+    }
 }
 
 /* line 942, ../scss/app.scss */

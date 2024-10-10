@@ -11425,6 +11425,11 @@ footer .box_foot .rcol .redes_foot a:hover {
 #explorador-pages .accordion .accordion-navigation.active .content.active .col_3-wrapper {
   margin-bottom: -130px;
 }
+@media (max-width: 900px) {
+  #explorador-pages .accordion .accordion-navigation.active .content.active .col_3-wrapper {
+    margin-bottom: -90px;
+  }
+}
 
 /* line 777, ../scss/app.scss */
 #destaque {
@@ -11685,6 +11690,14 @@ footer .box_foot .rcol .redes_foot a:hover {
   font-family: "Commissioner", sans-serif !important;
   font-size: 16px !important;
 }
+#sobre .container-fluid ul li {
+  font-family: "Commissioner", sans-serif;
+  color: #530f24;
+}
+#sobre .container-fluid hr {
+  border: solid #444746;
+  border-width: 1px;
+}
 
 /* line 888, ../scss/app.scss */
 #sobre h1 {
@@ -11774,12 +11787,31 @@ footer .box_foot .rcol .redes_foot a:hover {
   color: #b82251;
 }
 
+@media (max-width: 922px) {
+  #contato .terms-checkbox {
+    display: flex;
+  }
+  #contato .terms-checkbox input[type=checkbox] {
+    margin-top: 4px;
+  }
+}
+
 /* line 921, ../scss/app.scss */
 #contato form label {
   color: #57162F;
   font-family: "Commissioner", sans-serif;
   font-size: 14px;
   font-weight: 600;
+}
+#contato form label .checkbox-tetx {
+  font-weight: 400;
+  color: #000;
+}
+#contato form label a {
+  margin-left: 3px;
+}
+#contato form label a:hover {
+  color: #000 !important;
 }
 
 #contato form svg {
@@ -11817,6 +11849,11 @@ footer .box_foot .rcol .redes_foot a:hover {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 1.68px;
+}
+@media (max-width: 520px) {
+  #contato form input[type=submit] {
+    margin-top: 16px;
+  }
 }
 
 /* line 942, ../scss/app.scss */
