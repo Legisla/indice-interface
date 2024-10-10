@@ -11690,9 +11690,9 @@ footer .box_foot .rcol .redes_foot a:hover {
   font-family: "Commissioner", sans-serif !important;
   font-size: 16px !important;
 }
-#sobre .container-fluid ul li {
+#sobre .container-fluid ol li {
   font-family: "Commissioner", sans-serif;
-  color: #530f24;
+  color: #000;
 }
 #sobre .container-fluid hr {
   border: solid #444746;
