@@ -11516,10 +11516,13 @@ footer .box_foot .rcol .redes_foot a:hover {
 #topo_interna .central-topo h1 {
   max-width: 50%;
   color: #FFFFFF;
-  padding: 50px 0px;
+  padding: 47px 0px 0px;
   font-size: 48px;
   text-transform: uppercase;
   margin-bottom: 0 !important;
+  min-height: 147px;
+  display: flex;
+  align-items: flex-end;
 }
 @media (max-width: 900px) {
   #topo_interna .central-topo h1 {
