@@ -13,8 +13,6 @@
         </div>
     </section><!-- topo -->
 
-    <br clear="all">
-
     <section id="explorador-pages">
 
         @include('layouts.explorerPanel')
