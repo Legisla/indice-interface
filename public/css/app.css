@@ -11511,6 +11511,10 @@ footer .box_foot .rcol .redes_foot a:hover {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
+  background: url(../img/idv-img-paginas9.png) no-repeat right center #57162F;
+  height: 220px;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 782px) {
   #topo_interna .central-topo {
@@ -11519,28 +11523,23 @@ footer .box_foot .rcol .redes_foot a:hover {
   }
 }
 #topo_interna .central-topo h1 {
-  width: 100%;
+  max-width: 50%;
   color: #FFFFFF;
   font-size: 48px;
   text-transform: uppercase;
   margin-bottom: 0 !important;
-  background: url(../img/idv-img-paginas9.png) no-repeat right center #57162F;
-  height: 220px;
-  display: flex;
-  align-items: center;
   flex-wrap: wrap;
 }
 @media (max-width: 900px) {
   #topo_interna .central-topo h1 {
     max-width: 100%;
-    min-height: 206px !important;
-    padding: 0px 20px;
+    padding: 30px 20px;
     background-size: 100%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   #topo_interna .central-topo h1 {
-    font-size: 36px !important;
+    font-size: 40px;
   }
 }
 
@@ -11590,10 +11589,13 @@ footer .box_foot .rcol .redes_foot a:hover {
 }
 #topo_interna_institucional .central-topo {
   text-align: left;
-  height: 206px;
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
+  background: url(../img/idv-img-paginas9.png) no-repeat right center #57162F;
+  height: 220px;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 900px) {
   #topo_interna_institucional .central-topo {
@@ -11605,16 +11607,12 @@ footer .box_foot .rcol .redes_foot a:hover {
   display: none;
 }
 #topo_interna_institucional .central-topo h1 {
+  float: left;
   width: 100%;
   color: #FFFFFF;
   font-size: 48px;
   text-transform: uppercase;
   margin-bottom: 0 !important;
-  background: url(../img/idv-img-paginas9.png) no-repeat right center #57162F;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 @media (max-width: 900px) {
   #topo_interna_institucional .central-topo h1 {
@@ -11622,11 +11620,8 @@ footer .box_foot .rcol .redes_foot a:hover {
     min-height: 206px !important;
     padding: 0px 20px;
     text-shadow: 0px 0px 7px #000;
-  }
-}
-@media (max-width: 400px) {
-  #topo_interna_institucional .central-topo h1 {
-    font-size: 36px !important;
+    display: flex;
+    align-items: center;
   }
 }
 

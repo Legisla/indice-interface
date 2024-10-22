@@ -12325,6 +12325,10 @@ footer .box_foot .rcol .redes_foot a:hover {
         max-width: 1170px;
         margin-left: auto;
         margin-right: auto;
+        background: url(../img/idv-img-paginas9.png) no-repeat right center #57162F;
+        height: 220px;
+        display: flex;
+        align-items: center;
        
         @media(max-width: 782px){
             height: auto;
@@ -12332,24 +12336,19 @@ footer .box_foot .rcol .redes_foot a:hover {
         }
 
         h1 {
-            width: 100%;
+            max-width: 50%;
             color: #FFFFFF;
             font-size: 48px;
             text-transform: uppercase;
             margin-bottom: 0 !important;
-            background: url(../img/idv-img-paginas9.png) no-repeat right center #57162F;
-            height: 220px;
-            display: flex;
-            align-items: center;
             flex-wrap: wrap;
             @media(max-width: 900px){
                 max-width: 100%;    
-                min-height: 206px !important;
-                padding: 0px 20px;
+                padding: 30px 20px;
                 background-size: 100% ;
             }
-            @media(max-width: 400px){
-                font-size: 36px !important;
+            @media(max-width: 500px){
+                font-size: 40px;
             }
         }
     }
@@ -12406,11 +12405,13 @@ footer .box_foot .rcol .redes_foot a:hover {
     }
     .central-topo{
         text-align: left;
-        height: 206px;
         max-width: 1170px;
         margin-left: auto;
         margin-right: auto;
-        
+        background: url(../img/idv-img-paginas9.png) no-repeat right center #57162F;
+        height: 220px;
+        display: flex;
+        align-items: center;
         @media(max-width: 900px){
             flex-direction: column;
             text-align: center;
@@ -12421,24 +12422,19 @@ footer .box_foot .rcol .redes_foot a:hover {
             display: none;
         }
         h1 {
+            float: left;
             width: 100%;
             color: #FFFFFF;
             font-size: 48px;
             text-transform: uppercase;
-            margin-bottom: 0 !important;
-            background: url(../img/idv-img-paginas9.png) no-repeat right center #57162F;
-            height: 220px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
+            margin-bottom: 0 !important;            
             @media(max-width: 900px){
                 max-width: 100%;    
                 min-height: 206px !important;
                 padding: 0px 20px;
                 text-shadow: 0px 0px 7px #000;
-            }
-            @media(max-width: 400px){
-                font-size: 36px !important;
+                display: flex;
+                align-items: center;
             }
         }
     }
