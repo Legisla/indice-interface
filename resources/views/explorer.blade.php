@@ -5,17 +5,20 @@
 @section('content')
     <section id="topo_interna">
 
-        <div class="central">
+        <div class="central-topo">
             <h1 class="{{!empty($filterActive)?'title-filter-page':''}}">
                 {!!$title!!}
             </h1>
         </div>
     </section><!-- topo -->
-    <br clear="all">
+    <!-- <br clear="all"> -->
+
+    <section id="explorador-pages">
 
     @include('layouts.explorerPanel')
+    </section>
 
-    <br clear="all">
+    <!-- <br clear="all"> -->
 
     <section id="dados">
         <div class="central">
@@ -34,8 +37,11 @@
             <div class="box_top_select">
 
                 @include('layouts.site_components.more-info')
-
+               
                 <form>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                    <path d="M12 0.360107H0L6 7.36011L12 0.360107Z" fill="white"/>
+                </svg>
                     <select id="UF"
                             name="UF"
                             data-params="{{$uri??''}}"
@@ -64,6 +70,7 @@
                         <option value="uma-estrela" {{!empty($stars) && $stars === 1 ?'selected':''}}>1 estrela</option>
                     </select> -->
                 </form>
+                
 
             </div>
 
@@ -85,7 +92,7 @@
                 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
             </div><!-- MODAL EXPLICATIVO -->
 
-            <br clear="all">
+            <!-- <br clear="all"> -->
 
             <div class="lista_resultados">
 
@@ -139,5 +146,5 @@
 
         </div>
     </section><!-- dados -->
-    <br clear="all">
+    <!-- <br clear="all"> -->
 @endsection

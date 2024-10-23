@@ -4,20 +4,22 @@
 
 @section('content')
 
-    <section id="topo_interna">
+    <section id="topo_interna"> 
 
-        <div class="central">
+        <div class="central-topo">
             <h1>
                 Deputad{{$congressperson->sex === 'F' ? 'a' : 'o'}} {{$congressperson->congressperson_name}}
             </h1>
         </div>
     </section><!-- topo -->
 
-    <br>
+    <!-- <br> -->
+
+    <section id="explorador-pages">
 
     @include('layouts.explorerPanel')
-
-    <br>
+    </section>
+    <!-- <br> -->
 
     <section id="dados">
         <div class="central">
@@ -55,7 +57,7 @@
                         <i class="fa fa-star font_ativo"></i>
                     </div>
                     @endif
-                    <br>
+                    <!-- <br> -->
 
                     <h2>{{$congressperson->congressperson_name}}</h2>
 
@@ -154,7 +156,7 @@
             
             @foreach($statsData as $axis=>$stat)
 
-                <div class="col_3">'
+                <div class="col_3">
                     <div class="box_grafico">
                         <h4>{{$stat['info']['axisName']}}</h4>
 
@@ -198,7 +200,7 @@
                                 useDirtyRect: false
                             }).setOption({
                                     grid: {left: '5%', right: '7%', top: 20, bottom: 25},
-                                    color: ['#810f36', '#b82251', '#fa2567'],
+                                    color: ['#57162F', '#BD464A', '#EA5454'],
                                     tooltip: {trigger: 'axis'},
                                     dataset: {
                                         source: [

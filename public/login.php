@@ -99,7 +99,7 @@ if (isset($_POST['usuario']) && isset($_POST['senha']) && $_POST['usuario'] == $
     }
 } else {
     ?>
-    <img src="https://indice.legislabrasil.org/img/marca.png">
+    <img src="https://indice.legislabrasil.org/img/idv-marca.png">
     <?php
     if (isset($_POST['usuario']) || isset($_POST['senha'])) {
         echo "<h2>Credenciais incorretas.</h2>";

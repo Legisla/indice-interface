@@ -10,3 +10,47 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'Commissioner';
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    src: url('Commissioner-Regular.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'Commissioner';
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+    src: url('Commissioner-Medium.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'Commissioner';
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+    src: url('Commissioner-SemiBold.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'Commissioner';
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+    src: url('Commissioner-Bold.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'Commissioner';
+    font-display: swap;
+    font-weight: 800;
+    font-style: normal;
+    src: url('Commissioner-ExtraBold.ttf') format(truetype);
+}
+
+
+
+

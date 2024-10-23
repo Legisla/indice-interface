@@ -5,17 +5,20 @@
 @section('content')
     <section id="topo_interna_institucional">
 
-        <div class="central">
+        <div class="central-topo">
             <h1>
                 {{$page->title}}
             </h1>
         </div>
     </section><!-- topo -->
-    <br clear="all">
+    <!-- <br clear="all"> -->
 
-    @include('layouts.explorerPanel')
+    <section id="explorador-pages">
 
-    <br clear="all">
+        @include('layouts.explorerPanel')
+    </section>
+
+    <!-- <br clear="all"> -->
 
     <section id="sobre">
         <div class="central">
