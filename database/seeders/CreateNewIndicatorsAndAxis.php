@@ -15,6 +15,8 @@ class CreateNewIndicatorsAndAxis extends Seeder
      */
     public function run()
     {
+        DB::table('axes')->delete();
+        DB::table('indicators')->delete();
         $axes = [
             ['id' => 1, 'name' => 'Produção Legislativa', 'description' => ''],
             ['id' => 2, 'name' => 'Articulação e mobilização', 'description' => ''],
