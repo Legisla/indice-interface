@@ -55,7 +55,7 @@ class Format
         $office_time = $party_time = 0;
         $office_time_seconds = $congressperson->time_in_office;
         $office_time = $party_time = 0;
-        $office_time = round(($congressperson->time_in_office)/ 30.417  );
+        $office_time = round(($congressperson->time_in_office));
         if ($congressperson->entrance_on_party) {
             if (!$congressperson->exit_on_party) {
                 $congressperson->exit_on_party = Carbon::now();
@@ -89,15 +89,11 @@ class Format
                 ),
                 'nationalAxis' => (float)SiteConfig::getByKey(Configs::tryFrom('nat_avg_' . $axis->id)),
                 'congresPersonAxis' => CongresspersonAxis::findByAxisIdAndCongressperson($axis->id, $congressperson->id),
+                'stateAxis'=>$stateAxis[$axis->id],
                 'info' => [
                     'axisName' => $axis->name,
                     'indicators' => Indicator::findByAxesId($axis->id),
                 ],
-                'indicatorsMean' => self::indicatorsMean(
-                    CongresspersonIndicator::findByAxisIdAndCongressperson($axis->id, $congressperson->id),
-                    $stateIndicators[$axis->id],
-                    $nationalIndicators[$axis->id]
-                    )
             ];
         });
 
@@ -183,9 +179,9 @@ class Format
         foreach ($congressPersonIndicators as $key => $congressPersonIndicator) {
             $arr[] = [
                 (string)$key,
-                $congressPersonIndicator*10,
-                $stateIndicators[$key]*10,
-                $nationalIndicators[$key]*10,
+                $congressPersonIndicator,
+                $stateIndicators[$key],
+                $nationalIndicators[$key],
             ];
         }
 
