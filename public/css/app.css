@@ -11783,6 +11783,10 @@ footer .box_foot .rcol .redes_foot a:hover {
 #contato .central a:hover {
   color: #57162F;
 }
+#contato .central #recaptcha-div {
+  margin-bottom: 12px;
+  margin-top: 2px;
+}
 
 /* line 908, ../scss/app.scss */
 #contato .redes_contato {
