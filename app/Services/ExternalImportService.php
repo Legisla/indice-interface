@@ -19,7 +19,23 @@ class ExternalImportService implements ToModel, WithHeadingRow
         $uf_acronym = $row['siglauf'];
         $party_id = Party::findIdByAcronym($party_acronym);
         $uf_id = State::findIdByAcronym($uf_acronym);
-        $congressperson->update(['legislature_id'=> $row['legislat'], 'fk_party_id' =>$party_id,'fk_state_id' =>$uf_id,'stars' =>$row['estrelas'],'name' => $row['nome'], 'sex'=>$row['siglasexo'], 'civilName' => $row['nomecivil'],'active' => true,'time_in_office' => $row['meses']]);
+        $congressperson->update([
+            'legislature_id' => $row['legislat'],
+            'fk_party_id' => $party_id,
+            'fk_state_id' => $uf_id,
+            'stars' => $row['estrelas'],
+            'name' => $row['nome'],
+            'sex' => $row['siglasexo'],
+            'civilName' => $row['nomecivil'],
+            'active' => true,
+            'time_in_office' => $row['meses'],
+            'uri' => $row['uri'],
+            'uri_photo' => $row['urlfoto'],
+            'situation' => $row['situacao'],
+            'document' => $row['documento'],
+            'email' => $row['email'],
+            'birthdate' => $row['datanascimento']
+        ]);
         //importa scores dos eixos
         for ($i = 1; $i <= 4; $i++) {
             $score_axis = $row["eixo_{$i}"];
