@@ -7,7 +7,7 @@
     <section id="topo" class="top_home">
         <div class="central">
             <div class="col_5">
-                <img src="{{asset('img/imagem-top-home3.png')}}" alt="imagem de topo da home">
+                <img src="{{asset('img/idv-top-home11.png')}}" alt="imagem de topo da home">
             </div>
             <div class="col_7">
                 {!! $homePage->content !!}
