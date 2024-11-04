@@ -87,6 +87,7 @@ class State extends Model
             'iavg_14',
             'iavg_15',
             'iavg_16',
+            'iavg_17',
         )->where('id', $stateId)
             ->first()
             ->toArray();
@@ -101,20 +102,21 @@ class State extends Model
                 6 => $data['iavg_6'],
                 7 => $data['iavg_7'],
                 8 => $data['iavg_8'],
+                9 => $data['iavg_9'],
             ],
             2 => [
-                9 => $data['iavg_9'],
                 10 => $data['iavg_10'],
                 11 => $data['iavg_11'],
                 12 => $data['iavg_12'],
+                13 => $data['iavg_13'],
             ],
             3 => [
-                13 => $data['iavg_13'],
                 14 => $data['iavg_14'],
-                15 => $data['iavg_15']
+                15 => $data['iavg_15'],
+                16 => $data['iavg_16']
             ],
             4 => [
-                16 => $data['iavg_16']
+                17 => $data['iavg_17']
             ],
         ];
     }

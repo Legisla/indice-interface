@@ -3,22 +3,54 @@ namespace App\Services;
 
 use App\Models\Congressperson;
 use App\Models\CongresspersonIndicator;
+use App\Models\CongresspersonAxis;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Party;
+use App\Models\State;
 
 class ExternalImportService implements ToModel, WithHeadingRow
 {
     public function model(array $row)
     {
         dump($row);
-        $congresspersonName = $row['deputado'];
-        $congressperson = Congressperson::firstOrCreate(['external_id' => $row['external_id']], ['external_id' => $row['external_id'], 'name' => $congresspersonName ]);
-        $congressperson->update(['active' => true, 'stars' => $row["stars"], 'time_in_office' => $row['time_in_office'] ]);
-        #$congressperson->external_id = $row['external_id']; 
-
-        for ($i = 1; $i <= 16; $i++) {
-            $value = $row["variavel_{$i}"];
-            $score = $row["variavel_{$i}_score"];
+        $congressperson = Congressperson::firstOrCreate(['external_id' => $row['iddeputado']]);
+        $party_acronym = $row['siglapartido'];
+        $uf_acronym = $row['siglauf'];
+        $party_id = Party::findIdByAcronym($party_acronym);
+        $uf_id = State::findIdByAcronym($uf_acronym);
+        $congressperson->update([
+            'legislature_id' => $row['legislat'],
+            'fk_party_id' => $party_id,
+            'fk_state_id' => $uf_id,
+            'stars' => $row['estrelas'],
+            'name' => $row['nome'],
+            'sex' => $row['siglasexo'],
+            'civilName' => $row['nomecivil'],
+            'active' => true,
+            'time_in_office' => $row['meses'],
+            'uri' => $row['uri'],
+            'uri_photo' => $row['urlfoto'],
+            'situation' => $row['situacao'],
+            'document' => $row['documento'],
+            'email' => $row['email'],
+            'birthdate' => $row['datanascimento']
+        ]);
+        //importa scores dos eixos
+        for ($i = 1; $i <= 4; $i++) {
+            $score_axis = $row["eixo_{$i}"];
+            CongresspersonAxis::updateOrCreate(
+                [
+                    'fk_axis_id' => $i,
+                    'fk_congressperson_id' => $congressperson->id,
+                ],
+                [
+                    'score' => str_replace(',', '.', $score_axis),
+                ]
+            );
+        }
+        for ($i = 1; $i <= 17; $i++) {
+            $score_indicator = $row["variavel_{$i}_score"];
 
             CongresspersonIndicator::updateOrCreate(
                 [
@@ -26,11 +58,11 @@ class ExternalImportService implements ToModel, WithHeadingRow
                     'fk_congressperson_id' => $congressperson->id,
                 ],
                 [
-                    'value' => $value,
-                    'score' => $score,
+                    'value' => '0.0',//valores absolutos não são mais utilizados. 
+                    'score' => str_replace(',', '.', $score_indicator), //altera separador de decimais antes de importar
                     'outlier' => 0, #TODO: Consertar depois.
                 ]
-            );
+            );  
         }
     }
 }

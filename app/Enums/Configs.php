@@ -46,4 +46,6 @@ enum Configs: string
     case NAT_IAVG_15 = 'nat_iavg_15';
 
     case NAT_IAVG_16 = 'nat_iavg_16';
+
+    case NAT_IAVG_17 = 'nat_iavg_17';
 }

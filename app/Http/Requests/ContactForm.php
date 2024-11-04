@@ -39,6 +39,7 @@ class ContactForm extends FormRequest
             'phone' => 'required|min:10|max:11',
             'email' => 'required|email|max:255',
             'message' => 'required',
+            'g-recaptcha-response' => 'required|captcha',
         ];
     }
 
@@ -54,7 +55,9 @@ class ContactForm extends FormRequest
             'email.required' => 'O email é obrigatório',
             'email.email' => 'O email deve ser válido',
             'email.max' => 'O email deve ter no máximo 255 caracteres',
-            'message.required' => 'A mensagem é obrigatória'
+            'message.required' => 'A mensagem é obrigatória',
+            'g-recaptcha-response.required' => 'Por favor, complete o reCAPTCHA',
+            'g-recaptcha-response.captcha' => 'A verificação do reCAPTCHA tente novamente.'
         ];
     }
 }

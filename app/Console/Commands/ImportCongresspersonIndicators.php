@@ -67,7 +67,7 @@ class ImportCongresspersonIndicators extends Command
         $importService->doImportation($initiator,false,  $filename);
         $scoreService = new ScoreService($importService);
         $scoreService->calculateGeneralAverages();
-        $scoreService->calculateAxisScores();
+        // $scoreService->calculateAxisScores();
 
         $this->info('Médias dos estados calculadas.');
 

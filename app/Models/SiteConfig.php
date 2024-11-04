@@ -75,21 +75,21 @@ class SiteConfig extends Model
                  6 => self::getByKey(Configs::NAT_IAVG_6),
                  7 => self::getByKey(Configs::NAT_IAVG_7),
                  8 => self::getByKey(Configs::NAT_IAVG_8),
+                 9 => self::getByKey(Configs::NAT_IAVG_9) ,
             ],
             2 => [
-                 9 => self::getByKey(Configs::NAT_IAVG_9) ,
                 10 => self::getByKey(Configs::NAT_IAVG_10),
                 11 => self::getByKey(Configs::NAT_IAVG_11),
                 12 => self::getByKey(Configs::NAT_IAVG_12),
+                13 => self::getByKey(Configs::NAT_IAVG_13),
             ],
             3 => [
-                13 => self::getByKey(Configs::NAT_IAVG_13),
                 14 => self::getByKey(Configs::NAT_IAVG_14),
                 15 => self::getByKey(Configs::NAT_IAVG_15),
-
+                16 => self::getByKey(Configs::NAT_IAVG_16),
             ],
             4 => [
-                16 => self::getByKey(Configs::NAT_IAVG_16),
+                17 => self::getByKey(Configs::NAT_IAVG_17),
             ],
         ];
     }
