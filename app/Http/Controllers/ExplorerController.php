@@ -7,6 +7,7 @@ use App\Models\Congressperson;
 use App\Helpers\Format;
 use App\Models\Indicator;
 use App\Models\State;
+use App\Models\Party;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -277,10 +278,17 @@ class ExplorerController extends Controller
     public function explorerTopnParty(?string $selectedParty = null)
     {
         $limit = 3; // Definimos o número N como 3
+        $fkPartyId = null;
+        if ($selectedParty !== null) {
+            $selectedParty = strtoupper($selectedParty);
+            $party = Party::findByAcronym($selectedParty);
+            if ($party) {
+                $fkPartyId = $party->id;
+            }
+        }
+        $congresspeople = Congressperson::getTopNScores($limit,null,null,$fkPartyId);
 
-        $congresspeople = Congressperson::getByParty($selectedParty, $limit);
-
-        $title = 'Deputados de ' . $congresspeople[0]['party_acronym'];
+        $title = 'Deputados destaques do ' . $party->name;
 
         $sort = true;
 

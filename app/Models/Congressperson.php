@@ -171,22 +171,27 @@ class Congressperson extends BaseModel
      * 
      * @return \Illuminate\Database\Eloquent\Builder Prepared query with essential congressperson details.
      */
-    private static function mountExplorerQuery()
-    {
-        return self::select(
-            'congresspeople.external_id',
-            'congresspeople.name',
-            'congresspeople.uri_photo',
-            'congresspeople.stars',
-            'states.acronym as  state_acronym',
-            'parties.acronym as party_acronym',
-            'rate')
+    private static function mountExplorerQuery($orderby = 'name')
+        {
+            $query = self::select(
+                'congresspeople.external_id',
+                'congresspeople.name',
+                'congresspeople.uri_photo',
+                'congresspeople.stars',
+                'states.acronym as state_acronym',
+                'parties.acronym as party_acronym',
+                'rate'
+            )
             ->where('congresspeople.active', true)
             ->join('parties', 'parties.id', '=', 'congresspeople.fk_party_id')
-            ->join('states', 'states.id', '=', 'congresspeople.fk_state_id')
-            ->orderBy('name', 'asc');
-        
-    }
+            ->join('states', 'states.id', '=', 'congresspeople.fk_state_id');
+
+            if ($orderby !== false) {
+                $query->orderBy($orderby, 'asc');
+            }
+
+            return $query;
+        }
 
     /**
      * Fetch congresspeople by the provided state ID.
@@ -303,33 +308,48 @@ class Congressperson extends BaseModel
      * @param int|null $fkStateId
      * @return EloquentCollection|null
      */
-    public static function getTopNScores(int $limit, ?int $fkStateId = null, ?int $axis = null): ?EloquentCollection
+    public static function getTopNScores(int $limit, ?int $fkStateId = null, ?int $axis = null, ?int $fkPartyId = null ): ?EloquentCollection
     {
-    $query = self::mountExplorerQuery()
-                ->limit($limit);
+        $query = self::mountExplorerQuery(false)
+            ->limit($limit)
+            ->groupBy(
+                'congresspeople.id',
+                'congresspeople.external_id',
+                'congresspeople.name',
+                'congresspeople.uri_photo',
+                'congresspeople.stars',
+                'states.acronym',
+                'parties.acronym',
+                'rate',
+                'congresspeople.rate',
+                
 
-    if ($fkStateId !== null) {
-        $query->where('fk_state_id', $fkStateId);
-    }
-
-    if ($axis !== null) {
-
-    $query->addSelect('congressperson_axes.score as score')
-            ->join('congressperson_axes', 'congressperson_axes.fk_congressperson_id', '=', 'congresspeople.id')
-            ->where('congressperson_axes.fk_axis_id', $axis)
-            ->orderBy('score', 'desc')
-            ->orderBy('rate', 'desc')
-            ->orderBy('congresspeople.id', 'asc');
+            );            
+        if ($axis == null){
+            $query
+                ->join('congressperson_axes', 'congressperson_axes.fk_congressperson_id', '=', 'congresspeople.id')
+                ->orderBy('stars', 'desc')
+                ->orderBy('rate_non_adjusted', 'desc');
         }
-    else {
-        $query->orderBy('stars', 'desc');
-        $query->orderBy('rate', 'desc');
-        $query->orderBy('congresspeople.id', 'asc');
+        else{
+            $query->addSelect('congressperson_axes.score as score')
+                ->join('congressperson_axes', 'congressperson_axes.fk_congressperson_id', '=', 'congresspeople.id')
+                ->where('congressperson_axes.fk_axis_id', $axis)
+                ->orderBy('score', 'desc')
+                ->orderBy('rate_non_adjusted', 'desc')
+                ->orderBy('congresspeople.id', 'asc')
+                ->groupBy('congressperson_axes.score');
+        }
+        if ($fkStateId != null) {
+            $query->where('fk_state_id', $fkStateId);
+        }
+        if ($fkPartyId != null) {
+            $query->where('fk_party_id', $fkPartyId);
+        }
+        $result = $query->get();
+        return $result;
+            
     }
-    
-    return $query->get();
-    }
-
 
     /**
      * @param array    $indicator
