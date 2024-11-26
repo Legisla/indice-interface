@@ -62,11 +62,11 @@ Route::group(['prefix' => 'contatos'], function () {
 
         Route::group(['prefix' => 'topn'], function () {
 
-            Route::get('/estado/{selectedState}', [ExplorerController::class, 'explorerTopnUF'])->name('topn_uf');
+            Route::get('/estado/{selectedState}', [ExplorerController::class, 'explorerTopnUF'])->name('destaques-estados');
 
-            Route::get('/eixo/{axis}', [ExplorerController::class, 'explorerTopnAxis'])->name('topn_axis');
+            Route::get('/eixo/{axis}', [ExplorerController::class, 'explorerTopnAxis'])->name('destaques-eixos');
             
-            Route::get('/party/{selectedParty}', [ExplorerController::class, 'explorerTopnParty'])->name('topn_party');
+            Route::get('/party/{selectedParty}', [ExplorerController::class, 'explorerTopnParty'])->name('destaques-partidos');
 
         });
 
