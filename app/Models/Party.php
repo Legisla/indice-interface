@@ -83,6 +83,21 @@ class Party extends Model
 
         return $party->id;
     }
+    /**
+     * @param string $acronym
+     * @return \App\Models\Party|null
+     */
+    public static function findByAcronym(string $acronym): ?Party
+    {
+        $party = self::where('acronym', $acronym)->first();
+
+        if (!$party) {
+            return null;
+        }
+
+        return $party;
+    }
+
 
     public static function list():array
     {
