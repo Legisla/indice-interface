@@ -1,7 +1,6 @@
 @extends('layouts.base')
 
 @section('title','Legisla Brasil - Home')
-
 @section('content')
     <section id="topo_interna">
 
@@ -39,9 +38,10 @@
                 @include('layouts.site_components.more-info')
                
                 <form>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
-                    <path d="M12 0.360107H0L6 7.36011L12 0.360107Z" fill="white"/>
-                </svg>
+                @if(@!isset($sort))
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M12 0.360107H0L6 7.36011L12 0.360107Z" fill="white"/>
+                    </svg>
                     <select id="UF"
                             name="UF"
                             data-params="{{$uri??''}}"
@@ -54,7 +54,55 @@
                             </option>
                         @endforeach
                     </select>
+                @elseif($sort == 'state')
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M12 0.360107H0L6 7.36011L12 0.360107Z" fill="white"/>
+                    </svg>
+                    <select id="topnUF"
+                            name="topnUF"
+                            data-params="{{$uri??''}}"
+                            class="{{ !empty($filterActive)?'filterSelectState':'explorerTopState'}}">
+                        @foreach($states as $state)
+                            <option value="{{$state->acronym}}"
+                                {{(!empty($selectedState) && $selectedState === $state->acronym?'selected':'' )}}>
+                                {{$state->name}}
+                            </option>
+                        @endforeach
+                    </select>
+                @elseif($sort == 'party')
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M12 0.360107H0L6 7.36011L12 0.360107Z" fill="white"/>
+                    </svg>
+                    <select id="topnparty"
+                            name="topnparty"
+                            data-params="{{$uri??''}}"
+                            class="{{ !empty($filterActive)?'filterSelectState':'explorerTopParty'}}">
+                        @foreach($partiesNotEmpty as $party)
+                            <option value="{{$party->acronym}}"
+                                {{(!empty($selectedParty) && $selectedParty === $party->acronym?'selected':'' )}}>
+                                {{$party->acronym}}
+                            </option>
+                        @endforeach
+                    </select>
 
+                @elseif($sort == 'axis')
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M12 0.360107H0L6 7.36011L12 0.360107Z" fill="white"/>
+                    </svg>
+                    <select id="topnaxis"
+                            name="topnaxis"
+                            data-params="{{$uri??''}}"
+                            class="{{ !empty($filterActive)?'filterSelectState':'explorerTopAxis'}}">
+                        @foreach($axes  as $slug => $name)
+                            <option value="{{$slug}}"
+                                {{(!empty($selectedAxis) && $selectedAxis === $slug?'selected':'' )}}>
+                                {{$name}}
+                            </option>
+                        @endforeach
+                    </select>
+
+
+                @endif                    
                     <!-- <select id="classificacao"
                             name="classificacao"
                             class="{{!empty($filterActive)?'filterSelectRate':'explorerSelectRate'}}">

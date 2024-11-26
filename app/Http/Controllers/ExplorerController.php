@@ -12,7 +12,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Str;
 class ExplorerController extends Controller
 {
 
@@ -215,7 +215,6 @@ class ExplorerController extends Controller
     {
         $limit = 3; // Definimos o número N como 3
         $axis = Format::findAttributeBySlug($selectedAxis);
-        // Convertendo o estado selecionado para ID, se fornecido
         
         // Buscando os top 3 congressistas por score
         $congresspeople = Congressperson::getTopNScores($limit, null, $axis);
@@ -237,9 +236,13 @@ class ExplorerController extends Controller
         
         $title = 'Deputados destaques ' . $axisTitle;
         
-        $sort = true;
-
-        return view('explorer', compact('title', 'congresspeople', 'sort'));
+        $sort = 'axis';
+        $axes = Axis::all()
+        ->mapWithKeys(function ($axis) {
+            return [Str::slug($axis->name) => $axis->name];
+        })
+        ->toArray();
+        return view('explorer', compact('title', 'congresspeople', 'sort','axes','selectedAxis'));
     }
 
 
@@ -266,10 +269,10 @@ class ExplorerController extends Controller
         
         
         $title = 'Deputados destaques em ' . $state->name;
+        $selectedState = strtoupper($selectedState);
+        $sort = 'state';
 
-        $sort = true;
-
-        return view('explorer', compact('title', 'congresspeople', 'sort'));
+        return view('explorer', compact('title', 'congresspeople', 'sort','selectedState'));
     }
 
     /**
@@ -288,11 +291,12 @@ class ExplorerController extends Controller
         }
         $congresspeople = Congressperson::getTopNScores($limit,null,null,$fkPartyId);
 
-        $title = 'Deputados destaques do ' . $party->name;
+        $title = 'Deputados destaques do ' . $party->acronym;
 
-        $sort = true;
+        $sort = 'party';
+        
 
-        return view('explorer', compact('title', 'congresspeople', 'sort'));
+        return view('explorer', compact('title', 'congresspeople', 'sort','selectedParty'));
     }
 
     /**

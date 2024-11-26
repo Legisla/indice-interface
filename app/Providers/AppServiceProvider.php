@@ -29,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
     {
         View::share('states', State::all());
         View::share('parties', Party::all());
+        View::share('partiesNotEmpty', Party::getActiveParties());
         View::share('statsLinks', Format::getStatsLinks());
     }
 }
