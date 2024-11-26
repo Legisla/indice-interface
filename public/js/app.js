@@ -156,19 +156,19 @@ function redirectToExplorer() {
 function redirectToSelectedUF() {
   var state = $('.explorerTopState').val() || null;
   if (state) {
-    location.href = baseUrl + '/explorador/topn/estado/' + state.toLowerCase();
+    location.href = baseUrl + '/explorador/destaques/estado/' + state.toLowerCase();
   }
 }
 function redirectToSelectedParty() {
   var party = $('.explorerTopParty').val() || null;
   if (party) {
-    location.href = baseUrl + '/explorador/topn/party/' + party.toLowerCase();
+    location.href = baseUrl + '/explorador/destaques/partido/' + party.toLowerCase();
   }
 }
 function redirectToSelectedAxis() {
   var axis = $('.explorerTopAxis').val() || null;
   if (axis) {
-    location.href = baseUrl + '/explorador/topn/eixo/' + axis.toLowerCase();
+    location.href = baseUrl + '/explorador/destaques/eixo/' + axis.toLowerCase();
   }
 }
 function redirectToFilter() {

@@ -60,17 +60,19 @@ Route::group(['prefix' => 'contatos'], function () {
 
         });
 
-        Route::group(['prefix' => 'topn'], function () {
+        Route::group(['prefix' => 'destaques'], function () {
 
             Route::get('/estado/{selectedState}', [ExplorerController::class, 'explorerTopnUF'])->name('destaques-estados');
 
             Route::get('/eixo/{axis}', [ExplorerController::class, 'explorerTopnAxis'])->name('destaques-eixos');
             
-            Route::get('/party/{selectedParty}', [ExplorerController::class, 'explorerTopnParty'])->name('destaques-partidos');
+            Route::get('/partido/{selectedParty}', [ExplorerController::class, 'explorerTopnParty'])->name('destaques-partidos');
 
         });
-
-
+        // redireciona rotas antigas.
+        Route::redirect('/topn/{any}', '/explorador/destaques/{any}', 301)->where('any', '.*');
+        Route::redirect('/topn/party/{any}', '/explorador/destaques/partido/{any}', 301)->where('any', '.*');
+        Route::redirect('/destaques/party/{any}', '/explorador/destaques/partido/{any}', 301)->where('any', '.*');
 
         Route::get('/estado/{selectedState}', [ExplorerController::class, 'explorerByState'])->name('explorador-estado');
 
