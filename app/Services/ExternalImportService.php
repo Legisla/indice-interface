@@ -19,6 +19,7 @@ class ExternalImportService implements ToModel, WithHeadingRow
         $uf_acronym = $row['siglauf'];
         $party_id = Party::findIdByAcronym($party_acronym);
         $uf_id = State::findIdByAcronym($uf_acronym);
+        $rate_non_ajusted=(float)str_replace(',', '.', $row['score_final']);
         $congressperson->update([
             'legislature_id' => $row['legislat'],
             'fk_party_id' => $party_id,
@@ -34,7 +35,10 @@ class ExternalImportService implements ToModel, WithHeadingRow
             'situation' => $row['situacao'],
             'document' => $row['documento'],
             'email' => $row['email'],
-            'birthdate' => $row['datanascimento']
+            'birthdate' => $row['datanascimento'],
+            'rate_non_adjusted' => $rate_non_ajusted,
+            'rate' => round($rate_non_ajusted)
+
         ]);
         //importa scores dos eixos
         for ($i = 1; $i <= 4; $i++) {
