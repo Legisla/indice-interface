@@ -6,7 +6,7 @@
     <link href="{{asset('img/favicon.ico')}}" type="image/x-icon" rel="icon"/>
     <link href="{{asset('img/favicon.ico')}}" type="image/x-icon" rel="shortcut icon"/>
     <title>Legisla Brasil - {{str_replace('-',' ',ucfirst(Route::current()->getName()))}}</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}"/>
+    <link rel="stylesheet" href="{{mix('css/app.css')}}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>

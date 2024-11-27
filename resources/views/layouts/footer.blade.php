@@ -64,7 +64,7 @@
 <script src="{{asset('js/foundation.min.js')}}"></script>
 <script src="{{asset('js/jquery.mask.min.js')}}"></script>
 
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{mix('js/app.js')}}"></script>
 
 <script> const baseUrl = "{{url('')}}"</script>
 
