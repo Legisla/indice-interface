@@ -11079,7 +11079,7 @@ header .desk_logo, .header_interna .desk_logo {
     margin: 0 20px 0 9%;
     position: initial;
     background: #EECFB0;
-    border-radius: 0;
+    border-radius: 0 0 12px 12px;
 }
 
 @media only screen and (max-width: 1640px) {
@@ -12272,13 +12272,13 @@ footer .box_foot .rcol .redes_foot a:hover {
     width: 100%;
     text-align: center;
     a{
-        border: 1px solid #4EBAAF;
+        border: 1px solid #fff;
         height: 58px;
         padding: 9px 49px 19px 46px;
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        color: #4EBAAF;
+        color: #fff;
         font-size: 24px;
         display: flex !important;
         gap: 20px;
