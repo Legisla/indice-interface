@@ -1,6 +1,6 @@
 <?php
 $usuario = 'user';
-$senha = 'senha;
+$senha = 'senha';
 
 if ((isset($_GET['usuario']) && isset($_GET['senha'])) && ($_GET['usuario'] == $usuario && $_GET['senha'] == $senha) && isset($_GET['arquivo'])) {
     $file = '../../../csv/'.$_GET['arquivo'];

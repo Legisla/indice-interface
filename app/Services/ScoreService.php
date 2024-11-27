@@ -29,19 +29,6 @@ class ScoreService
 
     public function process()
     {
-        $indicators = Indicator::all();
-        $this->importService->report('calculating indicator scores for each congressperson');
-        $this->importService->iterateProgressBar(
-            $indicators, function ($indicator) {
-            $this->calculateIndicatorScore($indicator->id);
-        });
-
-        $this->importService->report('calculating main rate for each congressperson');
-        $this->calculateCongresspeopleMainRate();
-
-        $this->importService->report('calculating axis scores for each congressperson');
-        $this->calculateAxisScores();
-
         $this->importService->report('calculating general averages');
         $this->calculateGeneralAverages();
     }
