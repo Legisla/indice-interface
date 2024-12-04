@@ -44,7 +44,7 @@ class CreateNewIndicatorsAndAxis extends Seeder
             ['fk_axis_id' => 2, 'id' =>11, 'name' =>  'Cargos ocupados na legislatura', 'description' => ''],
             ['fk_axis_id' => 2, 'id' =>12, 'name' =>  'Requerimentos de Audiência Pública', 'description' => ''],
             ['fk_axis_id' => 2, 'id' =>13, 'name' =>  'Reuniões e eventos técnicos', 'description' => ''],
-            ['fk_axis_id' => 3, 'id' =>14, 'name' =>  'Requerimento e Fiscalização', 'description' => ''],
+            ['fk_axis_id' => 3, 'id' =>14, 'name' =>  'Requerimento de Fiscalização', 'description' => ''],
             ['fk_axis_id' => 3, 'id' =>15, 'name' =>  'Convocação de Autoridades', 'description' => ''],
             ['fk_axis_id' => 3, 'id' =>16, 'name' =>  'Proposição de CPIs', 'description' => ''],
             ['fk_axis_id' => 4, 'id' =>17, 'name' =>  'Alinhamento partidário', 'description' => '']
