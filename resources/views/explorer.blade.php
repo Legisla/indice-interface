@@ -83,7 +83,7 @@
                     <p>
                         A pontuação final dos parlamentares é obtida pela média em todos os indicadores. Dessa forma, as
                         estrelas são dadas a partir da faixa em que a nota do parlamentar se encontra. A classificação
-                        varia de uma estrela (nota 1,3 ou menos) a cinco estrelas (notas maiores que 5,3). Para mais
+                        varia de uma estrela (nota 0 a 4) a cinco estrelas (notas iguais ou maiores que 7,5). Para mais
                         detalhes, consulte a página Metodologia.
                     </p>
 
