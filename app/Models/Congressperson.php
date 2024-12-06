@@ -144,10 +144,12 @@ class Congressperson extends BaseModel
             'uri_photo',
             'preferred_themes'
         )
-            ->join('parties', 'parties.id', '=', 'congresspeople.fk_party_id')
+            ->leftJoin('parties', 'parties.id', '=', 'congresspeople.fk_party_id') 
             ->join('states', 'states.id', '=', 'congresspeople.fk_state_id')
-            ->where('congresspeople.external_id', $externalId)->first();
+            ->where('congresspeople.external_id', $externalId)
+            ->first();
     }
+
 
     /**
      * @param float|null $value
@@ -184,7 +186,7 @@ class Congressperson extends BaseModel
             )
             ->where('congresspeople.active', true)
             ->where('situation', '!=', 'Fim de Mandato')            
-            ->join('parties', 'parties.id', '=', 'congresspeople.fk_party_id')
+            ->leftJoin('parties', 'parties.id', '=', 'congresspeople.fk_party_id')
             ->join('states', 'states.id', '=', 'congresspeople.fk_state_id');
 
             if ($orderby !== false) {

@@ -172,7 +172,7 @@
                         <strong>{{$congressperson->name}}</strong>
                         <p>
                             {{$congressperson->state_acronym}}<br>
-                            {{$congressperson->party_acronym}}<br>
+                            {{$congressperson->party_acronym ?? "Sem partido"}}<br>
                         </p>
 
                         <div class="ranking">

@@ -62,7 +62,7 @@
                     <h2>{{$congressperson->congressperson_name}}</h2>
 
                     <h4>
-                        {{$congressperson->state_name}} - {{$congressperson->party_acronym}}
+                        {{$congressperson->state_name}} - {{ $congressperson->party_acronym ?? 'Sem partido' }}
                         <br>
                         {{$congressperson->title}}
                         <br>
