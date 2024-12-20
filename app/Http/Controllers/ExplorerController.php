@@ -222,8 +222,8 @@ class ExplorerController extends Controller
         // Definindo títulos para os eixos
         $axisTitles = [
             1 => 'Produção Legislativa',
-            2 => 'Fiscalização',
-            3 => 'Mobilização',
+            2 => 'Articulação e Mobilização',
+            3 => 'Fiscalização',
             4 => 'Alinhamento Partidário'
         ];
         
