@@ -62,7 +62,10 @@
                             <a class="terms-link" href="{{ url('/politica-de-privacidade') }}" target="_blank">Política de privacidade</a>.
                         </label>
                     </div>
-
+                    <div id="recaptcha-div">
+                        {!! NoCaptcha::renderJs() !!}
+                        {!! NoCaptcha::display() !!}
+                    </div>
                    
                     <input type="submit" name="Enviar" value="Enviar">
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
