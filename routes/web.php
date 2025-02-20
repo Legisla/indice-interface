@@ -19,6 +19,8 @@ use TCG\Voyager\Facades\Voyager;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/indices-atualizacao', [HomeController::class, 'indicesAtualizacao'])->name('indices-atualizacao');
+
 Route::get('/import', [HomeController::class, 'import'])->name('import');
 
 Route::get('/sobre-o-projeto', [HomeController::class, 'institutional'])->name('sobre-o-projeto');

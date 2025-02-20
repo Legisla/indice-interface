@@ -12632,9 +12632,78 @@ footer .box_foot .rcol .redes_foot a:hover {
         input[type=checkbox]{
             margin-top: 4px;
         }
-
     }      
 }
+
+#contato.index-atualizacao{
+    background-color: #57162F;
+    padding-bottom: 0;
+}
+
+.central.index-atualizacao__content{
+    img{
+        margin-top: 70px;
+        @media(max-width: 768){
+            margin-top: 0;
+        }
+    }
+    h2{
+        text-transform: uppercase;
+    }
+    p{
+        color: #fff;
+    }
+    .site-link{
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px 20px;
+        font-family: 'Commissioner', sans-serif;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 4px;
+        font-size: 24px;
+        margin: 30px 0;
+        &:hover{
+            color: #fff !important;
+        }
+        svg{
+            position: relative;
+            top: 12px !important;
+            left: 10px !important
+        }
+    }
+    .terms-checkbox__index{
+        color: #fff;
+    }
+    
+    .terms-link{
+        color: #fff;
+        border: none;
+        &:hover{
+            color: #fff;
+        }
+    }
+    .terms-checkbox__index label span{
+        color: #fff !important;
+    }
+    form{
+        input[type=submit]{
+            background-color: transparent !important;
+            border: 1px solid #fff !important;
+            padding: 10px 20px 10px 0 !important;
+            border-radius: 4px !important;
+            color: #fff !important; 
+        }
+        svg{
+            top: -33px !important;
+            left: 150px !important
+        }
+    }
+    
+}
+
 
 /* line 921, ../scss/app.scss */
 #contato form label {

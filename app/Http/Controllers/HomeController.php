@@ -111,4 +111,16 @@ class HomeController extends Controller
         ));
     }
 
+    public function indicesAtualizacao()
+    {
+        return view('indices-atualizacao');
+    }
+
+    public function indicesAtualizacaoDetails()
+    {
+        $indexDetails = (new Page())->getByUri(Route::getCurrentRoute()->getName());
+
+        return view('indices-atualizacao', compact('pageDetails'));
+    }
+
 }
